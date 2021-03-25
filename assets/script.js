@@ -6,13 +6,21 @@ $(".toggle-trigger").click(function () {
 
 // navbar toggle
 
-$("#hamburger").click(function () {
+function toggleNav() {
   let x = document.querySelector('#myLinks');
   if (x.style.display === 'block') {
     x.style.display = 'none';
   } else {
     x.style.display = 'block';
   }
+}
+
+$("#hamburger").click(function () {
+  toggleNav();
+});
+
+$(".section-link").click(function () {
+  toggleNav();
 });
 
 // Return to top button script copied and adapted from W3 schools tutorial
