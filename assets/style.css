@@ -11,6 +11,62 @@ body {
 
 /* Exercise Section Styling */
 
+/* Cards copied and adapted from W3 Schools page https://www.w3schools.com/howto/howto_css_cards.asp */
+
+.card {
+  background: rgba(255, 245, 245, 0.9);
+  margin: 10px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.content {
+  display: none;
+}
+
+.content p {
+  margin: 10px;
+}
+
+.content button {
+  margin: 10px auto 20px auto;
+}
+
+.toggle-trigger {
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: 5px 0;
+}
+
+.card h3 {
+  font-size: 0.9em;
+}
+
+ul {
+  padding-left: 0;
+}
+
+/* Toggle-Trigger styling and animation taken from
+Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling */
+
+.toggle-trigger::after {
+  content: ">";
+  font-weight: bold;
+  display: inline-block;
+  position: absolute;
+  right: 20px;
+  transform: rotate(90deg)scale(0.5, 1);
+  transition: transform 0.6s;
+}
+
+.toggle-trigger.active::after {
+  transform: rotate(-90deg) scale(0.5, 1);
+}
+
 /* My Workout Section Styling */
 
 /* Modal Box Stylings */
