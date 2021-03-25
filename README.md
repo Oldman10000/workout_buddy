@@ -28,3 +28,4 @@ I am a fitness 'veteran' and I want:
 1. To be able to quickly construct my workout
 2. To be able to add my own custom exercises
 3. To be able to have a challenging workout
+4. For my workout to be saved on the app next time I visit
