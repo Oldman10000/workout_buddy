@@ -124,4 +124,24 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 /* Footer Styling */
 
+.circle {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: red;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+#toTop {
+  color: whitesmoke;
+  text-align: center;
+  padding-top: 2px;
+}
+
 /* Media Queries */
