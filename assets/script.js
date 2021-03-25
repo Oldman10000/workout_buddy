@@ -15,11 +15,7 @@ function toggleNav() {
   }
 }
 
-$("#hamburger").click(function () {
-  toggleNav();
-});
-
-$(".section-link").click(function () {
+$("#hamburger, .section-link").click(function () {
   toggleNav();
 });
 
