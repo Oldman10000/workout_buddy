@@ -1,0 +1,8 @@
+body {
+  background-image: url("../assets/images/background-image.jpg");
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-position: center;
+  background-attachment: fixed;
+}
