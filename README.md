@@ -26,9 +26,10 @@ I am a fitness beginner and I want:
 I am a fitness 'veteran' and I want:
 
 1. To be able to quickly construct my workout
-2. To be able to add my own custom exercises if what I want to do is unavailable
-3. To challenge myself
-4. For my workout to be saved on the app next time I visit
+2. To have a range of exercises to choose from
+3. To be able to add my own custom exercises if what I want to do is unavailable
+4. To challenge myself
+5. For my workout to be saved on the app next time I visit
 
 ## Scope
 
@@ -42,6 +43,7 @@ Provide simple exercise instructions in text | 5 | 5
 Provide exercise instructions using video | 3 | 1
 Add scaling difficulty settings | 4 | 3
 Provide users with positive feedback | 3 | 4
+Have a large range of exercises baked into the site | 4 | 2
 Allow user to add custom exercises on their individual workout | 4 | 4
 Create login feature for user profile | 4 | 1
 Allow workouts to be stored locally on user browsers | 5 | 5
