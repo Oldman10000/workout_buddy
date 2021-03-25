@@ -62,7 +62,13 @@ The structure will be as simple as possible so as not to overwhelm the user. I w
 
 The website will conform to web standards in terms of interactive design. Links will be clearly highlighted and signposted.
 
+One change I plan to implement which is slightly different to web standards is that the navbar 'hamburger' element will be on all screen sizes including desktop. My reasoning for this is that it is not so important to have the navigation elements immediately visible on a larger screen, as elements will expand horizontally on larger screens causing the y axis to be much shorter and most of the elements will be already visible. I believe this will result in a more aesthetically pleasing result as I plan for the page to be as minimalist as possible.
+
 ## Skeleton
+
+The below wireframe gives me an idea of the layout before starting to write any code. It is subject to change if I decide there are better ways of structuring some aspects once the site has been created but I plan to stick to the below as closely as possible.
+
+[Wireframe for mobile, tablet, and desktop](documentation/wireframe.pdf)
 
 ## Surface
 
