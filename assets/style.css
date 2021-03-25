@@ -58,6 +58,15 @@ body {
   text-decoration: inherit;
 }
 
+/* Instructions styling */
+
+.description {
+  background: rgba(255, 245, 245, 0.9);
+  margin: 20px 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
 /* Exercise Section Styling */
 
 /* Cards copied and adapted from W3 Schools page https://www.w3schools.com/howto/howto_css_cards.asp */
