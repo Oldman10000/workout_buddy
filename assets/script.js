@@ -60,3 +60,14 @@ addExercise.addEventListener('submit', e => {
   template(exercise);
   addExercise.reset();
 });
+
+// add existing exercises to workout list
+
+$(".workout-add").click(function () {
+  let text = $(this).parent().prev().text();
+  console.log(text);
+  const html = `
+  <li class="exercise">${text}<li>
+  `;
+  list.innerHTML += html;
+})
