@@ -131,8 +131,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   list-style-type: none;
 }
 
-
-
 /* Modal Box Stylings */
 
 /* Contact Form Styling */
@@ -155,6 +153,22 @@ textarea:focus {
 
 input[type=submit] {
   margin: 10px auto;
+}
+
+.form-feedback {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: red;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.form-feedback p {
+  margin: 5px;
+  text-align: center;
 }
 
 /* Footer Styling */

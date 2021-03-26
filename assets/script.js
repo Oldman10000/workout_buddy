@@ -71,3 +71,14 @@ $(".workout-add").click(function () {
   `;
   list.innerHTML += html;
 })
+
+// action upon submit contact form
+
+$("#contact-form").submit(function (e) {
+  e.preventDefault();
+  $(".form-feedback").css("display", "block");
+  setTimeout(function () {
+    $(".form-feedback").css("display", "none");
+  }, 6000);
+  $("#contact-form")[0].reset();
+})
