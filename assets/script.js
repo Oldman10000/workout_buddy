@@ -48,6 +48,7 @@ const list = document.querySelector('#workout-list');
 
 // array for exercises added to my workout section by user
 let myExercises = [];
+let arrLength = 0;
 
 const template = exercise => {
   const html = `
@@ -63,7 +64,8 @@ addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
   console.log(exercise);
-  myExercises.push(exercise);
+  arrLength = arrLength += 1;
+  myExercises.push(arrLength);
   template(exercise);
   addExercise.reset();
 });
@@ -82,7 +84,8 @@ $(".workout-add").click(function () {
   list.innerHTML += html;
   $(this).parent().prev().toggleClass('active');
   $(this).parent().slideToggle('slow');
-  myExercises.push(exercise);
+  arrLength = arrLength += 1;
+  myExercises.push(arrLength);
 })
 
 // delete items from workout list and from myExercises array
@@ -91,13 +94,7 @@ $("#workout-list").click(function (e) {
   if(e.target.classList.contains('delete')){
     e.target.parentElement.remove();
   };
-  let x = $(this).text().trim();
-  console.log(x);
-  myExercises.forEach(exercise => {
-    if(exercise == x){
-      myExercises.remove(exercise);
-    }
-  })
+  myExercises.splice(-1,1);
 });
 
 // action upon submit contact form
