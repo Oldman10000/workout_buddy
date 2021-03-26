@@ -131,6 +131,52 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   list-style-type: none;
 }
 
+#workout-list {
+  margin: auto;
+}
+
+.exercise {
+  background-color: rgba(255, 245, 245, 0.9);
+  font-size: 1.2em;
+  padding: 5px;
+  margin: 10px 5px;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+}
+
+#workout-list i{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#workout-list i:hover{
+  cursor: pointer;
+  color: red;
+}
+
+#exercise-add {
+  border: none;
+  border-radius: 2.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 40px;
+  background-image: url('/assets/images/plus-solid.svg');
+  background-repeat: no-repeat;
+  background-position: 5px;
+  background-size: 0.7em;
+  background-color: rgba(255, 245, 245, 0.9);
+  padding-left: 25px;
+}
+
+#exercise-add:focus {
+  border: solid 2.5px grey;
+  border-radius: 2.5px;
+  background-color: lightpink;
+}
+
 /* Modal Box Stylings */
 
 /* Contact Form Styling */
