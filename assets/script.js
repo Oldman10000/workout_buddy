@@ -46,6 +46,9 @@ $("#toTop").click(function () {
 const addExercise = document.querySelector('.exercise-form');
 const list = document.querySelector('#workout-list');
 
+// array for exercises added to my workout section by user
+let myExercises = [];
+
 const template = exercise => {
   const html = `
   <li class="exercise">${exercise}<li>
@@ -57,6 +60,7 @@ addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
   console.log(exercise);
+  myExercises.push(exercise);
   template(exercise);
   addExercise.reset();
 });
