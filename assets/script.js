@@ -51,7 +51,10 @@ let myExercises = [];
 
 const template = exercise => {
   const html = `
-  <li class="exercise">${exercise}<li>
+    <li class="exercise">
+      <span>${exercise}</span>
+      <i class="fas fa-trash-alt delete"></i>
+    <li>
   `;
   list.innerHTML += html;
 }
@@ -68,13 +71,28 @@ addExercise.addEventListener('submit', e => {
 // add existing exercises to workout list
 
 $(".workout-add").click(function () {
-  let text = $(this).parent().prev().text();
+  let text = $(this).prev().text();
   console.log(text);
   const html = `
   <li class="exercise">${text}<li>
   `;
   list.innerHTML += html;
 })
+
+// delete items from workout list and from myExercises array
+
+$(".exercise").click(function (e) {
+  let x = $(this).text().trim();
+  console.log(x);
+  if(e.target.classList.contains('delete')){
+    e.target.parentElement.remove();
+  };
+  myExercises.forEach(exercise => {
+    if(exercise == x){
+      myExercises.remove(exercise);
+    }
+  })
+});
 
 // action upon submit contact form
 
