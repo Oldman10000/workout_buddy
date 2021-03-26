@@ -38,3 +38,25 @@ $("#toTop").click(function () {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 })
+
+// adding custom items to workout list
+// code copied and adapted from Udemy Course
+// 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling
+
+const addExercise = document.querySelector('.exercise-form');
+const list = document.querySelector('#workout-list');
+
+const template = exercise => {
+  const html = `
+  <li class="exercise">${exercise}<li>
+  `;
+  list.innerHTML += html;
+}
+
+addExercise.addEventListener('submit', e => {
+  e.preventDefault();
+  let exercise = addExercise.add.value.trim();
+  console.log(exercise);
+  template(exercise);
+  addExercise.reset();
+});
