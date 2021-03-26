@@ -127,6 +127,12 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 /* My Workout Section Styling */
 
+#workout ul {
+  list-style-type: none;
+}
+
+
+
 /* Modal Box Stylings */
 
 /* Contact Form Styling */
