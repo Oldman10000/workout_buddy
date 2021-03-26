@@ -54,7 +54,7 @@ const template = exercise => {
     <li class="exercise">
       <span>${exercise}</span>
       <i class="fas fa-trash-alt delete"></i>
-    <li>
+    </li>
   `;
   list.innerHTML += html;
 }
@@ -81,12 +81,12 @@ $(".workout-add").click(function () {
 
 // delete items from workout list and from myExercises array
 
-$(".exercise").click(function (e) {
-  let x = $(this).text().trim();
-  console.log(x);
+$("#workout-list").click(function (e) {
   if(e.target.classList.contains('delete')){
     e.target.parentElement.remove();
   };
+  let x = $(this).text().trim();
+  console.log(x);
   myExercises.forEach(exercise => {
     if(exercise == x){
       myExercises.remove(exercise);
