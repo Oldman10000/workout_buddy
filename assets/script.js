@@ -71,17 +71,18 @@ addExercise.addEventListener('submit', e => {
 // add existing exercises to workout list
 
 $(".workout-add").click(function () {
-  let text = $(this).parent().prev().text();
-  console.log(text);
+  let exercise = $(this).parent().prev().text();
+  console.log(exercise);
   const html = `
     <li class="exercise">
-      <span>${text}</span>
+      <span>${exercise}</span>
       <i class="fas fa-trash-alt delete"></i>
     </li>
   `;
   list.innerHTML += html;
   $(this).parent().prev().toggleClass('active');
   $(this).parent().slideToggle('slow');
+  myExercises.push(exercise);
 })
 
 // delete items from workout list and from myExercises array
