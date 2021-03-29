@@ -116,15 +116,16 @@ startWorkout = function (sec1, sec2) {
   // timer for the exercise
   let timer = function () {
     let x = exercises[0];
+    let sec = sec1
     let timer1 = setInterval(function () {
       $(".modal-content").html(`
           <p class="modal-heading">${x}</p>
           <div class="timer">
-            <p class="timerdisplay">${sec1}</p>
+            <p class="timerdisplay">${sec}</p>
           </div>
         `);
-      sec1--;
-      if (sec1 < 0) {
+      sec--;
+      if (sec < 0) {
         clearInterval(timer1);
         removeFirstExercise();
         if (exercises.length == 0) {
@@ -140,15 +141,16 @@ startWorkout = function (sec1, sec2) {
 
   // timer for rest period between exercises
   let restTimer = function () {
+    let sec = sec2;
     let timer2 = setInterval(function () {
       $(".modal-content").html(`
           <p class="modal-heading">Rest!</p>
           <div class="timer">
-            <p class="timerdisplay">${sec2}</p>
+            <p class="timerdisplay">${sec}</p>
           </div>
         `);
-      sec2--;
-      if (sec2 < 0) {
+      sec--;
+      if (sec < 0) {
         clearInterval(timer2);
         timer(sec1);
       }
@@ -191,7 +193,7 @@ $("#start-workout").click(function () {
     $("#exercise-modal").hide();
   })
   $("#easy").click(function () {
-    startWorkout(30, 60);
+    startWorkout(5, 5);
   })
   $("#medium").click(function () {
     startWorkout(45, 45);
