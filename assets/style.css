@@ -204,6 +204,20 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
+#close-modal {
+  position: absolute;
+  top: 5px;
+  right: 7px;
+  color: black;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#close-modal:hover, #close-modal:focus {
+  cursor: pointer;
+  color: red;
+}
+
 .buttons-div {
   height: 50%;
   position: relative;
