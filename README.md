@@ -31,9 +31,9 @@ I am a fitness 'veteran' and I want:
 4. To challenge myself
 5. For my workout to be saved on the app next time I visit
 
-## Scope
+### Scope
 
-### Strategy Trade-off Table
+#### Strategy Trade-off Table
 
 Below I have created a trade-off table that addresses the user stories above.
 
@@ -56,7 +56,7 @@ I will only be adding a relatively small amount of individual exercises baked in
 
 It would also be useful for a user to be able to create an account and log in. This would then allow them to store their workouts and come back to them. Users could even create their own workout routines and save them on a public server for other users to access. Of course this would involve a great deal of backend development, which is currently outside my skillset. However, a solution for this using JavaScript would be for the workout data to be stored locally to the user's browser, so if they refresh the page or return to it the next day, the workout will still be present.
 
-## Structure
+### Structure
 
 I plan for the website to be structured on one single page. The layout will be simple and responsive as it will be useful for a user to be able to use this on all device types.
 
@@ -64,7 +64,7 @@ The structure will be as simple as possible so as not to overwhelm the user. I w
 
 The website will conform to web standards in terms of interactive design. Links will be clearly highlighted and signposted.
 
-## Skeleton
+### Skeleton
 
 The below wireframe gives me an idea of the layout before starting to write any code. It is subject to change if I decide there are better ways of structuring some aspects once the site has been created but I plan to stick to the below as closely as possible.
 
@@ -72,6 +72,17 @@ One element I plan to implement which is slightly different to web standards is 
 
 [Wireframe for mobile, tablet, and desktop](documentation/wireframe.pdf)
 
-## Surface
+### Surface
 
+## Credits
+
+### Images
+
+* Image of woman exercising taken from [unsplash.com](https://unsplash.com/photos/lrQPTQs7nQQ). Photographer Credit - Jonathan Borba
+
+### Text
+
+* Exercise instructions text taken and adapted from several websites as needed
+  - [healthline.com](https://www.healthline.com/)
+  - [spotebi.com](https://www.spotebi.com/)
 
