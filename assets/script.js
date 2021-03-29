@@ -189,14 +189,21 @@ startEasyWorkout = function () {
   }
 }
 
-$("#easy").click(function () {
-  startEasyWorkout();
-})
-
 // Open exercise modal
 
 $("#start-workout").click(function () {
+  $(".modal-content").html(`
+    <i class="fas fa-times" id="close-modal"></i>
+    <div class="buttons-div">
+      <button class="btn btn-success modal-button" id="easy">Take it easy</button>
+      <button class="btn btn-success modal-button" id="medium">Make me sweat</button>
+      <button class="btn btn-success modal-button" id="hard">Hardcore</button>
+    </div>
+  `)
   $("#exercise-modal").show();
+  $("#easy").click(function () {
+    startEasyWorkout();
+  })
 })
 
 $("#close-modal").click(function () {
