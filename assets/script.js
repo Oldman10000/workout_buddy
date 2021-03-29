@@ -136,3 +136,13 @@ getExercises();
 // }
 
 // timer();
+
+// Open exercise modal
+
+$("#start-workout").click(function() {
+  $("#exercise-modal").css("display", "block");
+})
+
+$("#close-modal").click(function () {
+  $("#exercise-modal").css("display", "none");
+})
