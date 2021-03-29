@@ -183,6 +183,9 @@ startEasyWorkout = function () {
         <i class="fab fa-instagram"></i>
       </div>
     `);
+    $("#close-modal").click(function () {
+      $("#exercise-modal").hide();
+    })
   }
 }
 
