@@ -167,7 +167,7 @@ startEasyWorkout = function () {
         clearInterval(timer2);
         timer(5);
       }
-    })
+    }, 1000)
   }
 
   let congratulations = function () {
@@ -201,11 +201,10 @@ $("#start-workout").click(function () {
     </div>
   `)
   $("#exercise-modal").show();
+  $("#close-modal").click(function () {
+    $("#exercise-modal").hide();
+  })
   $("#easy").click(function () {
     startEasyWorkout();
   })
-})
-
-$("#close-modal").click(function () {
-  $("#exercise-modal").hide();
 })
