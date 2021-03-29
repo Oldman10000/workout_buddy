@@ -53,7 +53,7 @@ let arrLength = 0;
 const template = exercise => {
   const html = `
     <li class="exercise">
-      <span>${exercise}</span>
+      <span class="activity">${exercise}</span>
       <i class="fas fa-trash-alt delete"></i>
     </li>
   `;
@@ -77,7 +77,7 @@ $(".workout-add").click(function () {
   console.log(exercise);
   const html = `
     <li class="exercise">
-      <span>${exercise}</span>
+      <span class="activity">${exercise}</span>
       <i class="fas fa-trash-alt delete"></i>
     </li>
   `;
@@ -91,10 +91,10 @@ $(".workout-add").click(function () {
 // delete items from workout list and from myExercises array
 
 $("#workout-list").click(function (e) {
-  if(e.target.classList.contains('delete')){
+  if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   };
-  myExercises.splice(-1,1);
+  myExercises.splice(-1, 1);
 });
 
 // action upon submit contact form
@@ -107,3 +107,17 @@ $("#contact-form").submit(function (e) {
   }, 6000);
   $("#contact-form")[0].reset();
 })
+
+// create function for final workout list to be used for stopwatch function
+
+let exercises = [];
+
+function getExercises() {
+  let allExercises = document.querySelectorAll(".activity");
+  allExercises.forEach(exercise => {
+    exercises.push(exercise.innerText);
+  })
+  console.log(exercises);
+}
+
+getExercises();
