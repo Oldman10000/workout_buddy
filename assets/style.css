@@ -204,6 +204,13 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
+.buttons-div {
+  height: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .modal-button{
   width: 50%;
   margin: 10px auto;
@@ -231,6 +238,10 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   top: 50%;
   transform: translateY(-50%);
   font-size: 5em;
+}
+
+.complete-img {
+  margin: 15px;
 }
 
 /* Contact Form Styling */
