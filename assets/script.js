@@ -120,29 +120,82 @@ function getExercises() {
   console.log(exercises);
 }
 
-getExercises();
+// easy workout funciton
 
-// timer function
+startEasyWorkout = function () {
 
-// function timer(){
-//   var sec = 15;
-//   var timer = setInterval(function(){
-//     document.querySelector('.timerdisplay').innerHTML = sec;
-//     sec--;
-//     if(sec < 0) {
-//       clearInterval(timer);
-//     }
-//   }, 1000);
-// }
+  getExercises();
 
-// timer();
+  removeFirstExercise = function () {
+    exercises.shift();
+  }
+
+  timer = function (sec) {
+    let x = exercises[0];
+    let timer1 = setInterval(function () {
+      $(".modal-content").html(`
+          <p class="modal-heading">${x}</p>
+          <div class="timer">
+            <p class="timerdisplay">${sec}</p>
+          </div>
+        `);
+      sec--;
+      if (sec < 0) {
+        clearInterval(timer1);
+        removeFirstExercise();
+        if (exercises.length == 0) {
+          congratulations();
+        } else {
+          restTimer(5);
+        }
+      }
+    }, 1000);
+  }
+
+  timer(5);
+
+  let restTimer = function (sec) {
+    let timer2 = setInterval(function () {
+      $(".modal-content").html(`
+          <p class="modal-heading">Rest!</p>
+          <div class="timer">
+            <p class="timerdisplay">${sec}</p>
+          </div>
+        `);
+      sec--;
+      if (sec < 0) {
+        clearInterval(timer2);
+        timer(5);
+      }
+    })
+  }
+
+  let congratulations = function () {
+    $(".modal-content").html(`
+      <i class="fas fa-times" id="close-modal"></i>
+      <h3>Congratulations!</h3>
+      <p>Workout Complete</p>
+      <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
+      <p>Share to social media</p>
+      <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+      </div>
+    `);
+  }
+}
+
+$("#easy").click(function () {
+  startEasyWorkout();
+})
 
 // Open exercise modal
 
-$("#start-workout").click(function() {
-  $("#exercise-modal").css("display", "block");
+$("#start-workout").click(function () {
+  $("#exercise-modal").show();
 })
 
 $("#close-modal").click(function () {
-  $("#exercise-modal").css("display", "none");
+  $("#exercise-modal").hide();
 })
