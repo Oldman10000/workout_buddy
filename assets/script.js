@@ -46,10 +46,6 @@ $("#toTop").click(function () {
 const addExercise = document.querySelector('.exercise-form');
 const list = document.querySelector('#workout-list');
 
-// array for exercises added to my workout section by user
-let myExercises = [];
-let arrLength = 0;
-
 const template = exercise => {
   const html = `
     <li class="exercise">
@@ -64,8 +60,6 @@ addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
   console.log(exercise);
-  arrLength = arrLength += 1;
-  myExercises.push(arrLength);
   template(exercise);
   addExercise.reset();
 });
@@ -84,8 +78,6 @@ $(".workout-add").click(function () {
   list.innerHTML += html;
   $(this).parent().prev().toggleClass('active');
   $(this).parent().slideToggle('slow');
-  arrLength = arrLength += 1;
-  myExercises.push(arrLength);
 })
 
 // delete items from workout list and from myExercises array
@@ -94,7 +86,6 @@ $("#workout-list").click(function (e) {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   };
-  myExercises.splice(-1, 1);
 });
 
 // action upon submit contact form
@@ -120,56 +111,59 @@ function getExercises() {
   console.log(exercises);
 }
 
-// easy workout funciton
+// general workout timer function
+// this loops through each item in the exercises array until workout is complete
 
-startEasyWorkout = function () {
-
-  getExercises();
-
+startWorkout = function (sec1, sec2) {
+  // gets array of exercises
+  getExercises(); 
+  // removes first exercise from array
   removeFirstExercise = function () {
     exercises.shift();
   }
-
-  timer = function (sec) {
+  // timer for the exercise
+  let timer = function () {
     let x = exercises[0];
     let timer1 = setInterval(function () {
       $(".modal-content").html(`
           <p class="modal-heading">${x}</p>
           <div class="timer">
-            <p class="timerdisplay">${sec}</p>
+            <p class="timerdisplay">${sec1}</p>
           </div>
         `);
-      sec--;
-      if (sec < 0) {
+      sec1--;
+      if (sec1 < 0) {
         clearInterval(timer1);
         removeFirstExercise();
         if (exercises.length == 0) {
           congratulations();
         } else {
-          restTimer(5);
+          restTimer(sec2);
         }
       }
     }, 1000);
   }
 
-  timer(5);
+  timer(sec1);
 
-  let restTimer = function (sec) {
+  // timer for rest period between exercises
+  let restTimer = function () {
     let timer2 = setInterval(function () {
       $(".modal-content").html(`
           <p class="modal-heading">Rest!</p>
           <div class="timer">
-            <p class="timerdisplay">${sec}</p>
+            <p class="timerdisplay">${sec2}</p>
           </div>
         `);
-      sec--;
-      if (sec < 0) {
+      sec2--;
+      if (sec2 < 0) {
         clearInterval(timer2);
-        timer(5);
+        timer(sec1);
       }
     }, 1000)
   }
 
+  // congratulations message when workout is complete
   let congratulations = function () {
     $(".modal-content").html(`
       <i class="fas fa-times" id="close-modal"></i>
@@ -189,7 +183,7 @@ startEasyWorkout = function () {
   }
 }
 
-// Open exercise modal
+// Open exercise modal to start workout
 
 $("#start-workout").click(function () {
   $(".modal-content").html(`
@@ -205,6 +199,12 @@ $("#start-workout").click(function () {
     $("#exercise-modal").hide();
   })
   $("#easy").click(function () {
-    startEasyWorkout();
+    startWorkout(30, 60);
+  })
+  $("#medium").click(function () {
+    startWorkout(45, 45);
+  })
+  $("#hard").click(function () {
+    startWorkout(60, 30);
   })
 })
