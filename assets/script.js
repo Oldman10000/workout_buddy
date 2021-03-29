@@ -121,3 +121,18 @@ function getExercises() {
 }
 
 getExercises();
+
+// timer function
+
+// function timer(){
+//   var sec = 15;
+//   var timer = setInterval(function(){
+//     document.querySelector('.timerdisplay').innerHTML = sec;
+//     sec--;
+//     if(sec < 0) {
+//       clearInterval(timer);
+//     }
+//   }, 1000);
+// }
+
+// timer();
