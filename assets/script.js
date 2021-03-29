@@ -1,10 +1,5 @@
-// toggles display of workout instructions
-
-$(".toggle-trigger").click(function () {
-  $(this).toggleClass('active').next().slideToggle('slow');
-});
-
-// navbar toggle
+// navbar toggle - code copied and adapted from W3 schools tutorial
+// https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
 
 function toggleNav() {
   let x = document.querySelector('#myLinks');
@@ -17,6 +12,11 @@ function toggleNav() {
 
 $("#hamburger, .section-link").click(function () {
   toggleNav();
+});
+
+// toggles display of workout instructions
+$(".toggle-trigger").click(function () {
+  $(this).toggleClass('active').next().slideToggle('slow');
 });
 
 // Return to top button script copied and adapted from W3 schools tutorial
@@ -46,6 +46,7 @@ $("#toTop").click(function () {
 const addExercise = document.querySelector('.exercise-form');
 const list = document.querySelector('#workout-list');
 
+// creates template literal for exercises added to list
 const template = exercise => {
   const html = `
     <li class="exercise">
@@ -56,6 +57,8 @@ const template = exercise => {
   list.innerHTML += html;
 }
 
+// adds content of box to workout list upon submit
+// values are trimmed to show only text content to remove any whitespace
 addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
@@ -64,8 +67,7 @@ addExercise.addEventListener('submit', e => {
   addExercise.reset();
 });
 
-// add existing exercises to workout list
-
+// adds existing exercises to workout list
 $(".workout-add").click(function () {
   let exercise = $(this).parent().prev().text();
   console.log(exercise);
@@ -80,29 +82,19 @@ $(".workout-add").click(function () {
   $(this).parent().slideToggle('slow');
 })
 
-// delete items from workout list and from myExercises array
-
+// deletes items from workout list
 $("#workout-list").click(function (e) {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   };
 });
 
-// action upon submit contact form
-
-$("#contact-form").submit(function (e) {
-  e.preventDefault();
-  $(".form-feedback").css("display", "block");
-  setTimeout(function () {
-    $(".form-feedback").css("display", "none");
-  }, 6000);
-  $("#contact-form")[0].reset();
-})
-
 // create function for final workout list to be used for stopwatch function
 
+// empty array of exercises
 let exercises = [];
 
+// pushes each item in myWorkout list to the exercises array
 function getExercises() {
   let allExercises = document.querySelectorAll(".activity");
   allExercises.forEach(exercise => {
@@ -112,8 +104,8 @@ function getExercises() {
 }
 
 // general workout timer function
-// this loops through each item in the exercises array until workout is complete
 
+// this loops through each item in the exercises array until workout is complete
 startWorkout = function (sec1, sec2) {
   // gets array of exercises
   getExercises(); 
@@ -207,4 +199,14 @@ $("#start-workout").click(function () {
   $("#hard").click(function () {
     startWorkout(60, 30);
   })
+})
+
+// action upon submit contact form
+$("#contact-form").submit(function (e) {
+  e.preventDefault();
+  $(".form-feedback").show();
+  setTimeout(function () {
+    $(".form-feedback").hide();
+  }, 6000);
+  $("#contact-form")[0].reset();
 })
