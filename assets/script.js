@@ -129,6 +129,7 @@ startWorkout = function (sec1, sec2) {
         clearInterval(timer1);
         removeFirstExercise();
         if (exercises.length == 0) {
+          $("#cheer")[0].play();
           congratulations();
         } else {
           $("#ding")[0].play();
