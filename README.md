@@ -136,6 +136,11 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 * Image of woman exercising taken from [unsplash.com](https://unsplash.com/photos/lrQPTQs7nQQ). Photographer Credit - Jonathan Borba
 * Champagne bottle SVG in congratulations section from [pixabay.com](https://pixabay.com/vectors/bottle-champagne-1936658/). Image by [succo](https://pixabay.com/users/succo-96729/).
 
+### Audio
+
+* 'Ding' sound effect played at the end of each exercise taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/ding-sound-effect/).
+* 'Cheer' sound effect played at the end of the workout taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/big-crowd-cheering/).
+
 ### Text
 
 * Exercise instructions text taken and adapted from several websites as needed
