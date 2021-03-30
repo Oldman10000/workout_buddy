@@ -131,6 +131,7 @@ startWorkout = function (sec1, sec2) {
         if (exercises.length == 0) {
           congratulations();
         } else {
+          $("#ding")[0].play();
           restTimer(sec2);
         }
       }
@@ -152,6 +153,7 @@ startWorkout = function (sec1, sec2) {
       sec--;
       if (sec < 0) {
         clearInterval(timer2);
+        $("#ding")[0].play();
         timer(sec1);
       }
     }, 1000)
