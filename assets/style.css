@@ -1,16 +1,21 @@
+main {
+  background: #f5f5f5;
+}
+
 /* Hero Images */
 
 .hero {
   background-size: 100vw;
-  height: 75vh;
+  height: 40vh;
   background-repeat: no-repeat;
-  background-color: #fff;
+  background-color: #f5f5f5;
   background-position: center;
   background-attachment: fixed;
 }
 
 .hero-1{
   background-image: url("../assets/images/hero1.jpg");
+  height: 60vh;
 }
 
 .hero-2{
@@ -32,8 +37,8 @@
 .topnav {
   overflow: hidden;
   position: relative;
-  border-bottom: solid 2px green;
-  background: rgba(0,0,0,0)
+  border-bottom: solid 2px #d53910;
+  background: #f5f5f5;
 }
 
 .topnav #myLinks {
@@ -59,7 +64,7 @@
 }
 
 #hamburger:hover {
-  color: green;
+  color: #d53910;
   cursor: pointer;
 }
 
@@ -73,14 +78,13 @@
 }
 
 .section-link:hover {
-  color: green;
+  color: #d53910;
   text-decoration: inherit;
 }
 
 /* Instructions styling */
 
 #instructions {
-  background: white;
   width: 100%;
   padding: 40px 20px;
 }
@@ -176,7 +180,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 #workout-list i:hover{
   cursor: pointer;
-  color: red;
+  color: #d53910;
 }
 
 #exercise-add {
@@ -237,7 +241,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 #close-modal:hover, #close-modal:focus {
   cursor: pointer;
-  color: red;
+  color: #d53910;
 }
 
 .buttons-div {
@@ -263,7 +267,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .timer {
   height: 100%;
-  background-color: red;
+  background-color: #d53910;
   margin: 25px;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
@@ -308,7 +312,7 @@ input[type=submit] {
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background: red;
+  background: #d53910;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
@@ -326,7 +330,7 @@ input[type=submit] {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: red;
+  background-color: #d53910;
   border-radius: 100%;
   cursor: pointer;
   height: 30px;
@@ -335,7 +339,7 @@ input[type=submit] {
 }
 
 #toTop {
-  color: whitesmoke;
+  color: #f5f5f5;
   text-align: center;
   padding-top: 2px;
 }
