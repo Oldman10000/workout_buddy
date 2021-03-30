@@ -133,7 +133,10 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 
 ### Images
 
-* Image of woman exercising taken from [unsplash.com](https://unsplash.com/photos/lrQPTQs7nQQ). Photographer Credit - Jonathan Borba
+* Image of woman performing sit ups taken from [unsplash.com](https://unsplash.com/photos/lrQPTQs7nQQ). Photographer Credit - [Jonathan Borba](https://unsplash.com/@jonathanborba).
+* Image of feet walking up concrete steps taken from [unspash.com](https://unsplash.com/photos/PHIgYUGQPvU). Photographer Credit - [Bruno Nascimento](https://unsplash.com/@bruno_nascimento).
+* Image of women on yoga mats taken from [unsplash.com](https://unsplash.com/photos/gJtDg6WfMlQ). Photorapher Credit - [Bruce Mars](https://unsplash.com/@brucemars).
+* Image of man performing pushups taken from [unsplash.com](https://unsplash.com/photos/zbF-lW3k1QU). Photographer Credit - [Gabe Pierce](https://unsplash.com/@gaberce).
 * Champagne bottle SVG in congratulations section from [pixabay.com](https://pixabay.com/vectors/bottle-champagne-1936658/). Image by [succo](https://pixabay.com/users/succo-96729/).
 
 ### Audio
