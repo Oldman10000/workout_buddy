@@ -1,10 +1,28 @@
-body {
-  background-image: url("../assets/images/background-image.jpg");
+/* Hero Images */
+
+.hero {
   background-size: 100vw;
+  height: 75vh;
   background-repeat: no-repeat;
   background-color: #fff;
   background-position: center;
   background-attachment: fixed;
+}
+
+.hero-1{
+  background-image: url("../assets/images/hero1.jpg");
+}
+
+.hero-2{
+  background-image: url("../assets/images/hero2.jpg");
+}
+
+.hero-3{
+  background-image: url("../assets/images/hero3.jpg");
+}
+
+.hero-4{
+  background-image: url("../assets/images/hero4.jpg");
 }
 
 /* Header Styling */
@@ -15,6 +33,7 @@ body {
   overflow: hidden;
   position: relative;
   border-bottom: solid 2px green;
+  background: rgba(0,0,0,0)
 }
 
 .topnav #myLinks {
@@ -60,10 +79,13 @@ body {
 
 /* Instructions styling */
 
+#instructions {
+  background: white;
+  width: 100%;
+  padding: 40px 20px;
+}
+
 .description {
-  background: rgba(255, 245, 245, 0.9);
-  margin: 20px 40px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
 
