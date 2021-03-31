@@ -121,6 +121,7 @@ startWorkout = function (sec1, sec2) {
     let sec = sec1
     let timer1 = setInterval(function () {
       $(".modal-content").html(`
+          <i class="fas fa-times" id="close-modal"></i>
           <p class="modal-heading">${x}</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
@@ -128,7 +129,11 @@ startWorkout = function (sec1, sec2) {
           <div class="progress"></div>
         `);
       sec--;
-      let progWidth = ((sec+1) * width / sec1);
+      $("#close-modal").click(function () {
+        $("#exercise-modal").hide();
+        clearInterval(timer1);
+      })
+      let progWidth = ((sec + 1) * width / sec1);
       $(".progress").css({
         width: progWidth + 'px'
       });
@@ -171,6 +176,7 @@ startWorkout = function (sec1, sec2) {
     let x = exercises[0];
     let timer2 = setInterval(function () {
       $(".modal-content").html(`
+          <i class="fas fa-times" id="close-modal"></i>
           <p class="modal-heading">Rest!<br>Next Exercise: ${x}</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
@@ -178,7 +184,11 @@ startWorkout = function (sec1, sec2) {
           <div class="progress"></div>
         `);
       sec--;
-      let progWidth = ((sec+1) * width / sec2);
+      $("#close-modal").click(function () {
+        $("#exercise-modal").hide();
+        clearInterval(timer2);
+      })
+      let progWidth = ((sec + 1) * width / sec2);
       $(".progress").css({
         width: progWidth + 'px'
       });
@@ -215,6 +225,7 @@ startWorkout = function (sec1, sec2) {
     let x = exercises[0];
     let timer3 = setInterval(function () {
       $(".modal-content").html(`
+          <i class="fas fa-times" id="close-modal"></i>
           <p class="modal-heading">Get Ready...</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
@@ -222,7 +233,11 @@ startWorkout = function (sec1, sec2) {
           <div class="progress"></div>
         `);
       sec--;
-      let progWidth = ((sec+1) * width / sec3);
+      $("#close-modal").click(function () {
+        $("#exercise-modal").hide();
+        clearInterval(timer3);
+      })
+      let progWidth = ((sec + 1) * width / sec3);
       $(".progress").css({
         width: progWidth + 'px'
       });
