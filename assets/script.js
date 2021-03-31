@@ -140,6 +140,9 @@ startWorkout = function (sec1, sec2) {
           background: '#d53910'
         });
       }
+      if (sec == 4 || sec == 9) {
+        $("#ding")[0].play();
+      }
       if (sec < 0) {
         clearInterval(timer1);
         removeFirstExercise();
@@ -147,7 +150,7 @@ startWorkout = function (sec1, sec2) {
           $("#cheer")[0].play();
           congratulations();
         } else {
-          $("#ding")[0].play();
+          $("#buzz")[0].play();
           restTimer(sec2);
         }
       }
@@ -181,9 +184,12 @@ startWorkout = function (sec1, sec2) {
           background: '#d53910'
         });
       }
+      if (sec == 4 || sec == 9) {
+        $("#ding")[0].play();
+      }
       if (sec < 0) {
         clearInterval(timer2);
-        $("#ding")[0].play();
+        $("#buzz")[0].play();
         timer(sec1);
       }
     }, 1000)
