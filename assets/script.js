@@ -242,15 +242,7 @@ startWorkout = function (sec1, sec2) {
           background: '#d53910'
         });
       }
-      if (sec < 10) {
-        $(".timer").css({
-          background: '#d53910'
-        });
-        $(".progress").css({
-          background: '#d53910'
-        });
-      }
-      if (sec == 9 || sec == 19) {
+      if (sec == 4 || sec == 9) {
         $("#ding")[0].play();
       }
       if (sec < 0) {
