@@ -124,14 +124,22 @@ startWorkout = function (sec1, sec2) {
           <p class="modal-heading">${x}</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
-            <div class="progress"></div>
           </div>
+          <div class="progress"></div>
         `);
       sec--;
       let progWidth = ((sec+1) * width / sec1);
       $(".progress").css({
         width: progWidth + 'px'
       });
+      if (sec < 10) {
+        $(".timer").css({
+          background: '#d53910'
+        });
+        $(".progress").css({
+          background: '#d53910'
+        });
+      }
       if (sec < 0) {
         clearInterval(timer1);
         removeFirstExercise();
@@ -151,9 +159,10 @@ startWorkout = function (sec1, sec2) {
   // timer for rest period between exercises
   let restTimer = function () {
     let sec = sec2;
+    let x = exercises[0];
     let timer2 = setInterval(function () {
       $(".modal-content").html(`
-          <p class="modal-heading">Rest!</p>
+          <p class="modal-heading">Rest!<br>Next Exercise: ${x}</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
           </div>
@@ -164,6 +173,14 @@ startWorkout = function (sec1, sec2) {
       $(".progress").css({
         width: progWidth + 'px'
       });
+      if (sec < 10) {
+        $(".timer").css({
+          background: '#d53910'
+        });
+        $(".progress").css({
+          background: '#d53910'
+        });
+      }
       if (sec < 0) {
         clearInterval(timer2);
         $("#ding")[0].play();
