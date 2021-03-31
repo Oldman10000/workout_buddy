@@ -33,11 +33,13 @@ window.onscroll = () => {
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-$("#toTop").click(function () {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-})
+// smooth function copied and adapted from tutorialdeep.com
+// https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
+
+$('#toTop').click(function(){
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+  return false;
+});
 
 // adding custom items to workout list
 // code copied and adapted from Udemy Course
