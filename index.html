@@ -37,7 +37,7 @@
   <main>
     <section id="instructions">
       <div class="container text-center">
-        <h2>How it works</h2>
+        <h2 class="section-head">How it works</h2>
         <p>
           Workout Buddy makes it a cinch to exercise, wherever you are! Create your custom workout in seconds and get
           started straightaway. Follow our simple instructions below to get started!
@@ -80,7 +80,7 @@
 
     <section id="exercises">
       <div class="exercises-main container text-center">
-        <h2>Exercises</h2>
+        <h2 class="section-head">Exercises</h2>
         <div class="row">
           <div class="exercises-list col-12 col-md-6 col-lg-3">
             <h3>Warm Up</h3>
@@ -297,51 +297,60 @@
 
     <div class="hero hero-3"></div>
 
-    <section id="workout" class="container text-center">
-      <h2>My Workout</h2>
-      <div class="row">
-        <div class="col-12 col-lg-4">
-          <h3>Exercises</h3>
-          <ul id="workout-list">
-            <li class="exercise">
-              <span class="activity">High Knees</span>
-              <i class="fas fa-trash-alt delete"></i>
-            </li>
-          </ul>
-          <form class="exercise-form">
-            <label aria-label="add exercise"></label>
-            <input id="exercise-add" type="text" name="add" placeholder="Add your own exercise here">
-          </form>
-        </div>
-        <div class="col-12 col-lg-8">
-          <p>Select a button below to start your workout. Each difficulty level increases the amout of time you will
-            perform each exercise</p>
-          <ul>
-            <li>Take it easy: 30s per exercise with 60s of rest inbetween</li>
-            <li>Make me sweat: 45s per exercise with 45s of rest inbetween</li>
-            <li>Hardcore: 60s per exercise with 30s of rest inbetween</li>
-          </ul>
-          <button class="btn btn-success" id="start-workout">Let's Go!!</button>
-        </div>
-      </div>
-      <div class="modal-area" id="exercise-modal">
-        <div class="modal-content">
-          <i class="fas fa-times" id="close-modal"></i>
-          <!-- Select difficulty mode from here -->
-          <div class="buttons-div">
-            <button class="btn btn-success modal-button" id="easy">Take it easy</button>
-            <button class="btn btn-success modal-button" id="medium">Make me sweat</button>
-            <button class="btn btn-success modal-button" id="hard">Hardcore</button>
+    <section id="workout">
+      <div class="workout-main container text-center">
+        <h2 class="section-head">My Workout</h2>
+        <div class="row">
+          <div class="workout-exercises col-12 col-lg-4">
+            <h3>My Exercises</h3>
+            <ul id="workout-list">
+              <li class="exercise">
+                <span class="activity">High Knees</span>
+                <i class="fas fa-trash-alt delete"></i>
+              </li>
+            </ul>
+            <form class="exercise-form">
+              <label aria-label="add exercise"></label>
+              <input id="exercise-add" type="text" name="add" placeholder="Add your own exercise here">
+            </form>
           </div>
+          <div class="inst col-12 col-lg-8">
+            <h3>Instructions</h3>
+            <p>Hit the button below when you are ready to start your workout. Each difficulty level increases the amount of time you
+              will
+              perform each exercise, and reduces the rest time inbetween each.</p>
+            <ul>
+              <li>Take it easy: 30s per exercise with 60s of rest</li>
+              <li>Make me sweat: 45s per exercise with 45s of rest</li>
+              <li>Hardcore: 60s per exercise with 30s of rest</li>
+            </ul>
+            <button class="btn btn-success" id="start-workout">Let's Go!!</button>
+          </div>
+          <div class="next">
+            <a href="#contact">
+              <p title="next-section"><i class="fas fa-arrow-down"></i></p>
+            </a>
+          </div>
+        </div>
 
-          <!-- During Workout -->
-          <!-- <p class="modal-heading">Current Exercise Time Remaining</p>
+        <div class="modal-area" id="exercise-modal">
+          <div class="modal-content">
+            <i class="fas fa-times" id="close-modal"></i>
+            <!-- Select difficulty mode from here -->
+            <div class="buttons-div">
+              <button class="btn btn-success modal-button" id="easy">Take it easy</button>
+              <button class="btn btn-success modal-button" id="medium">Make me sweat</button>
+              <button class="btn btn-success modal-button" id="hard">Hardcore</button>
+            </div>
+
+            <!-- During Workout -->
+            <!-- <p class="modal-heading">Current Exercise Time Remaining</p>
           <div class="timer">
             <p class="timerdisplay">60</p>
           </div> -->
 
-          <!-- After Workout Complete -->
-          <!-- <h3>Congratulations!</h3>
+            <!-- After Workout Complete -->
+            <!-- <h3>Congratulations!</h3>
           <p>Workout Complete</p>
           <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
           <p>Share to social media</p>
@@ -350,6 +359,7 @@
             <i class="fab fa-twitter"></i>
             <i class="fab fa-instagram"></i>
           </div> -->
+          </div>
         </div>
       </div>
     </section>
