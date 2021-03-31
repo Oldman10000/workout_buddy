@@ -165,8 +165,6 @@ startWorkout = function (sec1, sec2) {
     }, 1000);
   }
 
-  timer(sec1);
-
   // timer for rest period between exercises
   let restTimer = function () {
     let sec = sec2;
@@ -211,8 +209,62 @@ startWorkout = function (sec1, sec2) {
     }, 1000)
   }
 
+  let countDown = function () {
+    let sec = 15;
+    let sec3 = 15;
+    let x = exercises[0];
+    let timer3 = setInterval(function () {
+      $(".modal-content").html(`
+          <p class="modal-heading">Get Ready...</p>
+          <div class="timer">
+            <p class="timerdisplay">${sec}</p>
+          </div>
+          <div class="progress"></div>
+        `);
+      sec--;
+      let progWidth = ((sec+1) * width / sec3);
+      $(".progress").css({
+        width: progWidth + 'px'
+      });
+      if (sec < 10) {
+        $(".timer").css({
+          background: '#ffa630'
+        });
+        $(".progress").css({
+          background: '#ffa630'
+        });
+      }
+      if (sec < 5) {
+        $(".timer").css({
+          background: '#d53910'
+        });
+        $(".progress").css({
+          background: '#d53910'
+        });
+      }
+      if (sec < 10) {
+        $(".timer").css({
+          background: '#d53910'
+        });
+        $(".progress").css({
+          background: '#d53910'
+        });
+      }
+      if (sec == 9 || sec == 19) {
+        $("#ding")[0].play();
+      }
+      if (sec < 0) {
+        clearInterval(timer3);
+        $("#buzz")[0].play();
+        timer(sec1);
+      }
+    }, 1000);
+  }
+
+  countDown();
+
   // congratulations message when workout is complete
-  let congratulations = function () {
+  let congratulations = () => {
     $(".modal-content").html(`
       <i class="fas fa-times" id="close-modal"></i>
       <h3>Congratulations!</h3>
@@ -229,7 +281,7 @@ startWorkout = function (sec1, sec2) {
     `);
     $("#close-modal").click(function () {
       $("#exercise-modal").hide();
-    })
+    });
   }
 }
 
