@@ -156,6 +156,14 @@ ul {
   border: solid 1px #d53910;
 }
 
+.amber {
+  border: solid 1px #FFA630;
+}
+
+.green {
+  border: solid 1px #33C173;
+}
+
 .content {
   display: none;
 }

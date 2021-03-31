@@ -17,6 +17,7 @@ $("#hamburger, .section-link").click(function () {
 // toggles display of workout instructions
 $(".toggle-trigger").click(function () {
   $(this).toggleClass('active').next().slideToggle('slow');
+  $(this).parent().toggleClass('amber');
 });
 
 // Return to top button script copied and adapted from W3 schools tutorial
@@ -36,7 +37,7 @@ window.onscroll = () => {
 // smooth function copied and adapted from tutorialdeep.com
 // https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
 
-$('#toTop').click(function(){
+$('#toTop').click(function () {
   $("html, body").animate({ scrollTop: 0 }, 1000);
   return false;
 });
@@ -81,6 +82,7 @@ $(".workout-add").click(function () {
   `;
   list.innerHTML += html;
   $(this).parent().prev().toggleClass('active');
+  $(this).parent().parent().toggleClass('green');
   $(this).parent().slideToggle('slow');
 })
 
@@ -93,7 +95,7 @@ $("#workout-list").click(function (e) {
 
 // create function for final workout list to be used for stopwatch function
 
-// empty array of exercises
+// empty array of exercises on workout list
 let exercises = [];
 
 // pushes each item in myWorkout list to the exercises array
@@ -102,7 +104,6 @@ function getExercises() {
   allExercises.forEach(exercise => {
     exercises.push(exercise.innerText);
   })
-  console.log(exercises);
 }
 
 // general workout timer function
