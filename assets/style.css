@@ -340,26 +340,30 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 .timer {
+  position: relative;
   height: 150px;
   width: 150px;
-  background-color: #d53910;
+  background-color: #33C173;
   margin: auto;
+  border: solid 5px black;
   border-radius: 50%;
 }
 
 .timerdisplay {
   position: relative;
+  width: 90%;
   top: 50%;
+  margin: auto;
   transform: translateY(-50%);
   font-size: 5em;
 }
 
 .progress {
-  background: red;
+  background: #33C173;
   height: 10px;
+  width: 100%;
   position: absolute;
-  left: 5px;
-  bottom: 5px;
+  bottom: 20px;
 }
 
 .complete-img-div {

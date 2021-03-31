@@ -132,6 +132,14 @@ startWorkout = function (sec1, sec2) {
       $(".progress").css({
         width: progWidth + 'px'
       });
+      if (sec < 20) {
+        $(".timer").css({
+          background: '#ffa630'
+        });
+        $(".progress").css({
+          background: '#ffa630'
+        });
+      }
       if (sec < 10) {
         $(".timer").css({
           background: '#d53910'
@@ -140,7 +148,7 @@ startWorkout = function (sec1, sec2) {
           background: '#d53910'
         });
       }
-      if (sec == 4 || sec == 9) {
+      if (sec == 9 || sec == 19) {
         $("#ding")[0].play();
       }
       if (sec < 0) {
@@ -176,6 +184,14 @@ startWorkout = function (sec1, sec2) {
       $(".progress").css({
         width: progWidth + 'px'
       });
+      if (sec < 20) {
+        $(".timer").css({
+          background: '#ffa630'
+        });
+        $(".progress").css({
+          background: '#ffa630'
+        });
+      }
       if (sec < 10) {
         $(".timer").css({
           background: '#d53910'
@@ -184,7 +200,7 @@ startWorkout = function (sec1, sec2) {
           background: '#d53910'
         });
       }
-      if (sec == 4 || sec == 9) {
+      if (sec == 9 || sec == 19) {
         $("#ding")[0].play();
       }
       if (sec < 0) {
@@ -233,7 +249,7 @@ $("#start-workout").click(function () {
     $("#exercise-modal").hide();
   })
   $("#easy").click(function () {
-    startWorkout(5, 5);
+    startWorkout(25, 25);
   })
   $("#medium").click(function () {
     startWorkout(45, 45);
