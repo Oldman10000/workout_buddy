@@ -113,6 +113,8 @@ startWorkout = function (sec1, sec2) {
   removeFirstExercise = function () {
     exercises.shift();
   }
+  // gets width of container
+  let width = $(".modal-content").width();
   // timer for the exercise
   let timer = function () {
     let x = exercises[0];
@@ -122,9 +124,14 @@ startWorkout = function (sec1, sec2) {
           <p class="modal-heading">${x}</p>
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
+            <div class="progress"></div>
           </div>
         `);
       sec--;
+      let progWidth = ((sec+1) * width / sec1);
+      $(".progress").css({
+        width: progWidth + 'px'
+      });
       if (sec < 0) {
         clearInterval(timer1);
         removeFirstExercise();
@@ -150,8 +157,13 @@ startWorkout = function (sec1, sec2) {
           <div class="timer">
             <p class="timerdisplay">${sec}</p>
           </div>
+          <div class="progress"></div>
         `);
       sec--;
+      let progWidth = ((sec+1) * width / sec2);
+      $(".progress").css({
+        width: progWidth + 'px'
+      });
       if (sec < 0) {
         clearInterval(timer2);
         $("#ding")[0].play();
@@ -166,7 +178,9 @@ startWorkout = function (sec1, sec2) {
       <i class="fas fa-times" id="close-modal"></i>
       <h3>Congratulations!</h3>
       <p>Workout Complete</p>
-      <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
+      <div class="complete-img-div">
+        <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
+      </div>
       <p>Share to social media</p>
       <div class="social">
         <i class="fab fa-facebook"></i>
@@ -183,6 +197,7 @@ startWorkout = function (sec1, sec2) {
 // Open exercise modal to start workout
 
 $("#start-workout").click(function () {
+  $("#exercise-modal").show();
   $(".modal-content").html(`
     <i class="fas fa-times" id="close-modal"></i>
     <div class="buttons-div">
@@ -191,7 +206,6 @@ $("#start-workout").click(function () {
       <button class="btn btn-success modal-button" id="hard">Hardcore</button>
     </div>
   `)
-  $("#exercise-modal").show();
   $("#close-modal").click(function () {
     $("#exercise-modal").hide();
   })
