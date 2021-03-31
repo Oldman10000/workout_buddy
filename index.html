@@ -316,7 +316,8 @@
           </div>
           <div class="inst col-12 col-lg-8">
             <h3>Instructions</h3>
-            <p>Hit the button below when you are ready to start your workout. Each difficulty level increases the amount of time you
+            <p>Hit the button below when you are ready to start your workout. Each difficulty level increases the amount
+              of time you
               will
               perform each exercise, and reduces the rest time inbetween each.</p>
             <ul>
@@ -375,30 +376,33 @@
     <div class="hero hero-4"></div>
 
     <section id="contact" class="container">
-      <h2>Feedback Form</h2>
-      <p>Please feel free to offer any feedback. We would also welcome suggestions for new exercises to be
-        added permanently.</p>
-      <form id="contact-form">
-        <div class="form-field">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="Your name..." required>
+      <div class="contact-main container text-center">
+        <h2 class="section-head">Feedback Form</h2>
+        <p>Please feel free to offer any feedback. We would also welcome suggestions for new
+          exercises to be
+          added permanently.</p>
+        <form id="contact-form">
+          <div class="form-field row">
+            <label for="name" class="col-12 col-md-3">Name:</label>
+            <input class="col-12 col-md-9" type="text" id="name" name="name" placeholder="Your name..." required>
+          </div>
+          <div class="form-field row">
+            <label for="tel" class="col-12 col-md-3">Tel:</label>
+            <input class="col-12 col-md-9" type="tel" id="tel" name="tel" placeholder="Your number..." required>
+          </div>
+          <div class="form-field row">
+            <label for="email" class="col-12 col-md-3">Email:</label>
+            <input class="col-12 col-md-9" type="email" id="email" name="email" placeholder="Your email..." required>
+          </div>
+          <div class="form-field row">
+            <label for="info" class="col-12 col-md-3">Comment:</label>
+            <textarea class ="col-12 col-md-9" name="info" id="info" placeholder="Write text here..." required></textarea>
+          </div>
+          <input type="submit" value="Submit" class="btn btn-success">
+        </form>
+        <div class="form-feedback">
+          <p>Thank you for your feedback!</p>
         </div>
-        <div class="form-field">
-          <label for="tel">Tel:</label>
-          <input type="tel" id="tel" name="tel" placeholder="Your number..." required>
-        </div>
-        <div class="form-field">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" placeholder="Your email..." required>
-        </div>
-        <div class="form-field">
-          <label for="info">Comment:</label>
-          <textarea name="info" id="info" placeholder="Write text here..." required></textarea>
-        </div>
-        <input type="submit" value="Submit" class="btn btn-success">
-      </form>
-      <div class="form-feedback">
-        <p>Thank you for your feedback!</p>
       </div>
     </section>
 

@@ -25,7 +25,7 @@ a:hover {
 
 .hero {
   background-size: 100vw;
-  height: 40vh;
+  height: 80vh;
   background-repeat: no-repeat;
   background-color: #f5f5f5;
   background-position: center;
@@ -34,7 +34,6 @@ a:hover {
 
 .hero-1{
   background-image: url("../assets/images/hero1.jpg");
-  height: 60vh;
 }
 
 .hero-2{
@@ -378,24 +377,29 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 /* Contact Form Styling */
 
-form {
-  margin: 20px;
+#contact {
+  padding-bottom: 20px;
 }
 
-.form-field * {
-  margin: 10px 0;
-  width: 50%;
-}
-textarea {
-  transition: width 1s ease-in-out;
+#contact-form {
+  margin: 40px auto;
 }
 
-textarea:focus {
+.form-field {
+  margin: 10px auto;
+}
+
+.form-field label {
+  text-align: left;
+}
+
+.form-field input, textarea {
   width: 100%;
+  margin: auto;
 }
 
 input[type=submit] {
-  margin: 10px auto;
+  margin: 20px auto;
 }
 
 .form-feedback {
