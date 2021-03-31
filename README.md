@@ -141,8 +141,9 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 
 ### Audio
 
-* 'Ding' sound effect played at the end of each exercise taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/ding-sound-effect/).
+* 'Ding' sound effect used for timer countdown taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/ding-sound-effect/).
 * 'Cheer' sound effect played at the end of the workout taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/big-crowd-cheering/).
+* 'Buzzer' sound effect played at end of each exercise taken from [freesoundslibrary.com](https://www.freesoundslibrary.com/buzzer-sound/).
 
 ### Text
 
