@@ -108,7 +108,7 @@ function getExercises() {
 // this loops through each item in the exercises array until workout is complete
 startWorkout = function (sec1, sec2) {
   // gets array of exercises
-  getExercises(); 
+  getExercises();
   // removes first exercise from array
   removeFirstExercise = function () {
     exercises.shift();
@@ -215,3 +215,29 @@ $("#contact-form").submit(function (e) {
   }, 6000);
   $("#contact-form")[0].reset();
 })
+
+// function to add smooth scrolling when selecting anchor tags
+// code copied and amended from W3 Schools tutorial
+// https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+
+$("a").click(function (e) {
+
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    e.preventDefault();
+
+    // Store hash
+    let hash = this.hash;
+
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 1000, function () {
+
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
+});
