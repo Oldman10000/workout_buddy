@@ -17,7 +17,7 @@ $("#hamburger, .section-link").click(function () {
 // toggles display of workout instructions
 $(".toggle-trigger").click(function () {
   $(this).toggleClass('active').next().slideToggle('slow');
-  $(this).parent().toggleClass('amber');
+  $(this).parent().toggleClass('green');
 });
 
 // Return to top button script copied and adapted from W3 schools tutorial
@@ -33,14 +33,6 @@ window.onscroll = () => {
     mybutton.style.display = "none";
   }
 }
-
-// smooth function copied and adapted from tutorialdeep.com
-// https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
-
-$('#toTop').click(function () {
-  $("html, body").animate({ scrollTop: 0 }, 1000);
-  return false;
-});
 
 // adding custom items to workout list
 // code copied and adapted from Udemy Course
@@ -81,9 +73,13 @@ $(".workout-add").click(function () {
     </li>
   `;
   list.innerHTML += html;
-  $(this).parent().prev().toggleClass('active');
-  $(this).parent().parent().toggleClass('green');
-  $(this).parent().slideToggle('slow');
+  let x = $(this);
+  setTimeout(function () {
+    console.log('hello');
+    $(x).parent().prev().toggleClass('active');
+    $(x).parent().slideToggle('slow');
+    $(x).parent().parent().toggleClass('green');
+  }, 1000);
 })
 
 // deletes items from workout list
@@ -92,8 +88,6 @@ $("#workout-list").click(function (e) {
     e.target.parentElement.remove();
   };
 });
-
-// create function for final workout list to be used for stopwatch function
 
 // empty array of exercises on workout list
 let exercises = [];
@@ -355,4 +349,12 @@ $("a").click(function (e) {
       window.location.hash = hash;
     });
   } // End if
+});
+
+// smooth function copied and adapted from tutorialdeep.com
+// https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
+
+$('#toTop').click(function () {
+  $("html, body").animate({ scrollTop: 0 }, 1000);
+  return false;
 });
