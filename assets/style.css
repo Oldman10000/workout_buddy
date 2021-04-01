@@ -32,19 +32,19 @@ a:hover {
   background-attachment: fixed;
 }
 
-.hero-1{
+.hero-1 {
   background-image: url("../assets/images/hero1.jpg");
 }
 
-.hero-2{
+.hero-2 {
   background-image: url("../assets/images/hero2.jpg");
 }
 
-.hero-3{
+.hero-3 {
   background-image: url("../assets/images/hero3.jpg");
 }
 
-.hero-4{
+.hero-4 {
   background-image: url("../assets/images/hero4.jpg");
 }
 
@@ -231,14 +231,14 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   border-bottom: solid 2px #d53910;
 }
 
-#workout-list i{
+#workout-list i {
   position: absolute;
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-#workout-list i:hover{
+#workout-list i:hover {
   cursor: pointer;
   color: #d53910;
 }
@@ -292,7 +292,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-content {
@@ -329,16 +329,16 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   transform: translateY(-50%);
 }
 
-.modal-button{
+.modal-button {
   width: 50%;
   margin: 10px auto;
 }
 
-.modal-button:hover{
+.modal-button:hover {
   cursor: pointer;
 }
 
-.modal-heading{
+.modal-heading {
   margin: 10px auto;
   font-size: 2em;
 }
@@ -401,6 +401,14 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 .form-field input, textarea {
   width: 100%;
   margin: auto;
+  border: none;
+  background-color: #f5f5f5;
+}
+
+.form-field input:focus, textarea:focus {
+  border: none;
+  border-bottom: solid 2px #d53910;
+  outline: none;
 }
 
 input[type=submit] {
