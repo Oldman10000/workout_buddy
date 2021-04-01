@@ -64,7 +64,7 @@ a:hover {
 
 .hero {
   background-size: 100vw;
-  height: 80vh;
+  height: 70vh;
   background-repeat: no-repeat;
   background-color: #f5f5f5;
   background-position: center;
@@ -73,6 +73,7 @@ a:hover {
 
 .hero-1 {
   background-image: url("../assets/images/hero1.jpg");
+  height: 80vh;
 }
 
 .hero-2 {
@@ -85,6 +86,24 @@ a:hover {
 
 .hero-4 {
   background-image: url("../assets/images/hero4.jpg");
+}
+
+@media only screen and (max-width: 1200px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero-1 {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+  .hero-1 {
+    height: 60vh;
+  }
 }
 
 /* Header Styling */
