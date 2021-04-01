@@ -23,12 +23,12 @@ section {
   padding: 5px 10px;
   font-weight: 600;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 3px 10px 0 rgba(0,0,0,0.1);
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 
 .my-button:hover {
-  font-size: 1.1em;
-  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.1);
+  font-size: 1.05em;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 10px 25px 0 rgba(0,0,0,0.2);
 }
 
 .red-button {
@@ -344,6 +344,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border: 2.5px solid #33C173;
 }
 
 #close-modal {

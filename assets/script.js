@@ -176,6 +176,9 @@ startWorkout = function (sec1, sec2) {
         $(".progress").css({
           background: '#ffa630'
         });
+        $(".modal-content").css({
+          border: '2.5px solid #ffa630'
+        });
       }
       if (sec < 10) {
         $(".timer").css({
@@ -183,6 +186,9 @@ startWorkout = function (sec1, sec2) {
         });
         $(".progress").css({
           background: '#d53910'
+        });
+        $(".modal-content").css({
+          border: '2.5px solid #d53910'
         });
       }
       if (sec == 9 || sec == 19) {
@@ -195,10 +201,16 @@ startWorkout = function (sec1, sec2) {
           $("#cheer")[0].play();
           setTimeout(function () {
             congratulations();
+            $(".modal-content").css({
+              border: '2.5px solid #33C173'
+            });
           }, 1000);
         } else {
           $("#buzz")[0].play();
           setTimeout(function () {
+            $(".modal-content").css({
+              border: '2.5px solid #33C173'
+            });
             restTimer(sec2);
           }, 1000);
         }
@@ -235,6 +247,9 @@ startWorkout = function (sec1, sec2) {
         $(".progress").css({
           background: '#ffa630'
         });
+        $(".modal-content").css({
+          border: '2.5px solid #ffa630'
+        });
       }
       if (sec < 10) {
         $(".timer").css({
@@ -242,6 +257,9 @@ startWorkout = function (sec1, sec2) {
         });
         $(".progress").css({
           background: '#d53910'
+        });
+        $(".modal-content").css({
+          border: '2.5px solid #d53910'
         });
       }
       if (sec == 9 || sec == 19) {
@@ -251,6 +269,9 @@ startWorkout = function (sec1, sec2) {
         clearInterval(timer2);
         $("#buzz")[0].play();
         setTimeout(function () {
+          $(".modal-content").css({
+            border: '2.5px solid #33C173'
+          });
           timer(sec1);
         }, 1000);
       }
@@ -286,6 +307,9 @@ startWorkout = function (sec1, sec2) {
         $(".progress").css({
           background: '#ffa630'
         });
+        $(".modal-content").css({
+          border: '2.5px solid #ffa630'
+        });
       }
       if (sec < 5) {
         $(".timer").css({
@@ -293,6 +317,9 @@ startWorkout = function (sec1, sec2) {
         });
         $(".progress").css({
           background: '#d53910'
+        });
+        $(".modal-content").css({
+          border: '2.5px solid #d53910'
         });
       }
       if (sec == 4 || sec == 9) {
@@ -302,6 +329,9 @@ startWorkout = function (sec1, sec2) {
         clearInterval(timer3);
         $("#buzz")[0].play();
         setTimeout(function () {
+          $(".modal-content").css({
+            border: '2.5px solid #33C173'
+          });
           timer(sec1);
         }, 1000);
       }
