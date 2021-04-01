@@ -164,10 +164,14 @@ startWorkout = function (sec1, sec2) {
         removeFirstExercise();
         if (exercises.length == 0) {
           $("#cheer")[0].play();
-          congratulations();
+          setTimeout(function() {
+            congratulations();
+          }, 1000);
         } else {
           $("#buzz")[0].play();
-          restTimer(sec2);
+          setTimeout(function () {
+            restTimer(sec2);   
+          }, 1000);
         }
       }
     }, 1000);
@@ -217,9 +221,11 @@ startWorkout = function (sec1, sec2) {
       if (sec < 0) {
         clearInterval(timer2);
         $("#buzz")[0].play();
-        timer(sec1);
+        setTimeout(function () {
+          timer(sec1);
+        }, 1000);
       }
-    }, 1000)
+    }, 1000);
   }
 
   let countDown = function () {
@@ -266,7 +272,9 @@ startWorkout = function (sec1, sec2) {
       if (sec < 0) {
         clearInterval(timer3);
         $("#buzz")[0].play();
-        timer(sec1);
+        setTimeout(function () {
+          timer(sec1);
+        }, 1000);
       }
     }, 1000);
   }
@@ -302,22 +310,28 @@ $("#start-workout").click(function () {
   $(".modal-content").html(`
     <i class="fas fa-times" id="close-modal"></i>
     <div class="buttons-div">
-      <button class="btn btn-success modal-button" id="easy">Take it easy</button>
-      <button class="btn btn-success modal-button" id="medium">Make me sweat</button>
-      <button class="btn btn-success modal-button" id="hard">Hardcore</button>
+      <button class="my-button modal-button" id="easy">Take it easy</button>
+      <button class="my-button modal-button" id="medium">Make me sweat</button>
+      <button class="my-button modal-button" id="hard">Hardcore</button>
     </div>
   `)
   $("#close-modal").click(function () {
     $("#exercise-modal").hide();
   })
   $("#easy").click(function () {
-    startWorkout(25, 25);
+    setTimeout(function () {
+      startWorkout(30, 60);
+    }, 200);
   })
   $("#medium").click(function () {
-    startWorkout(45, 45);
+    setTimeout(function () {
+      startWorkout(45, 45);
+    }, 200);
   })
   $("#hard").click(function () {
-    startWorkout(60, 30);
+    setTimeout(function () {
+      startWorkout(60, 30);
+    }, 200);
   })
 })
 
