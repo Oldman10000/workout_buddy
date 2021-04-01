@@ -73,12 +73,18 @@ $(".workout-add").click(function () {
     </li>
   `;
   list.innerHTML += html;
+  $(this).css({
+    background: '#33C173'
+  })
   let x = $(this);
   setTimeout(function () {
     console.log('hello');
     $(x).parent().prev().toggleClass('active');
     $(x).parent().slideToggle('slow');
     $(x).parent().parent().toggleClass('green');
+    $(x).css({
+      background: '#efefef'
+    })
   }, 1000);
 })
 

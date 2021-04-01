@@ -10,6 +10,45 @@ section {
   margin: 20px auto;
 }
 
+/* global button styles */
+
+.my-button {
+  color: #353B3C;
+  border-color: #33C173;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-weight: 600;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 3px 10px 0 rgba(0,0,0,0.1);
+  transition-duration: 1s;
+}
+
+.my-button:hover {
+  font-size: 1.1em;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2), 0 10px 20px 0 rgba(0,0,0,0.1);
+}
+
+.red-button {
+  border-color: #d53910;
+}
+
+/* Next Section button */
+
+.next {
+  height: 25px;
+  width: 25px;
+  border: solid 1.5px #d53910;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.next:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
 /* Anchor Tags */
 
 a {
@@ -113,27 +152,7 @@ strong {
   color: #d53910;
 }
 
-/* Next Section button */
-
-.next {
-  height: 25px;
-  width: 25px;
-  border: solid 1.5px #d53910;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.next:hover {
-  cursor: pointer;
-  border-color: black;
-}
-
 /* Exercise Section Styling */
-
-/* Cards copied and adapted from W3 Schools page https://www.w3schools.com/howto/howto_css_cards.asp */
 
 ul {
   padding-left: 0;
@@ -154,10 +173,6 @@ ul {
   margin: 10px auto;
   transition: 0.3s;
   border: solid 1px #d53910;
-}
-
-.amber {
-  border: solid 1px #FFA630;
 }
 
 .green {
@@ -191,7 +206,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .toggle-trigger::after {
   content: ">";
-  color: #d53910;
+  color: #353B3C;
   font-weight: bold;
   display: inline-block;
   position: absolute;
