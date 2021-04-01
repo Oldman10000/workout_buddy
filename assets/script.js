@@ -39,6 +39,7 @@ let exercises = [];
 
 // pushes each item in myWorkout list to the exercises array
 function getExercises() {
+  exercises = [];
   let allExercises = document.querySelectorAll(".activity");
   allExercises.forEach(exercise => {
     exercises.push(exercise.innerText);
@@ -47,11 +48,9 @@ function getExercises() {
 
 // refreshes local storage by taking the current data from the DOM every time this is run
 function addLocal() {
-  exercises = [];
   getExercises();
   let savedExercises = Object.assign({}, exercises);
   localStorage.setItem('exercises', JSON.stringify(savedExercises));
-  console.log(exercises);
 }
 
 // adding custom items to workout list
@@ -362,6 +361,11 @@ startWorkout = function (sec1, sec2) {
   }
 }
 
+// if there are no exercises on the workout
+function noExercises() {
+  alert('no exercises in list!!');
+}
+
 // Open exercise modal to start workout
 
 $("#start-workout").click(function () {
@@ -377,20 +381,33 @@ $("#start-workout").click(function () {
   $("#close-modal").click(function () {
     $("#exercise-modal").hide();
   })
+  getExercises();
   $("#easy").click(function () {
-    setTimeout(function () {
-      startWorkout(30, 60);
-    }, 200);
+    if (exercises.length) {
+      setTimeout(function () {
+        startWorkout(30, 60);
+      }, 200);
+    } else {
+      noExercises();
+    }
   })
   $("#medium").click(function () {
-    setTimeout(function () {
-      startWorkout(45, 45);
-    }, 200);
+    if (exercises.length) {
+      setTimeout(function () {
+        startWorkout(45, 45);
+      }, 200);
+    } else {
+      noExercises();
+    }
   })
   $("#hard").click(function () {
-    setTimeout(function () {
-      startWorkout(60, 30);
-    }, 200);
+    if (exercises.length) {
+      setTimeout(function () {
+        startWorkout(60, 30);
+      }, 200);
+    } else {
+      noExercises();
+    }
   })
 })
 
