@@ -34,12 +34,50 @@ window.onscroll = () => {
   }
 }
 
+// empty array of exercises on workout list
+let exercises = [];
+
+// pushes each item in myWorkout list to the exercises array
+function getExercises() {
+  let allExercises = document.querySelectorAll(".activity");
+  allExercises.forEach(exercise => {
+    exercises.push(exercise.innerText);
+  })
+}
+
+// refreshes local storage by taking the current data from the DOM every time this is run
+function addLocal() {
+  exercises = [];
+  getExercises();
+  let savedExercises = Object.assign({}, exercises);
+  localStorage.setItem('exercises', JSON.stringify(savedExercises));
+}
+
 // adding custom items to workout list
 // code copied and adapted from Udemy Course
 // 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling
 
 const addExercise = document.querySelector('.exercise-form');
 const list = document.querySelector('#workout-list');
+
+// gets exercises from local storage
+function getLocal() {
+  const stored = localStorage.getItem('exercises');
+  let data = JSON.parse(stored);
+  $.each(data, function (i, val) {
+    const html = `
+    <li class="exercise">
+      <span class="activity">${val}</span>
+      <i class="fas fa-trash-alt delete"></i>
+    </li>
+  `;
+    list.innerHTML += html;
+  })
+}
+
+// runs every time the page is refreshed and returns local storage
+getLocal();
+
 
 // creates template literal for exercises added to list
 const template = exercise => {
@@ -57,15 +95,15 @@ const template = exercise => {
 addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
-  console.log(exercise);
   template(exercise);
+  addLocal();
   addExercise.reset();
 });
 
 // adds existing exercises to workout list
 $(".workout-add").click(function () {
   let exercise = $(this).parent().prev().text();
-  console.log(exercise);
+  addLocal();
   const html = `
     <li class="exercise">
       <span class="activity">${exercise}</span>
@@ -93,18 +131,9 @@ $("#workout-list").click(function (e) {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   };
+  // deletes from local storage
+  addLocal();
 });
-
-// empty array of exercises on workout list
-let exercises = [];
-
-// pushes each item in myWorkout list to the exercises array
-function getExercises() {
-  let allExercises = document.querySelectorAll(".activity");
-  allExercises.forEach(exercise => {
-    exercises.push(exercise.innerText);
-  })
-}
 
 // general workout timer function
 
@@ -164,13 +193,13 @@ startWorkout = function (sec1, sec2) {
         removeFirstExercise();
         if (exercises.length == 0) {
           $("#cheer")[0].play();
-          setTimeout(function() {
+          setTimeout(function () {
             congratulations();
           }, 1000);
         } else {
           $("#buzz")[0].play();
           setTimeout(function () {
-            restTimer(sec2);   
+            restTimer(sec2);
           }, 1000);
         }
       }
