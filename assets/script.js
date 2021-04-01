@@ -51,6 +51,7 @@ function addLocal() {
   getExercises();
   let savedExercises = Object.assign({}, exercises);
   localStorage.setItem('exercises', JSON.stringify(savedExercises));
+  console.log(exercises);
 }
 
 // adding custom items to workout list
@@ -78,7 +79,6 @@ function getLocal() {
 // runs every time the page is refreshed and returns local storage
 getLocal();
 
-
 // creates template literal for exercises added to list
 const template = exercise => {
   const html = `
@@ -103,7 +103,6 @@ addExercise.addEventListener('submit', e => {
 // adds existing exercises to workout list
 $(".workout-add").click(function () {
   let exercise = $(this).parent().prev().text();
-  addLocal();
   const html = `
     <li class="exercise">
       <span class="activity">${exercise}</span>
@@ -111,6 +110,7 @@ $(".workout-add").click(function () {
     </li>
   `;
   list.innerHTML += html;
+  addLocal();
   $(this).css({
     background: '#33C173'
   })
