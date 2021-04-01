@@ -129,6 +129,27 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 8. If there are items still on the array, the restTimer function is triggered, which ticks down for the set amount of time depending on difficulty
 9. Once complete the timer function is triggered again from the 'new' first item in the array
 
+## Technologies Used
+
+### Languages Used
+
+* HTML5
+* CSS3
+* JavaScript
+
+### Frameworks, Libraries and Programs Used
+
+* [Bootstrap v4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) - Mainly used for content positioning and responsiveness
+* [jQuery](https://jquery.com/) - Used for interactive elements on the DOM and to simplify JavaScript use
+* [Fontawesome](https://fontawesome.com/) - This was used for all icons on the page
+* [Google Fonts](https://fonts.google.com/) - I used the font Roboto
+* [Git](https://git-scm.com/) - Used for version control
+* [VS Code](https://code.visualstudio.com/) - Text editor used to write all code and git version control from terminal
+* [Github](https://github.com/) - GitHub is used to store the project's code after being pushed from Git
+* [Balsamiq](https://balsamiq.com/) - Balsamiq was used to create the [wireframe](documentation/wireframe.pdf) during the design process
+* [Coolers](https://coolors.co/) to generate the colour pallette
+* [Compressjpeg](https://compressjpeg.com/) - used to compress hero images
+
 ## Credits
 
 ### Images
