@@ -601,7 +601,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 @media only screen and (max-width: 576px) {
   #heading {
     font-size: 1.8em;
-    margin-top: 15px;
+    padding-top: 15px;
   }
   .visible {
     width: 100%;
@@ -622,7 +622,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
     font-size: 1.05em;
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
   }
-  
+
   .hero-1 {
     background-image: url("../assets/images/hero1.jpg");
     height: 80vh;
