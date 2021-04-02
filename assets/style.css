@@ -443,6 +443,21 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   height: auto;
 }
 
+.social {
+  margin: 20px auto;
+}
+
+.social i {
+  font-size: 2em;
+  color: #353B3C;
+  margin: 0 10px;
+  transition-duration: 0.25s;
+}
+
+.social i:hover {
+  color: #33C173;
+}
+
 /* Contact Form Styling */
 
 #contact {

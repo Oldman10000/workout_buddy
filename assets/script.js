@@ -363,11 +363,11 @@ startWorkout = function (sec1, sec2) {
       <div class="complete-img-div">
         <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
       </div>
-      <p>Share to social media</p>
       <div class="social">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-instagram"></i>
+        <p>Share to social media!!</p>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
       </div>
     `);
     $("#close-modal").click(function () {
