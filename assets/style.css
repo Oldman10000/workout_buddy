@@ -142,11 +142,23 @@ a:hover {
 
 /* Header Styling */
 
-#fixed-head {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  background: red;
+#home {
+  background-color: #f5f5f5;
+}
+
+#heading a:hover {
+  color: #353B3C;
+}
+
+#heading {
+  margin-top: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+  #heading {
+    font-size: 1.8em;
+    margin-top: 15px;
+  }
 }
 
 /* Navbar */
@@ -199,7 +211,7 @@ a:hover {
 #hamburger {
   position: fixed;
   right: 15px;
-  top: 10px;
+  top: 15px;
   font-size: 1.5em;
   cursor: pointer;
   z-index: 2;
