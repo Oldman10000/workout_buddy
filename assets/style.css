@@ -154,6 +154,14 @@ a:hover {
   margin-top: 10px;
 }
 
+#heading i {
+  color: #d53910;
+}
+
+#heading i:hover {
+  color: #33C173;
+}
+
 @media only screen and (max-width: 576px) {
   #heading {
     font-size: 1.8em;
