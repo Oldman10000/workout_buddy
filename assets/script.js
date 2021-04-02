@@ -95,6 +95,7 @@ addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
   template(exercise);
+  startColour()
   addLocal();
   addExercise.reset();
 });
@@ -109,6 +110,7 @@ $(".workout-add").click(function () {
     </li>
   `;
   list.innerHTML += html;
+  startColour()
   addLocal();
   $(this).css({
     background: '#33C173'
@@ -130,9 +132,22 @@ $("#workout-list").click(function (e) {
   if (e.target.classList.contains('delete')) {
     e.target.parentElement.remove();
   };
+  startColour()
   // deletes from local storage
   addLocal();
 });
+
+// checks if there are any exercises in the workout and switches colour of start button depending
+function startColour() {
+  getExercises();
+  if (exercises.length) {
+    $("#start-workout").removeClass("red-button");
+  } else {
+    $("#start-workout").addClass("red-button");
+  }
+}
+
+startColour();
 
 // general workout timer function
 
