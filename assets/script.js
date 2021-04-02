@@ -384,8 +384,9 @@ function noExercises() {
 // Open exercise modal to start workout
 
 $("#start-workout").click(function () {
-  $("#exercise-modal").show();
-  $(".modal-content").html(`
+  if (exercises.length) {
+    $("#exercise-modal").show();
+    $(".modal-content").html(`
     <i class="fas fa-times" id="close-modal"></i>
     <div class="buttons-div">
       <button class="my-button modal-button" id="easy">Take it easy</button>
@@ -393,37 +394,28 @@ $("#start-workout").click(function () {
       <button class="my-button modal-button" id="hard">Hardcore</button>
     </div>
   `)
-  $("#close-modal").click(function () {
-    $("#exercise-modal").hide();
-  })
-  getExercises();
-  $("#easy").click(function () {
-    if (exercises.length) {
+    $("#close-modal").click(function () {
+      $("#exercise-modal").hide();
+    })
+    getExercises();
+    $("#easy").click(function () {
       setTimeout(function () {
         startWorkout(30, 60);
       }, 200);
-    } else {
-      noExercises();
-    }
-  })
-  $("#medium").click(function () {
-    if (exercises.length) {
+    })
+    $("#medium").click(function () {
       setTimeout(function () {
         startWorkout(45, 45);
       }, 200);
-    } else {
-      noExercises();
-    }
-  })
-  $("#hard").click(function () {
-    if (exercises.length) {
+    })
+    $("#hard").click(function () {
       setTimeout(function () {
         startWorkout(60, 30);
       }, 200);
-    } else {
-      noExercises();
-    }
-  })
+    })
+  } else {
+    noExercises();
+  }
 })
 
 // feedback form interactive script
