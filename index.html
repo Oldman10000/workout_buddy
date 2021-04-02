@@ -20,7 +20,7 @@
 
 <body>
 
-<!-- header section - navbar still needs work  -->
+  <!-- header section - navbar still needs work  -->
 
   <header id="home">
     <div class="topnav">
@@ -39,8 +39,8 @@
     </div>
     <div class="hero hero-1"></div>
   </header>
-  
-<!-- main body section -->
+
+  <!-- main body section -->
 
   <main>
 
@@ -321,10 +321,11 @@
             <h3>My Exercises</h3>
             <ul id="workout-list"></ul>
             <form class="exercise-form">
-              <label aria-label="add exercise"></label>
+              <label for="exercise-add" aria-label="add exercise"></label>
               <i class="fas fa-plus"></i>
               <span>
-                <input id="exercise-add" class="easy red-input" type="text" name="add" placeholder="Add your own exercise here">
+                <input id="exercise-add" class="easy red-input" type="text" name="add"
+                  placeholder="Add your own exercise here">
               </span>
             </form>
           </div>
@@ -351,12 +352,21 @@
         <!-- modal content with timers for the actual workout -->
         <div class="modal-area" id="exercise-modal">
           <div class="modal-content">
-            <!-- <i class="fas fa-times" id="close-modal"></i>
+            <i class="fas fa-times" id="close-modal"></i>
             <div class="buttons-div">
               <button class="my-button modal-button" id="easy">Take it easy</button>
               <button class="my-button modal-button" id="medium">Make me sweat</button>
               <button class="my-button modal-button" id="hard">Hardcore</button>
-            </div> -->
+              <button class="my-button modal-button" id="custom">Custom</button>
+              <div>
+                <label for="exercise-time" aria-label="exercise time"></label>
+                <input class="custom-number" id="exercise-time" type="number" placeholder="Exercise (s)">
+              </div>
+              <div>
+                <label for="rest-time" aria-label="rest time"></label>
+                <input class="custom-number" id="rest-time" type="number" placeholder="Rest (s)">
+              </div>
+            </div>
 
             <!-- During Workout -->
             <!-- <p class="modal-heading">Press Ups</p>
@@ -400,20 +410,23 @@
         <form id="contact-form">
           <div class="form-field row">
             <label for="name" class="col-12 col-md-3">Name:</label>
-            <input class="col-12 col-md-9 form-input easy red-input" type="text" id="name" name="name" placeholder="Your name..." required>
+            <input class="col-12 col-md-9 form-input easy red-input" type="text" id="name" name="name"
+              placeholder="Your name..." required>
           </div>
           <div class="form-field row">
             <label for="tel" class="col-12 col-md-3">Tel:</label>
-            <input class="col-12 col-md-9 form-input easy red-input" type="tel" id="tel" name="tel" placeholder="Your number..." required>
+            <input class="col-12 col-md-9 form-input easy red-input" type="tel" id="tel" name="tel"
+              placeholder="Your number..." required>
           </div>
           <div class="form-field row">
             <label for="email" class="col-12 col-md-3">Email:</label>
-            <input class="col-12 col-md-9 form-input red-input" type="email" id="email" name="email" placeholder="Your email..." required>
+            <input class="col-12 col-md-9 form-input red-input" type="email" id="email" name="email"
+              placeholder="Your email..." required>
           </div>
           <div class="form-field row">
             <label for="info" class="col-12 col-md-3">Comment:</label>
-            <textarea class="col-12 col-md-9 form-input easy red-input" name="info" rows="2" id="info" placeholder="Write text here..."
-              required></textarea>
+            <textarea class="col-12 col-md-9 form-input easy red-input" name="info" rows="2" id="info"
+              placeholder="Write text here..." required></textarea>
           </div>
           <input type="submit" value="Submit" id="submit-button" class="red-button my-button">
         </form>

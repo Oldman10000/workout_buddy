@@ -356,7 +356,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   padding: 20px;
   width: 80vw;
   max-width: 500px;
-  height: 60vh;
+  height: 70vh;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -381,7 +381,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 .buttons-div {
   height: 50%;
   position: relative;
-  top: 50%;
+  top: 30%;
   transform: translateY(-50%);
 }
 
@@ -392,6 +392,13 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .modal-button:hover {
   cursor: pointer;
+}
+
+.custom-number {
+  margin: 15px auto;
+  border: solid 2px #33C173;
+  border-radius: 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal-heading {

@@ -392,6 +392,15 @@ $("#start-workout").click(function () {
       <button class="my-button modal-button" id="easy">Take it easy</button>
       <button class="my-button modal-button" id="medium">Make me sweat</button>
       <button class="my-button modal-button" id="hard">Hardcore</button>
+      <button class="my-button modal-button" id="custom">Custom</button>
+      <div>
+        <label for="exercise-time" aria-label="exercise time"></label>
+        <input class="custom-number" id="exercise-time" type="number" placeholder="Exercise (s)">
+      </div>
+      <div>
+        <label for="rest-time" aria-label="rest time"></label>
+        <input class="custom-number" id="rest-time" type="number" placeholder="Rest (s)">
+      </div>
     </div>
   `)
     $("#close-modal").click(function () {
@@ -411,6 +420,13 @@ $("#start-workout").click(function () {
     $("#hard").click(function () {
       setTimeout(function () {
         startWorkout(60, 30);
+      }, 200);
+    })
+    $("#custom").click(function () {
+      let x = $("#exercise-time").val();
+      let y = $("#rest-time").val();
+      setTimeout(function () {
+        startWorkout(x, y);
       }, 200);
     })
   } else {
