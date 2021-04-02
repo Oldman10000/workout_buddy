@@ -2,8 +2,9 @@ main {
   background: #f5f5f5;
 }
 
-p, h1, h2, h3, h4 {
+* {
   font-family: 'Roboto', sans-serif;
+  color: #353B3C;
 }
 
 section {
@@ -74,13 +75,17 @@ section {
 
 .next:hover {
   cursor: pointer;
-  border-color: black;
+  border-color: #353B3C;
+}
+
+.next:hover i{
+  color: #d53910;
 }
 
 /* Anchor Tags */
 
 a {
-  color: black;
+  color: #353B3C;
 }
 
 a:hover {
@@ -298,6 +303,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
+  color: #353B3C;
 }
 
 #workout-list i:hover {
@@ -368,7 +374,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   position: absolute;
   top: 5px;
   right: 7px;
-  color: black;
+  color: #353B3C;
   font-size: 2em;
   font-weight: bold;
 }
@@ -412,7 +418,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   width: 150px;
   background-color: #33C173;
   margin: auto;
-  border: solid 5px black;
+  border: solid 5px #353B3C;
   border-radius: 50%;
 }
 
