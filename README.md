@@ -62,7 +62,7 @@ I plan for the website to be structured on one single page. The layout will be s
 
 The structure will be as simple as possible so as not to overwhelm the user. I want the user to be able to open the website and immediately be able to either create a workout or start their workout with a minimum of fuss. This is especially important for a first time user so as not to create cognitive overload.
 
-The website will conform to web standards in terms of interactive design. Links will be clearly highlighted and signposted.
+The website will conform to web standards in terms of interactive design. Links will be clearly highlighted and signposted. Interactive elements stand out and respond when hovered over.
 
 ### Skeleton
 
@@ -72,7 +72,23 @@ One element I plan to implement which is slightly different to web standards is 
 
 [Wireframe for mobile, tablet, and desktop](documentation/wireframe.pdf)
 
+Since making the above wireframe, the original design has been slightly amended while the website was being created. There is now a hero image background between each section, which provides a simple and pleasant seperation. There are arrows between each section which when pressed, smoothly scroll the user down to the next section.
+
 ### Surface
+
+I have chosen a diverse colour palette generated on [Coolers.co](www.coolers.co). 
+
+The background is a slightly off white 'whitesmoke', with most text content being an off black 'onyx' colour so the contrast is not too stark and easier on the eyes. 
+
+Colour comes from red and green elements on the page. The red pairs well with the background hero images used, as these feature a lot of red elements. Red and green are used in terms of interactive design as well: in many cases if something 'needs doing' such as the form inputs, they will show as red, and if they are ready to be submitted they will turn green. This provides the user with simple visual feedback on their action.
+
+The red, amber and green colours are also used in the workout timer function in a mimic 'traffic light' system. As time is running out on the timer, the colour scheme changes from green to amber, then to red to provide the user with visual feedback.
+
+![Colour Palette](documentation/Workout_Buddy_Palette.png)
+
+The hero images used generally match the colour palette as mentioned above as most of them feature red elements, providing the site with a pleasant viewing experience.
+
+All font is 'Roboto' from the Google Fonts collection. This is a very typical font for a website, due to it's simple and legible nature so it makes sense to be included in what is a simple design.
 
 ## Issues Overcome
 
@@ -146,6 +162,7 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 * [Git](https://git-scm.com/) - Used for version control
 * [VS Code](https://code.visualstudio.com/) - Text editor used to write all code and git version control from terminal
 * [Github](https://github.com/) - GitHub is used to store the project's code after being pushed from Git
+* Github Projects - Agile kanban project management tool used set and track tasks within the project, making workflow easy
 * [Balsamiq](https://balsamiq.com/) - Balsamiq was used to create the [wireframe](documentation/wireframe.pdf) during the design process
 * [Coolers](https://coolors.co/) to generate the colour pallette
 * [Compressjpeg](https://compressjpeg.com/) - used to compress hero images
