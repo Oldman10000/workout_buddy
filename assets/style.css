@@ -364,28 +364,37 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   font-weight: bold;
 }
 
-.buttons-div {
-  height: 50%;
+.buttons-div, .times-div {
+  height: 60%;
   position: relative;
-  top: 30%;
+  top: 50%;
   transform: translateY(-50%);
 }
 
 .modal-button {
-  width: 50%;
+  width: 70%;
   margin: 10px auto;
 }
 
 .custom-number {
+  font-size: 1.2em;
   margin: 15px auto;
   border: solid 2px #33C173;
-  border-radius: 2px;
+  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .modal-heading {
   margin: 10px auto;
   font-size: 2em;
+}
+
+#start {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 50px;
 }
 
 .timer {
