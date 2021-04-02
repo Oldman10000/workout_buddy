@@ -498,6 +498,7 @@ $("#contact-form").submit(function (e) {
     input.classList.remove("green-input");
     input.classList.add("red-input");
   });
+  $("#submit-button").addClass("red-button");
   setTimeout(function () {
     $(".form-feedback").hide();
   }, 6000);

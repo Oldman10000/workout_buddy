@@ -495,8 +495,12 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   background-color: #f5f5f5;
 }
 
-input[type=submit] {
+#submit-button {
   margin: 20px auto;
+}
+
+#submit-button:focus {
+  outline: none;
 }
 
 .form-feedback {
