@@ -16,6 +16,11 @@ section {
   margin: 20px auto;
 }
 
+a:hover {
+  color: #d53910;
+  text-decoration: none;
+}
+
 /* global button styles */
 
 .my-button {
@@ -44,6 +49,17 @@ section {
   border-bottom: solid 2px #33C173;
 }
 
+.red-input:focus {
+  border: none;
+  border-bottom: solid 2px #d53910;
+  outline: none;
+}
+.green-input:focus {
+  border: none;
+  border-bottom: solid 2px #33C173;
+  outline: none;
+}
+
 /* Next Section button */
 
 .next {
@@ -55,6 +71,14 @@ section {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.next:hover {
+  border-color: #353B3C;
+  cursor: pointer;
+}
+.next:hover i {
+  color: #d53910;
 }
 
 /* Anchor Tags */
@@ -75,20 +99,20 @@ a {
 }
 
 .hero-1 {
-  background-image: url("../assets/images/hero1.jpg");
+  background-image: url("../assets/images/hero1small.jpg");
   height: 80vh;
 }
 
 .hero-2 {
-  background-image: url("../assets/images/hero2.jpg");
+  background-image: url("../assets/images/hero2small.jpg");
 }
 
 .hero-3 {
-  background-image: url("../assets/images/hero3.jpg");
+  background-image: url("../assets/images/hero3small.jpg");
 }
 
 .hero-4 {
-  background-image: url("../assets/images/hero4.jpg");
+  background-image: url("../assets/images/hero4small.jpg");
 }
 
 /* Header Styling */
@@ -98,11 +122,19 @@ a {
 }
 
 #heading {
-  margin-top: 10px;
+  padding-top: 10px;
 }
 
 #heading i {
   color: #d53910;
+}
+
+#heading i:hover {
+  color: #33C173;
+}
+
+#heading a:hover {
+  color: #353B3C;
 }
 
 /* Navbar */
@@ -123,11 +155,11 @@ a {
 }
 
 .visible {
-  width: 180px;
+  width: 220px;
 }
 
 .shrink {
-  margin-right: 180px;
+  margin-right: 220px;
 }
 
 .nav-item {
@@ -147,6 +179,11 @@ a {
   text-align: right;
 }
 
+.nav a:hover {
+  cursor: pointer;
+  color: #d53910;
+}
+
 #hamburger {
   position: fixed;
   right: 15px;
@@ -160,6 +197,10 @@ a {
 #hamburger i {
   color: #d53910;
   transition: 0.3s;
+}
+
+#hamburger:hover i {
+  color: #33C173;
 }
 
 .flip {
@@ -296,6 +337,11 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   color: #353B3C;
 }
 
+#workout-list i:hover {
+  cursor: pointer;
+  color: #d53910
+}
+
 .exercise-form {
   margin: 40px auto 0;
 }
@@ -364,6 +410,11 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   font-weight: bold;
 }
 
+#close-modal:hover, #close-modal:focus {
+  cursor: pointer;
+  color: #d53910;
+}
+
 .buttons-div, .times-div {
   height: 60%;
   position: relative;
@@ -374,6 +425,10 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 .modal-button {
   width: 70%;
   margin: 10px auto;
+}
+
+.modal-button:hover {
+  cursor: pointer;
 }
 
 .custom-number {
@@ -445,6 +500,10 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   transition-duration: 0.25s;
 }
 
+.social i:hover {
+  color: #33C173;
+}
+
 /* Contact Form Styling */
 
 #contact {
@@ -472,6 +531,10 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 #submit-button {
   margin: 20px auto;
+}
+
+#submit-button:focus {
+  outline: none;
 }
 
 .form-feedback {
@@ -559,55 +622,21 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
     font-size: 1.05em;
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
   }
-  .next:hover {
-    cursor: pointer;
-    border-color: #353B3C;
+  
+  .hero-1 {
+    background-image: url("../assets/images/hero1.jpg");
+    height: 80vh;
   }
-  .next:hover i {
-    color: #d53910;
+
+  .hero-2 {
+    background-image: url("../assets/images/hero2.jpg");
   }
-  a:hover {
-    color: #d53910;
-    text-decoration: none;
+  
+  .hero-3 {
+    background-image: url("../assets/images/hero3.jpg");
   }
-  #heading a:hover {
-    color: #353B3C;
-  }
-  #heading i:hover {
-    color: #33C173;
-  }
-  .nav a:hover {
-    cursor: pointer;
-    color: #d53910;
-  }
-  #hamburger:hover i {
-    color: #33C173;
-  }
-  #workout-list i:hover {
-    cursor: pointer;
-    color: #d53910;
-  }
-  #close-modal:hover, #close-modal:focus {
-    cursor: pointer;
-    color: #d53910;
-  }
-  .modal-button:hover {
-    cursor: pointer;
-  }
-  .social i:hover {
-    color: #33C173;
-  }
-  #submit-button:focus {
-    outline: none;
-  }
-  .red-input:focus {
-    border: none;
-    border-bottom: solid 2px #d53910;
-    outline: none;
-  }
-  .green-input:focus {
-    border: none;
-    border-bottom: solid 2px #33C173;
-    outline: none;
+  
+  .hero-4 {
+    background-image: url("../assets/images/hero4.jpg");
   }
 }
