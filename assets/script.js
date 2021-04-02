@@ -411,15 +411,66 @@ $("#start-workout").click(function () {
   })
 })
 
+// feedback form interactive script
+
+// changes colour of submit button if all fields are valid
+function submitChange() {
+  if ($("#name").hasClass("green-input") && $("#tel").hasClass("green-input") && $("#email").hasClass("green-input") && $("#info").hasClass("green-input")) {
+    $("#submit-button").removeClass("red-button");
+  } else {
+    $("#submit-button").addClass("red-button");
+  }
+}
+
+// changes colour of input fields if all valid
+function formColour(x) {
+  $(x).keyup(function (e) {
+    if (e.target.value.length) {
+      $(x).removeClass("red-input");
+      $(x).addClass("green-input");
+    } else {
+      $(x).removeClass("green-input");
+      $(x).addClass("red-input");
+    }
+    submitChange();
+  });
+}
+
+const inputs = document.querySelectorAll(".easy");
+inputs.forEach(input => {
+  formColour(input);
+});
+
+// email function is seperate
+
+// regex for valid email format taken from https://www.w3resource.com/javascript/form/email-validation.php
+let letters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+$("#email").keyup(function (e) {
+  if (e.target.value.match(letters)) {
+    $("#email").removeClass("red-input");
+    $("#email").addClass("green-input");
+  } else {
+    $("#email").removeClass("green-input");
+    $("#email").addClass("red-input");
+  }
+  submitChange();
+});
+
 // action upon submit contact form
 $("#contact-form").submit(function (e) {
   e.preventDefault();
   $(".form-feedback").show();
+  $("#contact-form")[0].reset();
+  let inputs = document.querySelectorAll(".form-input");
+  inputs.forEach(input => {
+    input.classList.remove("green-input");
+    input.classList.add("red-input");
+  });
   setTimeout(function () {
     $(".form-feedback").hide();
   }, 6000);
-  $("#contact-form")[0].reset();
-})
+});
 
 // function to add smooth scrolling when selecting anchor tags
 // code copied and amended from W3 Schools tutorial
