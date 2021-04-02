@@ -425,9 +425,13 @@ $("#start-workout").click(function () {
     $("#custom").click(function () {
       let x = $("#exercise-time").val();
       let y = $("#rest-time").val();
-      setTimeout(function () {
-        startWorkout(x, y);
-      }, 200);
+      if (x.length && y.length) {
+        setTimeout(function () {
+          startWorkout(x, y);
+        }, 200);
+      } else {
+        alert('No times selected!!');
+      }
     })
   } else {
     noExercises();
