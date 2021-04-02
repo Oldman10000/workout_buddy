@@ -94,10 +94,14 @@ const template = exercise => {
 addExercise.addEventListener('submit', e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
-  template(exercise);
-  startColour()
-  addLocal();
-  addExercise.reset();
+  if (exercise.length) {
+    template(exercise);
+    startColour()
+    addLocal();
+    addExercise.reset();
+  } else {
+    alert('No text entered!');
+  }
 });
 
 // adds existing exercises to workout list
