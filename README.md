@@ -166,6 +166,7 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 * [Balsamiq](https://balsamiq.com/) - Balsamiq was used to create the [wireframe](documentation/wireframe.pdf) during the design process
 * [Coolers](https://coolors.co/) to generate the colour pallette
 * [Compressjpeg](https://compressjpeg.com/) - used to compress hero images
+* [Reduceimages.com](https://www.reduceimages.com/) - used to lower resolution of hero images for smaller screens
 
 ## Credits
 
