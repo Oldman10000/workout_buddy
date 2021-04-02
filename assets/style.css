@@ -122,24 +122,6 @@ a:hover {
   background-image: url("../assets/images/hero4.jpg");
 }
 
-@media only screen and (max-width: 1200px) {
-  .hero {
-    height: 50vh;
-  }
-  .hero-1 {
-    height: 70vh;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .hero {
-    height: 40vh;
-  }
-  .hero-1 {
-    height: 60vh;
-  }
-}
-
 /* Header Styling */
 
 #home {
@@ -160,13 +142,6 @@ a:hover {
 
 #heading i:hover {
   color: #33C173;
-}
-
-@media only screen and (max-width: 576px) {
-  #heading {
-    font-size: 1.8em;
-    margin-top: 15px;
-  }
 }
 
 /* Navbar */
@@ -546,12 +521,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   margin-bottom: 0;
 }
 
-@media only screen and (max-width: 768px) {
-  .form-field label {
-    margin-bottom: 20px;
-  }
-}
-
 .form-field input, textarea {
   /* width: 100%; */
   margin: auto;
@@ -605,3 +574,37 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 /* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+  .hero {
+    height: 50vh;
+  }
+  .hero-1 {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 40vh;
+  }
+  .hero-1 {
+    height: 60vh;
+  }
+  .form-field label {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #heading {
+    font-size: 1.8em;
+    margin-top: 15px;
+  }
+  .exercise-item, .form-field, .exercise-form, #workout-list {
+    width: 85%;
+  }
+  .toggle-trigger::after {
+    right: 60px;
+  }
+}
