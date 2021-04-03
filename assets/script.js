@@ -11,6 +11,13 @@ $("#hamburger").click(function () {
   $("main").toggleClass('shrink');
 });
 
+// closes navbar after picking section
+$(".section-link").click(function() {
+  $("#hamburger").toggleClass('flip');
+  $(".nav").toggleClass('visible');
+  $("main").toggleClass('shrink');
+});
+
 // toggles display of workout instructions
 $(".toggle-trigger").click(function () {
   $(this).toggleClass('active').next().slideToggle('slow');
