@@ -21,27 +21,29 @@
 <body>
 
   <!-- header section - navbar still needs work  -->
-
-  <header id="home">
+  <div id="light-dark-toggle" class="toggle-dark">
+    <i class="fas fa-eye"></i>
+  </div>
+  <header id="home" class="light">
     <h1 class="text-center" id="heading">
-      <a href="#home"><i class="fas fa-running"></i> Workout Buddy</a>
+      <a href="#home" class="light"><i class="fas fa-running"></i> Workout Buddy</a>
     </h1>
     <div id="hamburger">
       <i class="fa fa-bars"></i>
     </div>
-    <div class="nav">
+    <div class="nav light">
       <div class="nav-item"><a href="#home" class="section-link">Home</a></div>
       <div class="nav-item"><a href="#instructions" class="section-link">Instructions</a></div>
       <div class="nav-item"><a href="#exercises" class="section-link">Exercises</a></div>
       <div class="nav-item"><a href="#workout" class="section-link">Your Workout</a></div>
       <div class="nav-item"><a href="#contact" class="section-link">Contact</a></div>
     </div>
-    <div class="hero hero-1"></div>
+    <div class="hero hero-1 light"></div>
   </header>
 
   <!-- main body section -->
 
-  <main>
+  <main class="light">
 
     <!-- Instructions for how to use the application -->
     <section id="instructions">
@@ -85,7 +87,7 @@
       </div>
     </section>
 
-    <div class="hero hero-2"></div>
+    <div class="hero hero-2 light"></div>
 
     <!-- List of prebaked exercises - content still needs to be updated -->
     <section id="exercises">
@@ -309,7 +311,7 @@
       </div>
     </section>
 
-    <div class="hero hero-3"></div>
+    <div class="hero hero-3 light"></div>
 
     <!-- Workout section - this is where the workout list is generated either from the prebaked options or custom exercises entered by the user -->
     <section id="workout">
@@ -323,7 +325,7 @@
               <label for="exercise-add" aria-label="add exercise"></label>
               <i class="fas fa-plus"></i>
               <span>
-                <input id="exercise-add" class="easy red-input" type="text" name="add"
+                <input id="exercise-add" class="easy red-input light" type="text" name="add"
                   placeholder="Add your own exercise here">
               </span>
             </form>
@@ -354,7 +356,7 @@
 
         <!-- modal content with timers for the actual workout -->
         <div class="modal-area" id="exercise-modal">
-          <div class="modal-content"></div>
+          <div class="modal-content light"></div>
         </div>
       </div>
 
@@ -366,7 +368,7 @@
     <audio id="cheer" src="assets/audio/Big-crowd-cheering.mp3"></audio>
     <audio id="buzz" src="assets/audio/Buzzer-sound.mp3"></audio>
 
-    <div class="hero hero-4"></div>
+    <div class="hero hero-4 light"></div>
 
     <!-- contact form section -->
     <section id="contact" class="container">
@@ -378,22 +380,22 @@
         <form id="contact-form">
           <div class="form-field row">
             <label for="name" class="col-12 col-md-3">Name:</label>
-            <input class="col-12 col-md-9 form-input easy red-input" type="text" id="name" name="name"
+            <input class="col-12 col-md-9 form-input easy red-input light" type="text" id="name" name="name"
               placeholder="Your name..." required>
           </div>
           <div class="form-field row">
             <label for="tel" class="col-12 col-md-3">Tel:</label>
-            <input class="col-12 col-md-9 form-input easy red-input" type="tel" id="tel" name="tel"
+            <input class="col-12 col-md-9 form-input easy red-input light" type="tel" id="tel" name="tel"
               placeholder="Your number..." required>
           </div>
           <div class="form-field row">
             <label for="email" class="col-12 col-md-3">Email:</label>
-            <input class="col-12 col-md-9 form-input red-input" type="email" id="email" name="email"
+            <input class="col-12 col-md-9 form-input red-input light" type="email" id="email" name="email"
               placeholder="Your email..." required>
           </div>
           <div class="form-field row">
             <label for="info" class="col-12 col-md-3">Comment:</label>
-            <textarea class="col-12 col-md-9 form-input easy red-input" name="info" rows="2" id="info"
+            <textarea class="col-12 col-md-9 form-input easy red-input light" name="info" rows="2" id="info"
               placeholder="Write text here..." required></textarea>
           </div>
           <input type="submit" value="Submit" id="submit-button" class="red-button my-button">
@@ -408,7 +410,7 @@
 
   <footer>
     <!-- takes the user to the top of the screen -->
-    <div class="circle">
+    <div class="circle light">
       <p id="toTop" title="Go to top"><i class="fas fa-arrow-up"></i></p>
     </div>
   </footer>

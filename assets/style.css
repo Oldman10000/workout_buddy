@@ -1,11 +1,19 @@
 main {
-  background: #f5f5f5;
   transition: 0.5s;
+}
+
+.light {
+  background: #f5f5f5;
+  color: #353B3C;
+}
+
+.dark {
+  background: #353B3C;
+  color: #f5f5f5;
 }
 
 * {
   font-family: 'Roboto', sans-serif;
-  color: #353B3C;
 }
 
 section {
@@ -16,6 +24,10 @@ section {
   margin: 20px auto;
 }
 
+a {
+  color: inherit;
+}
+
 a:hover {
   color: #d53910;
   text-decoration: none;
@@ -24,9 +36,8 @@ a:hover {
 /* global button styles */
 
 .my-button {
-  color: #353B3C;
-  border-color: #33C173;
-  border-radius: 5px;
+  border: solid 2.5px #33C173;
+  border-radius: 7.5px;
   padding: 5px 10px;
   font-weight: 600;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
@@ -38,6 +49,10 @@ a:hover {
 }
 
 /* Global Input styles */
+
+input {
+  transition: 0.5s;
+}
 
 .red-input {
   border: none;
@@ -71,20 +86,19 @@ a:hover {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
+  transition: 0.5s;
+}
+
+.next i {
+  transition: 0.5s;
 }
 
 .next:hover {
-  border-color: #353B3C;
+  border-color: inherit;
   cursor: pointer;
 }
 .next:hover i {
-  color: #d53910;
-}
-
-/* Anchor Tags */
-
-a {
-  color: #353B3C;
+  color: inherit;
 }
 
 /* Hero Images */
@@ -93,9 +107,9 @@ a {
   background-size: 100vw;
   height: 70vh;
   background-repeat: no-repeat;
-  background-color: #f5f5f5;
   background-position: center;
   background-attachment: fixed;
+  transition: 0.5s;
 }
 
 .hero-1 {
@@ -117,12 +131,17 @@ a {
 
 /* Header Styling */
 
-#home {
-  background-color: #f5f5f5;
+header {
+  transition: 0.5s;
 }
 
 #heading {
   padding-top: 10px;
+  transition: 0.5s;
+}
+
+#heading a {
+  transition: 0.5s;
 }
 
 #heading i {
@@ -134,7 +153,7 @@ a {
 }
 
 #heading a:hover {
-  color: #353B3C;
+  color: inherit;
 }
 
 /* Navbar */
@@ -149,7 +168,6 @@ a {
   top: 0;
   right: 0;
   overflow-x: hidden;
-  background-color: #f5f5f5;
   padding-top: 60px;
   transition: 0.5s;
 }
@@ -182,6 +200,29 @@ a {
 .nav a:hover {
   cursor: pointer;
   color: #d53910;
+}
+
+#light-dark-toggle {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  font-size: 1.5em;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.toggle-dark i {
+  color: #353B3C;
+  transition: 0.3s;
+}
+
+#light-dark-toggle i:hover {
+  color: #d53910;
+}
+
+.toggle-light i {
+  color: #f5f5f5;
+  transition: 0.3s;
 }
 
 #hamburger {
@@ -289,7 +330,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .toggle-trigger::after {
   content: ">";
-  color: #353B3C;
+  color: inherit;
   font-weight: bold;
   display: inline-block;
   position: absolute;
@@ -349,7 +390,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 #exercise-add {
   width: 80%;
   height: 40px;
-  background-color: #f5f5f5;
   padding-left: 5px;
 }
 
@@ -388,7 +428,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 .modal-content {
-  background-color: #f5f5f5;
   margin: auto;
   padding: 20px;
   width: 80vw;
@@ -399,20 +438,22 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   transform: translateY(-50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   border: 2.5px solid #33C173;
+  transition: 0.5s;
 }
 
 #close-modal {
   position: absolute;
   top: 5px;
   right: 7px;
-  color: #353B3C;
+  color: #d53910;
   font-size: 2em;
   font-weight: bold;
+  transition: 0.25s;
 }
 
 #close-modal:hover, #close-modal:focus {
   cursor: pointer;
-  color: #d53910;
+  color: #33C173;
 }
 
 .buttons-div, .times-div {
@@ -524,9 +565,11 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 .form-field input, textarea {
-  /* width: 100%; */
   margin: auto;
-  background-color: #f5f5f5;
+}
+
+textarea {
+  transition: 0.5s;
 }
 
 #submit-button {
@@ -561,16 +604,20 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #d53910;
+  border: solid 2.5px;
   border-radius: 100%;
   cursor: pointer;
   height: 30px;
   width: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+
+.circle:hover {
+  color: #33C173;
 }
 
 #toTop {
-  color: #f5f5f5;
   text-align: center;
   padding-top: 2px;
 }

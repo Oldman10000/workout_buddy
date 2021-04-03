@@ -1,3 +1,9 @@
+// light/dark mode toggle
+$("#light-dark-toggle").click(function () {
+  $(this).toggleClass('toggle-light');
+  $(".light").toggleClass('dark');
+});
+
 // navbar toggle
 $("#hamburger").click(function () {
   $(this).toggleClass('flip');
