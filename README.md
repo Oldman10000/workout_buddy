@@ -187,8 +187,12 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 ### Text
 
 * Exercise instructions text taken and adapted from several websites as needed
+  - [cnet](https://www.cnet.com/)
   - [healthline.com](https://www.healthline.com/)
+  - [Mens Health](https://www.menshealth.com/uk/)
+  - [Openfit.com](https://www.openfit.com/)
   - [spotebi.com](https://www.spotebi.com/)
+
 
 ### Acknowledgements
 
