@@ -183,18 +183,6 @@ startColour();
 // used to check if sound is on or not
 let on = true;
 
-// sets local storage for sound so this remains the same after page refresh
-const soundStorage = localStorage.getItem("sound");
-function getSoundStorage() {
-  if (soundStorage == "on") {
-    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
-  } else {
-    // if soundStorage == "off"
-    // this is also the default option when the user first loads the page as local storage is not set until the toggle is activated
-    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
-  }
-}
-
 // toggles sound on and off
 function toggleSound() {
   $("#sound").click(function () {
@@ -522,11 +510,18 @@ function noExercises() {
 }
 
 // Open exercise modal to start workout
-
 $("#start-workout").click(function () {
+  // gets array of exercises on workout
   getExercises();
-  // gets saved sound preference
-  getSoundStorage();
+  // sets local storage for sound so this remains the same after page refresh
+  const soundStorage = localStorage.getItem("sound");
+  if (soundStorage == "on") {
+    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+  } else {
+    // if soundStorage == "off"
+    // this is also the default option when the user first loads the page as local storage is not set until the toggle is activated
+    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+  }
   if (exercises.length) {
     $("#exercise-modal").show();
     $(".modal-content").html(`
