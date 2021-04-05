@@ -24,9 +24,6 @@ $(".toggle-trigger").click(function () {
   $(this).parent().toggleClass('green');
 });
 
-// empty array of exercises on workout list
-let exercises = [];
-
 // pushes each item in myWorkout list to the exercises array
 function getExercises() {
   exercises = [];
@@ -426,6 +423,7 @@ function noExercises() {
 // Open exercise modal to start workout
 
 $("#start-workout").click(function () {
+  getExercises();
   if (exercises.length) {
     $("#exercise-modal").show();
     $(".modal-content").html(`
@@ -440,7 +438,6 @@ $("#start-workout").click(function () {
     $("#close-modal").click(function () {
       $("#exercise-modal").hide();
     });
-    getExercises();
     $("#easy").click(function () {
       setTimeout(function () {
         startWorkout(30, 60);
