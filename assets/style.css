@@ -444,7 +444,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 .modal-icon {
   position: absolute;
   top: 5px;
-  color: #33C173;
   font-size: 2em;
   font-weight: bold;
   transition: 0.25s;
@@ -454,13 +453,27 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
  left: 7px;
 }
 
+.fa-volume-up {
+  color: #33C173;
+  transition: 0.2s;
+}
+
+.fa-volume-mute {
+  color: #d53910;
+  transition: 0.2s;
+}
+
 #close-modal {
+  color: #33C173;
   right: 7px;
 }
 
-.modal-icon:hover, .modal-icon:focus {
-  cursor: pointer;
+#close-modal:hover, #close-modal:focus {
   color: #d53910;
+}
+
+.modal-icon:hover {
+  cursor: pointer;
 }
 
 .buttons-div, .times-div {
