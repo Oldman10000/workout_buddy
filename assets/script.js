@@ -146,6 +146,7 @@ startColour();
 let sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
 let on = true;
 
+// toggles sound on and off
 function toggleSound() {
   $("#sound").click(function () {
     if ($(this).children([0]).hasClass('fa-volume-up')) {
@@ -171,10 +172,96 @@ startWorkout = function (sec1, sec2) {
   removeFirstExercise = function () {
     exercises.shift();
   }
+
   // gets width of container
   let width = $(".modal-content").width();
-  // timer for the exercise
+
+  // when user starts workout, timer function is activated giving 15 seconds before workout begins
+  let countDown = function () {
+    let sec = 15;
+    let sec3 = 15;
+    let timer3 = setInterval(function () {
+      $(".modal-content").html(`
+        ${sound}
+        <div id="close-modal" class="modal-icon">
+          <i class="fas fa-times"></i>
+        </div>
+        <p class="modal-heading">Get Ready...</p>
+        <div class="timer">
+          <p class="timerdisplay">${sec}</p>
+        </div>
+        <div class="progress"></div>
+      `);
+      sec--;
+      // sound toggle
+      toggleSound();
+      // closes modal
+      $("#close-modal").click(function () {
+        $("#exercise-modal").hide();
+        clearInterval(timer3);
+      });
+      // reduces width of progress bar as timer ticks down
+      let progWidth = ((sec + 1) * width / sec3);
+      $(".progress").css({
+        width: progWidth + 'px'
+      });
+      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes to 'amber'
+      if (sec < 10) {
+        $(".timer").css({
+          background: '#ffa630'
+        });
+        $(".progress").css({
+          background: '#ffa630'
+        });
+        $(".modal-content").css({
+          border: '2.5px solid #ffa630'
+        });
+      }
+      // changes to 'red'
+      if (sec < 5) {
+        $(".timer").css({
+          background: '#d53910'
+        });
+        $(".progress").css({
+          background: '#d53910'
+        });
+        $(".modal-content").css({
+          border: '2.5px solid #d53910'
+        });
+      }
+      // plays sound when timer is at 10 and 5 seconds remaining
+      if (sec == 4 || sec == 9) {
+        if (on) {
+          $("#ding")[0].play();
+        }
+      }
+      // activates once timer elapses
+      if (sec < 0) {
+        // stops timer
+        clearInterval(timer3);
+        // plays sound effect
+        if (on) {
+          $("#buzz")[0].play();
+        }
+        setTimeout(function () {
+          // changes inner colours back to green for next section
+          $(".modal-content").css({
+            border: '2.5px solid #33C173'
+          });
+          // activates timer for first exercise in list
+          timer(sec1);
+        }, 1000);
+      }
+    }, 1000);
+  }
+
+  // triggers countdown function
+  countDown();
+
+  // timer for each exercise
   let timer = function () {
+    // takes first item in exercises array
     let x = exercises[0];
     let sec = sec1
     let timer1 = setInterval(function () {
@@ -190,15 +277,20 @@ startWorkout = function (sec1, sec2) {
         <div class="progress"></div>
       `);
       sec--;
+      // sound toggle
       toggleSound();
+      // closes modal
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
         clearInterval(timer1);
-      })
+      });
+      // reduces width of progress bar as timer ticks down
       let progWidth = ((sec + 1) * width / sec1);
       $(".progress").css({
         width: progWidth + 'px'
       });
+      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
           background: '#ffa630'
@@ -210,6 +302,7 @@ startWorkout = function (sec1, sec2) {
           border: '2.5px solid #ffa630'
         });
       }
+      // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
           background: '#d53910'
@@ -221,14 +314,19 @@ startWorkout = function (sec1, sec2) {
           border: '2.5px solid #d53910'
         });
       }
+      // plays sound when timer is at 20 and 10 seconds remaining
       if (sec == 9 || sec == 19) {
         if (on) {
           $("#ding")[0].play();
         }
       }
+      // activates once timer elapses
       if (sec < 0) {
+        // stops timer
         clearInterval(timer1);
+        // removes first exercise from exercises array
         removeFirstExercise();
+        // if exercises array is now empty, congratulations is trigged, ending the workout
         if (exercises.length == 0) {
           if (on) {
             $("#cheer")[0].play();
@@ -239,6 +337,7 @@ startWorkout = function (sec1, sec2) {
               border: '2.5px solid #33C173'
             });
           }, 1000);
+          // if exercises array has items remaining, triggers restTimer function
         } else {
           if (on) {
             $("#buzz")[0].play();
@@ -271,15 +370,20 @@ startWorkout = function (sec1, sec2) {
         <div class="progress"></div>
       `);
       sec--;
+      // sound toggle
       toggleSound();
+      // closes modal
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
         clearInterval(timer2);
-      })
+      });
+      // reduces width of progress bar as timer ticks down
       let progWidth = ((sec + 1) * width / sec2);
       $(".progress").css({
         width: progWidth + 'px'
       });
+      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
           background: '#ffa630'
@@ -291,6 +395,7 @@ startWorkout = function (sec1, sec2) {
           border: '2.5px solid #ffa630'
         });
       }
+      // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
           background: '#d53910'
@@ -302,12 +407,15 @@ startWorkout = function (sec1, sec2) {
           border: '2.5px solid #d53910'
         });
       }
+      // plays sound when timer is at 20 and 10 seconds remaining
       if (sec == 9 || sec == 19) {
         if (on) {
           $("#ding")[0].play();
         }
       }
+      // activates once timer elapses
       if (sec < 0) {
+        // stops timer
         clearInterval(timer2);
         if (on) {
           $("#buzz")[0].play();
@@ -316,80 +424,12 @@ startWorkout = function (sec1, sec2) {
           $(".modal-content").css({
             border: '2.5px solid #33C173'
           });
+          // starts timer for first exercise in array
           timer(sec1);
         }, 1000);
       }
     }, 1000);
   }
-
-  let countDown = function () {
-    let sec = 15;
-    let sec3 = 15;
-    let timer3 = setInterval(function () {
-      $(".modal-content").html(`
-        ${sound}
-        <div id="close-modal" class="modal-icon">
-          <i class="fas fa-times"></i>
-        </div>
-        <p class="modal-heading">Get Ready...</p>
-        <div class="timer">
-          <p class="timerdisplay">${sec}</p>
-        </div>
-        <div class="progress"></div>
-      `);
-      sec--;
-      toggleSound();
-      $("#close-modal").click(function () {
-        $("#exercise-modal").hide();
-        clearInterval(timer3);
-      });
-      let progWidth = ((sec + 1) * width / sec3);
-      $(".progress").css({
-        width: progWidth + 'px'
-      });
-      if (sec < 10) {
-        $(".timer").css({
-          background: '#ffa630'
-        });
-        $(".progress").css({
-          background: '#ffa630'
-        });
-        $(".modal-content").css({
-          border: '2.5px solid #ffa630'
-        });
-      }
-      if (sec < 5) {
-        $(".timer").css({
-          background: '#d53910'
-        });
-        $(".progress").css({
-          background: '#d53910'
-        });
-        $(".modal-content").css({
-          border: '2.5px solid #d53910'
-        });
-      }
-      if (sec == 4 || sec == 9) {
-        if (on) {
-          $("#ding")[0].play();
-        }
-      }
-      if (sec < 0) {
-        clearInterval(timer3);
-        if (on) {
-          $("#buzz")[0].play();
-        }
-        setTimeout(function () {
-          $(".modal-content").css({
-            border: '2.5px solid #33C173'
-          });
-          timer(sec1);
-        }, 1000);
-      }
-    }, 1000);
-  }
-
-  countDown();
 
   // congratulations message when workout is complete
   let congratulations = () => {
@@ -438,25 +478,30 @@ $("#start-workout").click(function () {
         <button class="my-button modal-button" id="custom">Custom</button>
       </div>
     `);
+    // toggles sound
     toggleSound();
     $("#close-modal").click(function () {
       $("#exercise-modal").hide();
     });
+    // if user selects 'take it easy' starts workout and sets times
     $("#easy").click(function () {
       setTimeout(function () {
         startWorkout(30, 60);
       }, 200);
     });
+    // if user selects 'make me sweat' starts workout and sets times
     $("#medium").click(function () {
       setTimeout(function () {
         startWorkout(45, 45);
       }, 200);
     });
+    // if user selects 'hardcore' starts workout and sets times
     $("#hard").click(function () {
       setTimeout(function () {
         startWorkout(60, 30);
       }, 200);
     });
+    // if user selects 'custom', this takes them to time select screen
     $("#custom").click(function () {
       $(".modal-content").html(`
         ${sound}
@@ -476,9 +521,11 @@ $("#start-workout").click(function () {
         </div>
        </div>
       `);
+      // closes modal
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
       });
+      // starts workout based on custom times
       $("#start").click(function () {
         let x = $("#exercise-time").val();
         let y = $("#rest-time").val();
@@ -487,11 +534,13 @@ $("#start-workout").click(function () {
             startWorkout(x, y);
           }, 200);
         } else {
+          // if user has entered no numbers to custom workout
           alert('No times selected!!');
         }
       });
     });
   } else {
+    // if no exercises in list
     noExercises();
   }
 })
