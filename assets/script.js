@@ -180,26 +180,47 @@ function startColour() {
 
 startColour();
 
-// sound on/off toggle
-
-// default upon page load
-let sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+// used to check if sound is on or not
 let on = true;
+
+// sets local storage for sound so this remains the same after page refresh
+const soundStorage = localStorage.getItem("sound");
+function getSoundStorage() {
+  if (soundStorage == "on") {
+    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+  } else {
+    // if soundStorage == "off"
+    // this is also the default option when the user first loads the page as local storage is not set until the toggle is activated
+    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+  }
+}
 
 // toggles sound on and off
 function toggleSound() {
   $("#sound").click(function () {
+    // checks whether sound is currently muted or not
+    // if sound is currently on
     if ($(this).children([0]).hasClass('fa-volume-up')) {
+      // this section is needed for the first modal pop up as this does not refresh
       $(this).children([0]).removeClass('fa-volume-up');
       $(this).children([0]).addClass('fa-volume-mute');
+      // changes value of 'on' variable when sound is switched off
       on = false;
+      // this changes the value of variable 'sound' every time, so that it stays the same every time the modal refreshes on 'set interval'
       sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+      z = "off";
+      // if sound is currently muted
     } else {
       $(this).children([0]).removeClass('fa-volume-mute');
       $(this).children([0]).addClass('fa-volume-up');
+      // returns 'on' variable to true when sound is on
       on = true;
       sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+      // this changes the value of variable 'sound' every time, so that it stays the same every time the modal refreshes on 'set interval'
+      z = "on";
     }
+    // sets local storage based on above code so this always matches dom content
+    localStorage.setItem("sound", z);
   });
 }
 
@@ -504,6 +525,8 @@ function noExercises() {
 
 $("#start-workout").click(function () {
   getExercises();
+  // gets saved sound preference
+  getSoundStorage();
   if (exercises.length) {
     $("#exercise-modal").show();
     $(".modal-content").html(`
@@ -561,6 +584,8 @@ $("#start-workout").click(function () {
         </div>
        </div>
       `);
+      // toggles sound
+      toggleSound();
       // closes modal
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
