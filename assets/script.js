@@ -1,7 +1,47 @@
-// light/dark mode toggle
+// light/dark mode toggle - saves in local storage for refresh
+// local storage code copied and amended from css-tricks.com
+// https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#storing-preferences
+
+const currentTheme = localStorage.getItem("theme");
+const toggleButton = localStorage.getItem("button");
+
+if (currentTheme == "dark") {
+  // ...then use the .dark-theme class
+  $(".light").addClass('dark');
+}
+
+if (toggleButton == "light") {
+  $("#light-dark-toggle").addClass('toggle-light');
+}
+
+// Listen for a click on the button 
 $("#light-dark-toggle").click(function () {
-  $(this).toggleClass('toggle-light');
+
+  // Toggle the .dark-theme class on each click
   $(".light").toggleClass('dark');
+
+  // Let's say the theme is equal to light
+  let theme = "light";
+
+  // If the body contains the .dark-theme class...
+  if ($(".light").hasClass('dark')) {
+
+    // ...then let's make the theme dark
+    theme = "dark";
+  }
+  // Then save the choice in localStorage
+  localStorage.setItem("theme", theme);
+
+  // toggles class on toggle button
+  $(this).toggleClass('toggle-light');
+
+  let button = "dark";
+
+  if ($(this).hasClass('toggle-light')) {
+    button = "light";
+  }
+
+  localStorage.setItem("button", button);
 });
 
 // navbar toggle
@@ -34,7 +74,7 @@ function getExercises() {
 }
 
 // refreshes local storage by taking the current data from the DOM every time this is run
-function addLocal() {
+function addLocalExercises() {
   getExercises();
   let savedExercises = Object.assign({}, exercises);
   localStorage.setItem('exercises', JSON.stringify(savedExercises));
@@ -48,7 +88,7 @@ const addExercise = document.querySelector('.exercise-form');
 const list = document.querySelector('#workout-list');
 
 // gets exercises from local storage
-function getLocal() {
+function getLocalExercises() {
   const stored = localStorage.getItem('exercises');
   let data = JSON.parse(stored);
   $.each(data, function (i, val) {
@@ -63,7 +103,7 @@ function getLocal() {
 }
 
 // runs every time the page is refreshed and returns local storage
-getLocal();
+getLocalExercises();
 
 // creates template literal for exercises added to list
 const template = exercise => {
@@ -84,7 +124,7 @@ addExercise.addEventListener('submit', e => {
   if (exercise.length) {
     template(exercise);
     startColour()
-    addLocal();
+    addLocalExercises();
     addExercise.reset();
   } else {
     alert('No text entered!');
@@ -102,7 +142,7 @@ $(".workout-add").click(function () {
   `;
   list.innerHTML += html;
   startColour()
-  addLocal();
+  addLocalExercises();
   $(this).css({
     background: '#33C173'
   })
@@ -125,7 +165,7 @@ $("#workout-list").click(function (e) {
   };
   startColour()
   // deletes from local storage
-  addLocal();
+  addLocalExercises();
 });
 
 // checks if there are any exercises in the workout and switches colour of start button depending
