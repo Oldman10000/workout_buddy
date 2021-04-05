@@ -140,36 +140,36 @@ function startColour() {
 
 startColour();
 
+// sound on/off toggle
+
+// default upon page load
+let sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+let on = true;
+
+function toggleSound() {
+  $("#sound").click(function () {
+    if ($(this).children([0]).hasClass('fa-volume-up')) {
+      $(this).children([0]).removeClass('fa-volume-up');
+      $(this).children([0]).addClass('fa-volume-mute');
+      on = false;
+      sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+    } else {
+      $(this).children([0]).removeClass('fa-volume-mute');
+      $(this).children([0]).addClass('fa-volume-up');
+      on = true;
+      sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+    }
+  });
+}
+
 // general workout timer function
 
 // this loops through each item in the exercises array until workout is complete
 startWorkout = function (sec1, sec2) {
-  // gets array of exercises
-  getExercises();
+
   // removes first exercise from array
   removeFirstExercise = function () {
     exercises.shift();
-  }
-
-  // sound on/off toggle
-  let sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
-
-  let on = true;
-
-  function toggleSound() {
-    $("#sound").click(function () {
-      if ($(this).children([0]).hasClass('fa-volume-up')) {
-        $(this).children([0]).removeClass('fa-volume-up');
-        $(this).children([0]).addClass('fa-volume-mute');
-        on = false;
-        sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
-      } else {
-        $(this).children([0]).removeClass('fa-volume-mute');
-        $(this).children([0]).addClass('fa-volume-up');
-        on = true;
-        sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
-      }
-    });
   }
   // gets width of container
   let width = $(".modal-content").width();
@@ -427,14 +427,18 @@ $("#start-workout").click(function () {
   if (exercises.length) {
     $("#exercise-modal").show();
     $(".modal-content").html(`
-    <div id="close-modal" class="modal-icon"><i class="fas fa-times"></i></div>
-    <div class="buttons-div">
-      <button class="my-button modal-button" id="easy">Take it easy</button>
-      <button class="my-button modal-button" id="medium">Make me sweat</button>
-      <button class="my-button modal-button" id="hard">Hardcore</button>
-      <button class="my-button modal-button" id="custom">Custom</button>
-    </div>
-  `);
+      ${sound}
+      <div id="close-modal" class="modal-icon">
+        <i class="fas fa-times"></i>
+      </div>
+      <div class="buttons-div">
+        <button class="my-button modal-button" id="easy">Take it easy</button>
+        <button class="my-button modal-button" id="medium">Make me sweat</button>
+        <button class="my-button modal-button" id="hard">Hardcore</button>
+        <button class="my-button modal-button" id="custom">Custom</button>
+      </div>
+    `);
+    toggleSound();
     $("#close-modal").click(function () {
       $("#exercise-modal").hide();
     });
@@ -455,7 +459,10 @@ $("#start-workout").click(function () {
     });
     $("#custom").click(function () {
       $(".modal-content").html(`
-      <i class="fas fa-times" id="close-modal"></i>
+        ${sound}
+        <div id="close-modal" class="modal-icon">
+          <i class="fas fa-times"></i>
+        </div>
         <div class="times-div">
           <div>
             <label for="exercise-time" aria-label="exercise time"></label>
@@ -468,7 +475,7 @@ $("#start-workout").click(function () {
           <button class="my-button modal-button" id="start">Start!</button>
         </div>
        </div>
-    `);
+      `);
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
       });
