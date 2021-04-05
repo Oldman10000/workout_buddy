@@ -12,7 +12,7 @@ $("#hamburger").click(function () {
 });
 
 // closes navbar after picking section
-$(".section-link").click(function() {
+$(".section-link").click(function () {
   $("#hamburger").toggleClass('flip');
   $(".nav").toggleClass('visible');
   $("main").toggleClass('shrink');
@@ -153,6 +153,27 @@ startWorkout = function (sec1, sec2) {
   removeFirstExercise = function () {
     exercises.shift();
   }
+
+  // sound on/off toggle
+  let sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+
+  let on = true;
+
+  function toggleSound() {
+    $("#sound").click(function () {
+      if ($(this).children([0]).hasClass('fa-volume-up')) {
+        $(this).children([0]).removeClass('fa-volume-up');
+        $(this).children([0]).addClass('fa-volume-mute');
+        on = false;
+        sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+      } else {
+        $(this).children([0]).removeClass('fa-volume-mute');
+        $(this).children([0]).addClass('fa-volume-up');
+        on = true;
+        sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+      }
+    });
+  }
   // gets width of container
   let width = $(".modal-content").width();
   // timer for the exercise
@@ -161,14 +182,18 @@ startWorkout = function (sec1, sec2) {
     let sec = sec1
     let timer1 = setInterval(function () {
       $(".modal-content").html(`
-          <i class="fas fa-times" id="close-modal"></i>
-          <p class="modal-heading">${x}</p>
-          <div class="timer">
-            <p class="timerdisplay">${sec}</p>
-          </div>
-          <div class="progress"></div>
-        `);
+        ${sound}
+        <div id="close-modal" class="modal-icon">
+          <i class="fas fa-times"></i>
+        </div>
+        <p class="modal-heading">${x}</p>
+        <div class="timer">
+          <p class="timerdisplay">${sec}</p>
+        </div>
+        <div class="progress"></div>
+      `);
       sec--;
+      toggleSound();
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
         clearInterval(timer1);
@@ -200,13 +225,17 @@ startWorkout = function (sec1, sec2) {
         });
       }
       if (sec == 9 || sec == 19) {
-        $("#ding")[0].play();
+        if (on) {
+          $("#ding")[0].play();
+        }
       }
       if (sec < 0) {
         clearInterval(timer1);
         removeFirstExercise();
         if (exercises.length == 0) {
-          $("#cheer")[0].play();
+          if (on) {
+            $("#cheer")[0].play();
+          }
           setTimeout(function () {
             congratulations();
             $(".modal-content").css({
@@ -214,7 +243,9 @@ startWorkout = function (sec1, sec2) {
             });
           }, 1000);
         } else {
-          $("#buzz")[0].play();
+          if (on) {
+            $("#buzz")[0].play();
+          }
           setTimeout(function () {
             $(".modal-content").css({
               border: '2.5px solid #33C173'
@@ -232,14 +263,18 @@ startWorkout = function (sec1, sec2) {
     let x = exercises[0];
     let timer2 = setInterval(function () {
       $(".modal-content").html(`
-          <i class="fas fa-times" id="close-modal"></i>
-          <p class="modal-heading">Rest!<br>Next Exercise: ${x}</p>
-          <div class="timer">
-            <p class="timerdisplay">${sec}</p>
-          </div>
-          <div class="progress"></div>
-        `);
+        ${sound}
+        <div id="close-modal" class="modal-icon">
+          <i class="fas fa-times"></i>
+        </div>
+        <p class="modal-heading">Rest!<br>Next Exercise: ${x}</p>
+        <div class="timer">
+          <p class="timerdisplay">${sec}</p>
+        </div>
+        <div class="progress"></div>
+      `);
       sec--;
+      toggleSound();
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
         clearInterval(timer2);
@@ -271,11 +306,15 @@ startWorkout = function (sec1, sec2) {
         });
       }
       if (sec == 9 || sec == 19) {
-        $("#ding")[0].play();
+        if (on) {
+          $("#ding")[0].play();
+        }
       }
       if (sec < 0) {
         clearInterval(timer2);
-        $("#buzz")[0].play();
+        if (on) {
+          $("#buzz")[0].play();
+        }
         setTimeout(function () {
           $(".modal-content").css({
             border: '2.5px solid #33C173'
@@ -289,21 +328,24 @@ startWorkout = function (sec1, sec2) {
   let countDown = function () {
     let sec = 15;
     let sec3 = 15;
-    let x = exercises[0];
     let timer3 = setInterval(function () {
       $(".modal-content").html(`
-          <i class="fas fa-times" id="close-modal"></i>
-          <p class="modal-heading">Get Ready...</p>
-          <div class="timer">
-            <p class="timerdisplay">${sec}</p>
-          </div>
-          <div class="progress"></div>
-        `);
+        ${sound}
+        <div id="close-modal" class="modal-icon">
+          <i class="fas fa-times"></i>
+        </div>
+        <p class="modal-heading">Get Ready...</p>
+        <div class="timer">
+          <p class="timerdisplay">${sec}</p>
+        </div>
+        <div class="progress"></div>
+      `);
       sec--;
+      toggleSound();
       $("#close-modal").click(function () {
         $("#exercise-modal").hide();
         clearInterval(timer3);
-      })
+      });
       let progWidth = ((sec + 1) * width / sec3);
       $(".progress").css({
         width: progWidth + 'px'
@@ -331,11 +373,15 @@ startWorkout = function (sec1, sec2) {
         });
       }
       if (sec == 4 || sec == 9) {
-        $("#ding")[0].play();
+        if (on) {
+          $("#ding")[0].play();
+        }
       }
       if (sec < 0) {
         clearInterval(timer3);
-        $("#buzz")[0].play();
+        if (on) {
+          $("#buzz")[0].play();
+        }
         setTimeout(function () {
           $(".modal-content").css({
             border: '2.5px solid #33C173'
@@ -351,7 +397,9 @@ startWorkout = function (sec1, sec2) {
   // congratulations message when workout is complete
   let congratulations = () => {
     $(".modal-content").html(`
-      <i class="fas fa-times" id="close-modal"></i>
+      <div id="close-modal" class="modal-icon">
+        <i class="fas fa-times"></i>
+      </div>
       <h3>Congratulations!</h3>
       <p>Workout Complete</p>
       <div class="complete-img-div">
@@ -381,7 +429,7 @@ $("#start-workout").click(function () {
   if (exercises.length) {
     $("#exercise-modal").show();
     $(".modal-content").html(`
-    <i class="fas fa-times" id="close-modal"></i>
+    <div id="close-modal" class="modal-icon"><i class="fas fa-times"></i></div>
     <div class="buttons-div">
       <button class="my-button modal-button" id="easy">Take it easy</button>
       <button class="my-button modal-button" id="medium">Make me sweat</button>
