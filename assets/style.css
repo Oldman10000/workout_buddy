@@ -321,10 +321,6 @@ ul {
   padding: 5px 0;
 }
 
-.exercise-item h4 {
-  font-size: 0.9em;
-}
-
 /* Toggle-Trigger styling and animation taken and amended from
 Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling */
 
@@ -630,6 +626,7 @@ textarea {
   width: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
   transition: 0.5s;
+  text-align: center;
 }
 
 .circle:hover {
@@ -637,8 +634,7 @@ textarea {
 }
 
 #toTop {
-  text-align: center;
-  padding-top: 2px;
+  padding-top: 3px;
 }
 
 /* Media Queries */
@@ -705,4 +701,9 @@ textarea {
   .hero-4 {
     background-image: url("../assets/images/hero4.jpg");
   }
+
+  p {
+    font-size: 1.2em;
+  }
+
 }
