@@ -234,6 +234,16 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
     - If the sound toggle is switched on, a 'cheer' sound effect is played
     - The user has the option to share their workout to social media. Each link currently opens in a seperate tab to the homepage of the respective social media site.
 
+### Future Features
+
+As mentioned previously, I think this site has potential for many additional features which have not been implemented at this point for various reasons. I will list some further ideas below.
+
+1. Add further exercises. Add a section for stretches to be performed at the start of each workout alongside warmup exercises.
+2. Include more detailed instructions for each exercise. This could be in the form of images/gifs/videos.
+3. On the "My Exercises" list in the "My Workout" section, allow the user to change the order of exercises on the list.
+4. Allow users to log in and create accounts. This could allow them to create workouts and store them in a shared database which any user can access like a social media site. For example the running/cycling etc application Strava allows users to save running routes for other users to access and look at. This could work in a similar way, but for workout routines. A completed workout could also be shared on the user's profile.
+5. Add a play/pause function to the workout timers. This was an idea I had at the start of the project, however I could not find a way for this to work easily as the timers use a setInterval() method which cannot be easily interrupted without being cancelled completely. This is something I would like to return to once I have more experience with JavaScript, however for the time being the timer will have to be strict with the user. Once they have started the workout, they have to either complete it completely or cancel it by closing the modal box.
+
 ## Issues Overcome
 
 ### Timer Function
