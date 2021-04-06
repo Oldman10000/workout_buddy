@@ -527,25 +527,29 @@ function noExercises() {
 function customOpen() {
   $(".modal-content").html(`
   ${sound}
-  <div id="close-modal" class="modal-icon">
-    <i class="fas fa-times"></i>
-  </div>
-  <div class="times-div">
-    <div>
-      <label for="exercise-time" aria-label="exercise time"></label>
-      <input class="custom-number" id="exercise-time" type="number" placeholder="Exercise (s)">
+    <div id="close-modal" class="modal-icon">
+      <i class="fas fa-times"></i>
     </div>
-    <div>
-      <label for="rest-time" aria-label="rest time"></label>
-      <input class="custom-number" id="rest-time" type="number" placeholder="Rest (s)">
+    <div class="times-div">
+      <div>
+        <label for="exercise-time" aria-label="exercise time"></label>
+        <input class="custom-number red-input" id="exercise-time" type="number" placeholder="Exercise (s)">
+      </div>
+      <div>
+        <label for="rest-time" aria-label="rest time"></label>
+        <input class="custom-number red-input" id="rest-time" type="number" placeholder="Rest (s)">
+      </div>
+      <div class="custom-buttons-div">
+        <button class="my-button modal-button red-button" id="start">Start!</button>
+        <button class="my-button modal-button red-button" id="back">Back</button>
+      </div>
     </div>
-    <div class="custom-buttons-div">
-      <button class="my-button modal-button" id="start">Start!</button>
-      <button class="my-button modal-button" id="back">Back</button>
-    </div>
-  </div>
- </div>
-`);
+  `);
+  // adds validation to custom number inputs
+  const inputs = document.querySelectorAll(".custom-number");
+  inputs.forEach(input => {
+    formColour(input);
+  });
   // toggles sound
   toggleSound();
   // closes modal
@@ -580,7 +584,7 @@ function customOpen() {
 }
 
 //opens first modal screen difficulty select
-let workoutStart = function() {
+let workoutStart = function () {
   // gets array of exercises on workout
   getExercises();
   // sets local storage for sound so this remains the same after page refresh
@@ -659,6 +663,15 @@ function submitChange() {
   }
 }
 
+// changes colour of start button in custom exercise times start button
+function startChange() {
+  if ($("#exercise-time").hasClass('green-input') && ($("#rest-time").hasClass('green-input'))) {
+    $("#start").removeClass('red-button');
+  } else {
+    $("#start").addClass("red-button");
+  }
+}
+
 // changes colour of input fields if all valid
 function formColour(x) {
   $(x).keyup(function (e) {
@@ -669,7 +682,10 @@ function formColour(x) {
       $(x).removeClass("green-input");
       $(x).addClass("red-input");
     }
+    // for form submit button
     submitChange();
+    // for custom exercise times start button
+    startChange();
   });
 }
 

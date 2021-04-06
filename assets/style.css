@@ -495,9 +495,11 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 .custom-number {
   font-size: 1.2em;
   margin: 15px auto;
-  border: solid 2px #33C173;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  background-color: #f5f5f5;
+}
+
+.custom-number:focus {
+  outline: none;
 }
 
 .modal-heading {
@@ -507,10 +509,6 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .custom-buttons-div {
   margin-top: 15%;
-}
-
-#back {
-  border-color: #d53910;
 }
 
 .timer {
