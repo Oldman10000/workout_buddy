@@ -142,9 +142,55 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
     - Every time the user toggles the button, this info is saved to local storage so that on refresh this data remains the same.
     - This is useful, as the user will generally have a preference for this option. If the user has switched it to 'off' on their first session, and returns the next day, they will expect this setting to stay the same and not be surprised by the sound effects.
 
-### Interactive Feedback
+### Visual Interactive Feedback
 
-###
+* All elements that the user can click on or change provide an immediate visual response when interacted with. This ranges from colour changes on CSS hover pseudoclasses to form validation.
+
+  - CSS hover pseudoclasses
+    - Most interactive items change colour upon hover as well as turning into hand cursors as is standard. 
+    - In the example below, the cursor is hovering over the 'trash' icon next to the text 'Press Ups'. Possible user interaction is clear due to the colour change.
+
+    ![Hover](documentation/hover.jpg)
+
+    - This feature is also included on:
+      - Light/Dark mode toggle
+      - Navbar Hamburger
+      - Navbar Items
+      - 'Next Section' down arrow
+      - 'X' logo in workout modal
+      - 'Back to top' arrow
+  
+    - On larger screens, all buttons grow slightly in size when hovered over.
+      - This feature does not work for smaller screens as these will generally be used as touchscreens and a hover feature is less useful. When testing the site on my mobile phone I disliked the effect that this feature had so I kept this feature to large screens only.
+  
+  - Exercises Section
+    - When opening the dropdown 'accordions' in the 'Exercises' section, the border of each list item changes colour from red to green.
+    - This simple effect elicits an instant positive response from the user and encourages them to add this item to the workout.
+    ![Green Border](documentation/green_list.jpg)
+    - As can also be seen in the above image, the arrow next to the h4 element in each list item rotates 180 degrees when the list item is opened. This provides an extra visual feedback element to the user.
+    - After the 'Add to workout' button has been selected, the background colour changes to green, and the window auto closes after a short timeout. This provides the user with feedback that they have successfully added the item to the workout.
+    ![Green Button](documentation/green_button.jpg)
+  
+  - My Workout Section
+    - When the user has added an item to the workout from the exercise list above, this item is instantly added to their 'My Exercises' list in the 'My Workout' section.
+    - As shown in the above image, I added the 'High Knees' exercise, this can now be seen in the 'My Exercises' list below, as well as the exercises already seen on the screenshots made higher up in the features section.
+    ![High Knees Added](documentation/high_knees.jpg)
+    - It is easy to delete any of items by simply clicking the trash icon.
+    - The user can add a custom exercise to the list as well by filling in the 'Add your own exercise here' form. In the screenshot above, it can be seen that 'Chest Press' is included as this has been manually entered this way, as it cannot be added from the 'Exercises' section above.
+  
+  - Form Validation
+    - I have added visual form validation elements to all inputs.
+      - When valid text is entered to input forms, the bottom border colour changes from red to green. This effect can be clearly seen below - contrast the green border in the input now that includes valid text to the previous image, where the input is empty.
+    ![Green Input](documentation/green_input.jpg)
+    - The 'Let's Go!!' button in the 'My Workout' section has a red border if the workout list is empty, but turns green after items have been added.
+    ![Empty Workout](documentation/start_red.jpg)
+    ![Non empty Workout](documentation/start_green.jpg)
+    - All items in the Feedback Form section exhibit the same effects for both the input bottom border colour and the button, which in this case is a submit button which only turns green once all form inputs are valid.
+    - As the email input is only valid once it includes an @ symbol with content afterwards, I used a regex (regular expression) in my code to ensure that the border properties changed correctly.
+      - Invalid Form due to email input
+      ![Invalid Form](documentation/invalid.jpg)
+      - Valid Form
+      ![Valid Form](documentation/valid.jpg)
 
 ## Issues Overcome
 
