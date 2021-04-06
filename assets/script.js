@@ -127,7 +127,16 @@ addExercise.addEventListener('submit', e => {
     addLocalExercises();
     addExercise.reset();
   } else {
-    alert('No text entered!');
+    $("#toast").html(`
+    <div class ="negative">
+      <p>No Text Entered!!</i></p>
+    </div>
+    `);
+    $("#toast").show();
+    setTimeout(function () {
+      $("#toast").hide();
+      $("#toast").html(``);
+    }, 6000);
   }
 });
 
@@ -503,7 +512,16 @@ startWorkout = function (sec1, sec2) {
 
 // if there are no exercises on the workout
 function noExercises() {
-  alert('no exercises in list!!');
+  $("#toast").html(`
+    <div class ="negative">
+      <p>No Exercises in List!!</i></p>
+    </div>
+  `);
+  $("#toast").show();
+  setTimeout(function () {
+    $("#toast").hide();
+    $("#toast").html(``);
+  }, 6000);
 }
 
 // Open exercise modal to start workout
@@ -596,7 +614,16 @@ $("#start-workout").click(function () {
           }, 200);
         } else {
           // if user has entered no numbers to custom workout
-          alert('No times selected!!');
+          $("#toast").html(`
+            <div class ="negative">
+            <p>No Times Selected!!</i></p>
+            </div>
+          `);
+          $("#toast").show();
+          setTimeout(function () {
+            $("#toast").hide();
+            $("#toast").html(``);
+          }, 6000);
         }
       });
     });
@@ -655,7 +682,12 @@ $("#email").keyup(function (e) {
 // action upon submit contact form
 $("#contact-form").submit(function (e) {
   e.preventDefault();
-  $(".form-feedback").show();
+  $("#toast").html(`
+  <div class ="form-feedback">
+    <p>Thank you for your feedback! <i class="far fa-smile"></i></p>
+  </div>
+  `);
+  $("#toast").show();
   $("#contact-form")[0].reset();
   let inputs = document.querySelectorAll(".form-input");
   inputs.forEach(input => {
@@ -664,7 +696,8 @@ $("#contact-form").submit(function (e) {
   });
   $("#submit-button").addClass("red-button");
   setTimeout(function () {
-    $(".form-feedback").hide();
+    $("#toast").hide();
+    $("#toast").html(``);
   }, 6000);
 });
 

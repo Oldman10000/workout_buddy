@@ -600,20 +600,37 @@ textarea {
   outline: none;
 }
 
-.form-feedback {
+/* Stylings for toast alerts */
+
+#toast {
   display: none;
   position: fixed;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  background: #d53910;
-  border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  z-index: 1;
 }
 
-.form-feedback p {
-  margin: 5px;
+#toast p {
+  margin: 15px;
   text-align: center;
+  font-weight: 600;
+}
+
+/* When submitting feedback form */
+.form-feedback {
+  background: #33C173;
+  border: solid 2.5px #33C173;
+  border-radius: 5px;
+}
+
+/* When inputs are invalid upon enter */
+.negative {
+  background: #d53910;
+  border: solid 2.5px #d53910;
+  border-radius: 5px;
 }
 
 /* Footer Styling */
