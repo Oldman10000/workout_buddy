@@ -122,6 +122,16 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
 
   ![Mid Nav](documentation/nav_mid.jpg)
 
+### Navigation
+
+* As well as the navbar accessible by the fixed hamburger on the top right of the screen, there are also navigation arrows between each section.
+
+  - Downwards facing arrows at the bottom of each section allow the user to quickly access the next section, should they prefer not to scroll past the hero images that divide each section. The scrolling action that occurs is a smooth rather than instant motion.
+  ![Mid Nav](documentation/nav_down.jpg)
+
+  - Once the user has scrolled further than 20px from the top of the screen, an upward facing arrow button appears at the middle bottom of the screen. Upon selection, this arrow returns the user to the very top of the page.
+![Mid Nav](documentation/nav_up.jpg)
+
 ### User Preferences
 
 * User preferences are saved in the browser local storage, meaning that when the user either refreshes the page or returns to it at any other time, the site will look exactly the same as how they left it. There are three main features which carry this function.
