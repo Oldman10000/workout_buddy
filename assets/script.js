@@ -180,9 +180,6 @@ function startColour() {
 
 startColour();
 
-// used to check if sound is on or not
-let on = true;
-
 // toggles sound on and off
 function toggleSound() {
   $("#sound").click(function () {
@@ -517,10 +514,14 @@ $("#start-workout").click(function () {
   const soundStorage = localStorage.getItem("sound");
   if (soundStorage == "on") {
     sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
+    // used to check if sound is on or not
+    on = true;
   } else {
     // if soundStorage == "off"
     // this is also the default option when the user first loads the page as local storage is not set until the toggle is activated
     sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+    // used to check if sound is on or not
+    on = false;
   }
   if (exercises.length) {
     $("#exercise-modal").show();
