@@ -505,12 +505,12 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   font-size: 2em;
 }
 
-#start {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 50px;
+.custom-buttons-div {
+  margin-top: 15%;
+}
+
+#back {
+  border-color: #d53910;
 }
 
 .timer {

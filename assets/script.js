@@ -524,8 +524,63 @@ function noExercises() {
   }, 6000);
 }
 
-// Open exercise modal to start workout
-$("#start-workout").click(function () {
+function customOpen() {
+  $(".modal-content").html(`
+  ${sound}
+  <div id="close-modal" class="modal-icon">
+    <i class="fas fa-times"></i>
+  </div>
+  <div class="times-div">
+    <div>
+      <label for="exercise-time" aria-label="exercise time"></label>
+      <input class="custom-number" id="exercise-time" type="number" placeholder="Exercise (s)">
+    </div>
+    <div>
+      <label for="rest-time" aria-label="rest time"></label>
+      <input class="custom-number" id="rest-time" type="number" placeholder="Rest (s)">
+    </div>
+    <div class="custom-buttons-div">
+      <button class="my-button modal-button" id="start">Start!</button>
+      <button class="my-button modal-button" id="back">Back</button>
+    </div>
+  </div>
+ </div>
+`);
+  // toggles sound
+  toggleSound();
+  // closes modal
+  $("#close-modal").click(function () {
+    $("#exercise-modal").hide();
+  });
+  // starts workout based on custom times
+  $("#start").click(function () {
+    let x = $("#exercise-time").val();
+    let y = $("#rest-time").val();
+    if (x.length && y.length) {
+      setTimeout(function () {
+        startWorkout(x, y);
+      }, 200);
+    } else {
+      // if user has entered no numbers to custom workout
+      $("#toast").html(`
+      <div class ="negative">
+      <p>No Times Selected!!</i></p>
+      </div>
+    `);
+      $("#toast").show();
+      setTimeout(function () {
+        $("#toast").hide();
+        $("#toast").html(``);
+      }, 6000);
+    }
+  });
+  $("#back").click(function () {
+    workoutStart();
+  });
+}
+
+//opens first modal screen difficulty select
+let workoutStart = function() {
   // gets array of exercises on workout
   getExercises();
   // sets local storage for sound so this remains the same after page refresh
@@ -580,57 +635,17 @@ $("#start-workout").click(function () {
     });
     // if user selects 'custom', this takes them to time select screen
     $("#custom").click(function () {
-      $(".modal-content").html(`
-        ${sound}
-        <div id="close-modal" class="modal-icon">
-          <i class="fas fa-times"></i>
-        </div>
-        <div class="times-div">
-          <div>
-            <label for="exercise-time" aria-label="exercise time"></label>
-            <input class="custom-number" id="exercise-time" type="number" placeholder="Exercise (s)">
-          </div>
-          <div>
-            <label for="rest-time" aria-label="rest time"></label>
-            <input class="custom-number" id="rest-time" type="number" placeholder="Rest (s)">
-          </div>
-          <button class="my-button modal-button" id="start">Start!</button>
-        </div>
-       </div>
-      `);
-      // toggles sound
-      toggleSound();
-      // closes modal
-      $("#close-modal").click(function () {
-        $("#exercise-modal").hide();
-      });
-      // starts workout based on custom times
-      $("#start").click(function () {
-        let x = $("#exercise-time").val();
-        let y = $("#rest-time").val();
-        if (x.length && y.length) {
-          setTimeout(function () {
-            startWorkout(x, y);
-          }, 200);
-        } else {
-          // if user has entered no numbers to custom workout
-          $("#toast").html(`
-            <div class ="negative">
-            <p>No Times Selected!!</i></p>
-            </div>
-          `);
-          $("#toast").show();
-          setTimeout(function () {
-            $("#toast").hide();
-            $("#toast").html(``);
-          }, 6000);
-        }
-      });
+      customOpen();
     });
   } else {
     // if no exercises in list
     noExercises();
   }
+}
+
+// Open exercise modal to start workout
+$("#start-workout").click(function () {
+  workoutStart();
 })
 
 // feedback form interactive script
