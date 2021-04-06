@@ -90,6 +90,44 @@ The hero images used generally match the colour palette as mentioned above as mo
 
 All font is 'Roboto' from the Google Fonts collection. This is a very typical font for a website, due to it's simple and legible nature so it makes sense to be included in what is a simple design.
 
+## Features
+
+### Responsive Design
+
+* The website is made to be viewed on all device types, using the Bootstrap grid system. On smaller screens most elements fully fit the horizontal width of their container, while on larger screens elements are more spaced out horizontally. A good example of this is the "My Exercises" section.
+
+  - On Smaller screens, the "My Exercises" items fill the container horizontally.
+
+  ![Small Screen](documentation/responsive_small.jpg)
+
+  - On Larger screens, the "My Exercises" items are in four columns.
+  
+  ![Large Screen](documentation/responsive_large.jpg)
+
+  - On tablet screens, the "My Exercises" items are in two columns.
+
+  ![Mid Screen](documentation/responsive_mid.jpg)
+
+* The Navbar, as mentioned in the Structure section, is always hidden within the 'Hamburger' on both large and small screens. This was to conserve screen real estate and to improve the visual aspect of the site. However there is still some responsive interaction.
+
+  - On smaller screens the navbar fills the whole screen when opened
+
+  ![Small Nav](documentation/nav_small.jpg)
+
+  - On larger screens this opens to the side, allowing the user to continue using the site.
+
+  ![Large Nav](documentation/nav_large.jpg)
+
+  - Tablet screens have a similar effect to large, only covering part of the window, while narrowing the content to the left.
+
+  ![Mid Nav](documentation/nav_mid.jpg)
+
+### User Preferences
+
+### Interactive Feedback
+
+###
+
 ## Issues Overcome
 
 ### Timer Function
