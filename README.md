@@ -162,6 +162,9 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
   
     - On larger screens, all buttons grow slightly in size when hovered over.
       - This feature does not work for smaller screens as these will generally be used as touchscreens and a hover feature is less useful. When testing the site on my mobile phone I disliked the effect that this feature had so I kept this feature to large screens only.
+
+  - Navbar Hamburger rotates 90 degrees when navbar is opened.
+  ![Small Nav](documentation/nav_small.jpg)
   
   - Exercises Section
     - When opening the dropdown 'accordions' in the 'Exercises' section, the border of each list item changes colour from red to green.
