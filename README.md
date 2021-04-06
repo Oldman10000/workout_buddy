@@ -124,6 +124,24 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
 
 ### User Preferences
 
+* User preferences are saved in the browser local storage, meaning that when the user either refreshes the page or returns to it at any other time, the site will look exactly the same as how they left it. There are three main features which carry this function.
+
+  - The "My Workout" section.
+      - Exercises added by the user to this section are saved to local storage. This goes for both 'preset' exercises added and also custom exercises.
+      - Items are also deleted from local storage when deleted by the user. The data in local storage will always match what appears on the screen, ensuring that it stays the same upon reload.
+      - This is useful, as the user does not have to recreate their favourite workout routine every time they access the page.
+
+      ![My Workout Storage](documentation/workout_local.jpg)
+  
+  - Light/Dark toggle
+    - The page will always reload to whichever viewing mode it was last set to on that browser.
+    - This is useful, as the user will generally have a preferred colour scheme, and it is nice that they don't have to toggle this every time they access the page.
+
+  - Sound toggle
+    - Sound effects played during the workout can be either turned to "on" or "off".
+    - Every time the user toggles the button, this info is saved to local storage so that on refresh this data remains the same.
+    - This is useful, as the user will generally have a preference for this option. If the user has switched it to 'off' on their first session, and returns the next day, they will expect this setting to stay the same and not be surprised by the sound effects.
+
 ### Interactive Feedback
 
 ###
