@@ -682,23 +682,36 @@ $("#email").keyup(function (e) {
 // action upon submit contact form
 $("#contact-form").submit(function (e) {
   e.preventDefault();
-  $("#toast").html(`
-  <div class ="form-feedback">
-    <p>Thank you for your feedback! <i class="far fa-smile"></i></p>
-  </div>
-  `);
-  $("#toast").show();
-  $("#contact-form")[0].reset();
-  let inputs = document.querySelectorAll(".form-input");
-  inputs.forEach(input => {
-    input.classList.remove("green-input");
-    input.classList.add("red-input");
-  });
-  $("#submit-button").addClass("red-button");
-  setTimeout(function () {
-    $("#toast").hide();
-    $("#toast").html(``);
-  }, 6000);
+  if ($("#submit-button").hasClass("red-button")) {
+    $("#toast").html(`
+      <div class ="negative">
+        <p>Please check all fields have been correctly filled!!</i></p>
+      </div>
+    `);
+    $("#toast").show();
+    setTimeout(function () {
+      $("#toast").hide();
+      $("#toast").html(``);
+    }, 6000);
+  } else {
+    $("#toast").html(`
+      <div class ="form-feedback">
+        <p>Thank you for your feedback! <i class="far fa-smile"></i></p>
+      </div>
+    `);
+    $("#toast").show();
+    $("#contact-form")[0].reset();
+    let inputs = document.querySelectorAll(".form-input");
+    inputs.forEach(input => {
+      input.classList.remove("green-input");
+      input.classList.add("red-input");
+    });
+    $("#submit-button").addClass("red-button");
+    setTimeout(function () {
+      $("#toast").hide();
+      $("#toast").html(``);
+    }, 6000);
+  }
 });
 
 // function to add smooth scrolling when selecting anchor tags
