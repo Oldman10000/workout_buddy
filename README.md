@@ -205,6 +205,35 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
       - Valid Form
       ![Valid Form](documentation/valid.jpg)
 
+### Workout Timer
+
+* When selecting the 'Let's Go!!' button, which starts the workout, a modal is triggered which appears in front of all other content.
+  - From the first screen, the user can select a difficulty option which selects different timeframes for the exercises and rest periods depending on the difficulty. The user has already been familiarised with the respective times in the Instructions section.
+    - On the top left is the sound toggle button. If the sound is set to on, there are some sound effects which play during and after the workout, which will be described in more detail later.
+    - On the top right is a close button. This is always active and will cancel the workout completely if selected in the middle of a timer.
+    ![First Modal Screen](documentation/open_modal.jpg)
+  - If the user selects 'custom', the content of the modal changes to two inputs for the user to enter their desired times for each exercise and rest period respectively. The workout will then begin as normal when the user selects the 'Start' Button.
+  ![Custom Workout Screen](documentation/custom.jpg)
+  - Once the workout has started, either by selecting one of the difficulties on the first screen or starting a custom workout, a countdown timer is displayed.
+  ![Countdown Screen](documentation/countdown.jpg)
+    - The countdown ticks for 15 seconds, giving the user time to prepare to start the workout. Every five seconds, there is visual feedback as the border colour, the background of the number and the progress bar change. First green, then amber and finally to red in a traffic light system.
+    - The progress bar at the bottom of the modal window reduces in size proportionally to the time remaining, providing further visual feedback.
+    - If the sound toggle is on, there will also be audio cues for the user. Every five seconds a short 'ding' sound is played, while once the timer has elapsed a buzzer sound is played.
+  - Once the countdown has elapsed, a new timer is triggered with the first exercise in the user's workout list. The content of the modal displays the current exercise.
+    ![Exercise Screen](documentation/exercise.jpg)
+    - As with the countdown, the colours of the border, number background and progress bar change. This time they change with 20 seconds and 10 seconds remaining to amber and red respectively.
+    - Once again, the progress bar reduces in size in proportion to the remaining time.
+    - As with the countdown, if sound is switched on, the audio cues are triggered, again at 20 and 10 seconds remaining for the 'ding' and the 'buzz' once the exercise is complete.
+  - When the exercise is complete, if there are further exercises remaining on the workout, the rest countdown is triggered.
+    - The rest screen is very similar to the workout. The text content informs the user to 'rest' and also displays the next exercise in the workout so the user is prepared for what is to come.
+    ![Rest Screen](documentation/rest.jpg)
+    - Visual and audio feedback is provided to the user in exactly the same way as in the exercise timer.
+  - If the current exercise is complete, and there are no further exercises in the workout, the congratulations screen is triggered.
+  ![Rest Screen](documentation/congratulations.jpg)
+    - There is an image of a champagne bottle displayed as well as text congratulating the user
+    - If the sound toggle is switched on, a 'cheer' sound effect is played
+    - The user has the option to share their workout to social media. Each link currently opens in a seperate tab to the homepage of the respective social media site.
+
 ## Issues Overcome
 
 ### Timer Function
