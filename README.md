@@ -204,6 +204,13 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
       ![Invalid Form](documentation/invalid.jpg)
       - Valid Form
       ![Valid Form](documentation/valid.jpg)
+  
+  - Toasts
+    - Toasts briefly appear on screen if form data is invalid on submission on all inputs except for the form submit button. These time out after 6 seconds.
+      - For example, when entering no characters to the add custom exercise input and entering:
+      ![Invalid Toast](documentation/invalid_text.jpg)
+    - Toast appears on valid form submission, thanking the user.
+      ![Thank you Toast](documentation/thank_you.jpg)
 
 ### Workout Timer
 
