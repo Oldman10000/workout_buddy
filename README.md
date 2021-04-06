@@ -198,6 +198,11 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
     - The 'Let's Go!!' button in the 'My Workout' section has a red border if the workout list is empty, but turns green after items have been added.
     ![Empty Workout](documentation/start_red.jpg)
     ![Non empty Workout](documentation/start_green.jpg)
+    - Number inputs in the custom workout section of the workout modal exhibit the same effects for the input bottom border colours and the start button which turns green once both inputs are valid.
+      - Invalid custom:
+      ![Invalid Custom Workout Screen](documentation/custom.jpg)
+      - Valid custom:
+      ![Valid Custom Workout Screen](documentation/valid_custom.jpg)
     - All items in the Feedback Form section exhibit the same effects for both the input bottom border colour and the button, which in this case is a submit button which only turns green once all form inputs are valid.
     - As the email input is only valid once it includes an @ symbol with content afterwards, I used a regex (regular expression) in my code to ensure that the border properties changed correctly.
       - Invalid Form due to email input
