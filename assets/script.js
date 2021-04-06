@@ -137,7 +137,7 @@ $(".workout-add").click(function () {
   const html = `
     <li class="exercise">
       <span class="activity">${exercise}</span>
-      <i class="fas fa-trash-alt delete"></i>
+      <i class="fas fa-trash-alt delete light"></i>
     </li>
   `;
   list.innerHTML += html;
