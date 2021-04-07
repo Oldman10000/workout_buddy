@@ -73,7 +73,7 @@ $(".toggle-trigger").click(function () {
 // pushes each item in myWorkout list to the exercises array
 function getExercises() {
   // empty exercises array
-  let exercises = [];
+  exercises = [];
   // defines all exercises as added in the DOM and cycles through them
   // to add to the exercises array
   let allExercises = document.querySelectorAll(".activity");
