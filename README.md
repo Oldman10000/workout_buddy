@@ -443,6 +443,20 @@ Fortunately I was unable to identify many bugs with the app. However one bug whi
 
 * I also used JS Hint to double check my script, again there were no major issues. There are warnings for undefined variables, which are mostly jQuery $ symbols, and a few other variables which appear undeclared at points. However as these variables are often nested within functions, this is not an issue. JS Hint was also helpful in regard to ensuring I had added semicolons to all the correct places.
 
+### Chrome Dev Tools Lighthouse
+
+As always, Chrome dev tools lighthouse was very useful in testing the site for performance, accessibility, best practices and SEO. Tests were run in incognito mode on Chrome to prevent stored data from affecting loading performances.
+
+* Desktop results
+![Desktop Results](documentation/lighthouse_desktop.jpg)
+
+* Mobile Results
+![Mobile Results](documentation/lighthouse_mobile.jpg)
+
+The mobile Performance is slightly worse than that of the desktop due to the large file sizes of the hero images. For small screens I reduced the resolution of these images to improve load times, however I could go no smaller with these images otherwise the quality would have been compromised.
+
+My <strong> tags were displayed as having an insufficient contrast ratio to the background due to the red colour. I tested this with friends of various ages, none of whom considered this to be an issue so I have kept these in. I find it strange that these were the only red coloured elements which were flagged as being potentially problematic, as many other elements on the page share the same shade of colour.
+
 ## Technologies Used
 
 ### Languages Used
