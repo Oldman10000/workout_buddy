@@ -633,6 +633,18 @@ textarea {
 
 /* Footer Styling */
 
+footer {
+  transition: 0.5s;
+}
+
+footer p {
+  text-align: right;
+  margin-bottom: 0;
+  padding: 0 1rem 1rem 0;
+}
+
+
+/* Back to top button */
 .circle {
   display: none;
   position: fixed;
