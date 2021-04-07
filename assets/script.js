@@ -2,7 +2,6 @@
 // local storage code copied and amended from css-tricks.com
 // https://css-tricks.com/a-complete-guide
 // -to-dark-mode-on-the-web/#storing-preferences
-
 const currentTheme = localStorage.getItem("theme");
 const toggleButton = localStorage.getItem("button");
 
@@ -47,27 +46,38 @@ $("#light-dark-toggle").click(function () {
 
 // navbar toggle
 $("#hamburger").click(function () {
+  // flips hamburger 90 degrees
   $(this).toggleClass("flip");
+  // toggles navbar visibility
   $(".nav").toggleClass("visible");
+  // toggles main content width to fit navbar
   $("main").toggleClass("shrink");
 });
 
 // closes navbar after picking section
 $(".section-link").click(function () {
+  // flips hamburger back to original state
   $("#hamburger").toggleClass("flip");
+  // closes navbar
   $(".nav").toggleClass("visible");
+  // expands main content to fill window again
   $("main").toggleClass("shrink");
 });
 
 // toggles display of workout instructions
 $(".toggle-trigger").click(function () {
+  // toggles inner content of the list item
   $(this).toggleClass("active").next().slideToggle("slow");
+  // toggles border colour of list item
   $(this).parent().toggleClass("green");
 });
 
 // pushes each item in myWorkout list to the exercises array
 function getExercises() {
+  // empty exercises array
   exercises = [];
+  // defines all exercises as added in the DOM and cycles through them
+  // to add to the exercises array
   let allExercises = document.querySelectorAll(".activity");
   allExercises.forEach(exercise => {
     exercises.push(exercise.innerText);
@@ -77,7 +87,9 @@ function getExercises() {
 // refreshes local storage by taking the current
 // data from the DOM every time this is run
 function addLocalExercises() {
+  // gets all exercises in DOM and pushes to array
   getExercises();
+  // adds each exercise on the exercises array to local storage JSON string
   let savedExercises = Object.assign({}, exercises);
   localStorage.setItem("exercises", JSON.stringify(savedExercises));
 }
@@ -91,8 +103,11 @@ const list = document.querySelector("#workout-list");
 
 // gets exercises from local storage
 function getLocalExercises() {
+  // gets locally stored exercises
   const stored = localStorage.getItem("exercises");
+  // parses JSON data to object
   let data = JSON.parse(stored);
+  // for each value in object, pushes this to the DOM
   $.each(data, function (i, val) {
     const html = `
     <li class="exercise">
@@ -121,13 +136,21 @@ const template = exercise => {
 // adds content of box to workout list upon submit
 // values are trimmed to show only text content to remove any whitespace
 addExercise.addEventListener("submit", e => {
+  // prevents default submit action
   e.preventDefault();
+  // gets value of input box and trims any empty space
   let exercise = addExercise.add.value.trim();
+  // if input has content then pushes the value to the workout list
   if (exercise.length) {
+    // creates template literal
     template(exercise);
+    // checks colour for visual input validation colour change
     startColour();
+    // adds to local storage
     addLocalExercises();
+    // resets input box
     addExercise.reset();
+    // if input has no content then triggers negative toast
   } else {
     $("#toast").html(`
     <div class ="negative">
@@ -135,6 +158,7 @@ addExercise.addEventListener("submit", e => {
     </div>
     `);
     $("#toast").show();
+    // times toast out after 6 seconds
     setTimeout(function () {
       $("#toast").hide();
       $("#toast").html(``);
@@ -145,19 +169,24 @@ addExercise.addEventListener("submit", e => {
 // adds existing exercises to workout list
 $(".workout-add").click(function () {
   let exercise = $(this).parent().prev().text();
+  // create template literal
   const html = `
     <li class="exercise">
       <span class="activity">${exercise}</span>
       <i class="fas fa-trash-alt delete light"></i>
     </li>
   `;
+  // pushes template literal to DOM
   list.innerHTML += html;
+  // checks colour for visual input validation colour change
   startColour();
+  // adds to local storage
   addLocalExercises();
   $(this).css({
     background: "#33C173"
   });
   let x = $(this);
+  // toggles appearance of exercise instructions after submitting
   setTimeout(function () {
     $(x).parent().prev().toggleClass("active");
     $(x).parent().slideToggle("slow");
@@ -170,9 +199,11 @@ $(".workout-add").click(function () {
 
 // deletes items from workout list
 $("#workout-list").click(function (e) {
+  // checks for class 'delete' so it only targets the trashcan icon
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
   }
+  // checks colour for visual input validation colour change
   startColour();
   // deletes from local storage
   addLocalExercises();
@@ -189,6 +220,7 @@ function startColour() {
   }
 }
 
+// checks automatically upon page load if there are items on the workout list
 startColour();
 
 // toggles sound on and off
@@ -538,18 +570,21 @@ startWorkout = function (sec1, sec2) {
 
 // if there are no exercises on the workout
 function noExercises() {
+  // negative toast appears
   $("#toast").html(`
     <div class ="negative">
       <p>No Exercises in List!!</i></p>
     </div>
   `);
   $("#toast").show();
+  // toast times out after 6 seconds
   setTimeout(function () {
     $("#toast").hide();
     $("#toast").html(``);
   }, 6000);
 }
 
+// if user selects custom workout difficulty
 function customOpen() {
   $(".modal-content").html(`
   ${sound}
