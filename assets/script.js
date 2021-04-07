@@ -75,7 +75,7 @@ $(".toggle-trigger").click(function () {
 // pushes each item in myWorkout list to the exercises array
 function getExercises() {
   // empty exercises array
-  exercises = [];
+  let exercises = [];
   // defines all exercises as added in the DOM and cycles through them
   // to add to the exercises array
   let allExercises = document.querySelectorAll(".activity");
@@ -267,10 +267,10 @@ function toggleSound() {
 
 // this loops through each item in the
 // exercises array until workout is complete
-startWorkout = function (sec1, sec2) {
+let startWorkout = function (sec1, sec2) {
 
   // removes first exercise from array
-  removeFirstExercise = function () {
+  let removeFirstExercise = function () {
     exercises.shift();
   };
 
@@ -841,7 +841,7 @@ $("a").click(function (e) {
 // Return to top button script copied and adapted from W3 schools tutorial
 // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 
-mybutton = document.querySelector(".circle");
+let mybutton = document.querySelector(".circle");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = () => {
