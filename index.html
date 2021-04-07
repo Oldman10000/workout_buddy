@@ -1,424 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Application to make it easy to custom make a workout." />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-      crossorigin="anonymous"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-    </style>
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>Workout Buddy</title>
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
-  </head>
 
-  <body>
-    <!-- header section and navbar -->
-    <div id="light-dark-toggle" class="toggle-dark">
-      <i class="fas fa-eye"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Application to make it easy to custom make a workout." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+  </style>
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>Workout Buddy</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="manifest" href="manifest.json" crossorigin="use-credentials" />
+</head>
+
+<body>
+  <!-- header section and navbar -->
+  <div id="light-dark-toggle" class="toggle-dark">
+    <i class="fas fa-eye"></i>
+  </div>
+  <header id="home" class="light">
+    <h1 class="text-center" id="heading">
+      <a href="#home" class="light"><i class="fas fa-running"></i> Workout Buddy</a>
+    </h1>
+    <div id="hamburger">
+      <i class="fa fa-bars"></i>
     </div>
-    <header id="home" class="light">
-      <h1 class="text-center" id="heading">
-        <a href="#home" class="light"><i class="fas fa-running"></i> Workout Buddy</a>
-      </h1>
-      <div id="hamburger">
-        <i class="fa fa-bars"></i>
-      </div>
-      <div class="nav light">
-        <div class="nav-item"><a href="#home" class="section-link">Home</a></div>
-        <div class="nav-item"><a href="#instructions" class="section-link">Instructions</a></div>
-        <div class="nav-item"><a href="#exercises" class="section-link">Exercises</a></div>
-        <div class="nav-item"><a href="#workout" class="section-link">Your Workout</a></div>
-        <div class="nav-item"><a href="#contact" class="section-link">Contact</a></div>
-      </div>
+    <div class="nav light">
+      <div class="nav-item"><a href="#home" class="section-link">Home</a></div>
+      <div class="nav-item"><a href="#instructions" class="section-link">Instructions</a></div>
+      <div class="nav-item"><a href="#exercises" class="section-link">Exercises</a></div>
+      <div class="nav-item"><a href="#workout" class="section-link">Your Workout</a></div>
+      <div class="nav-item"><a href="#contact" class="section-link">Contact</a></div>
+    </div>
 
-      <!-- hero-1 -->
-      <div class="hero hero-1 light"></div>
-    </header>
+    <!-- hero-1 -->
+    <div class="hero hero-1 light"></div>
+  </header>
 
-    <!-- main body section -->
+  <!-- main body section -->
 
-    <main class="light">
-      <!-- Instructions for how to use the application -->
-      <section id="instructions">
-        <div class="container text-center">
-          <h2 class="section-head">How it works</h2>
-          <p>
-            Workout Buddy makes it a cinch to exercise, wherever you are! Create your custom workout in seconds and get started straightaway. Follow our simple instructions below to get started!
-          </p>
-          <div class="inst-set-1 row">
-            <div class="col-12 col-lg-4 inst-item">
-              <h3 class="inst-head">1</h3>
-              <p>
-                Choose any number of exercisers from our hand picked list. We have selected exercises that will allow you to challenge all muscle groups! If your favourite exercise is not on the list, you can also add your own custom
-                exercises!
-              </p>
-            </div>
-            <div class="col-12 col-lg-4 inst-item">
-              <h3 class="inst-head">2</h3>
-              <p>Once you are happy with your workout, hit "Let's Go!!" and select your difficulty setting to get started. The difficulty setting affects the duration of each exercise and rest periods.</p>
-            </div>
-            <div class="col-12 col-lg-4 inst-item">
-              <h3 class="inst-head">3</h3>
-              <p>Your workout will begin once you have selected your difficulty level. Each exericise will display on the screen, along with the countdown timer and sound prompts so you always know what stage you are at!</p>
-            </div>
-          </div>
-          <div class="inst-set-2 row">
-            <p class="col-12 col-lg-6"><strong>Important: </strong>We always recommend selecting at least 3 warm up exercises for each workout. This gets your blood pumping and reduces the risk of injury.</p>
-            <p class="col-12 col-lg-6">
-              For beginners, we recommend adding 2-3 exercises from each section for between 8-12 exercises in total and to select the easy difficulty setting. When you feel ready for more, add more exercises or increase the difficulty!
+  <main class="light">
+    <!-- Instructions for how to use the application -->
+    <section id="instructions">
+      <div class="container text-center">
+        <h2 class="section-head">How it works</h2>
+        <p>
+          Workout Buddy makes it a cinch to exercise, wherever you are! Create your custom workout in seconds and get
+          started straightaway. Follow our simple instructions below to get started!
+        </p>
+        <div class="inst-set-1 row">
+          <div class="col-12 col-lg-4 inst-item">
+            <h3 class="inst-head">1</h3>
+            <p>
+              Choose any number of exercisers from our hand picked list. We have selected exercises that will allow you
+              to challenge all muscle groups! If your favourite exercise is not on the list, you can also add your own
+              custom
+              exercises!
             </p>
           </div>
-          <div class="next">
-            <a href="#exercises" aria-label="next-section">
-              <i class="fas fa-arrow-down"></i>
-            </a>
+          <div class="col-12 col-lg-4 inst-item">
+            <h3 class="inst-head">2</h3>
+            <p>Once you are happy with your workout, hit "Let's Go!!" and select your difficulty setting to get started.
+              The difficulty setting affects the duration of each exercise and rest periods.</p>
+          </div>
+          <div class="col-12 col-lg-4 inst-item">
+            <h3 class="inst-head">3</h3>
+            <p>Your workout will begin once you have selected your difficulty level. Each exericise will display on the
+              screen, along with the countdown timer and sound prompts so you always know what stage you are at!</p>
           </div>
         </div>
-      </section>
-
-      <!-- hero 2 -->
-      <div class="hero hero-2 light"></div>
-
-      <!-- List of prebaked exercises  -->
-      <section id="exercises">
-        <div class="exercises-main container text-center">
-          <h2 class="section-head">Exercises</h2>
-          <p>
-            Choose any number of exercises from the options below to add to your workout. Open each dropdown list for instructions on how to perform each exercise.
+        <div class="inst-set-2 row">
+          <p class="col-12 col-lg-6"><strong>Important: </strong>We always recommend selecting at least 3 warm up
+            exercises for each workout. This gets your blood pumping and reduces the risk of injury.</p>
+          <p class="col-12 col-lg-6">
+            For beginners, we recommend adding 2-3 exercises from each section for between 8-12 exercises in total and
+            to select the easy difficulty setting. When you feel ready for more, add more exercises or increase the
+            difficulty!
           </p>
-          <div class="row">
-            <div class="exercises-list col-12 col-md-6 col-xl-3">
-              <h3>Warm Up</h3>
-              <ul>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">High Knees</h4>
-                  <div class="content">
-                    <p>Begin Jogging on the spot, lifting your knees as high as you can.</p>
-                    <p>Try to lift your knees up to hip level but keep the core tight to support your back.</p>
-                    <p>For a more advanced move, hold your hands straight at hip level and try to touch the knees to your hands as you lift them.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Hip Rotations</h4>
-                  <div class="content">
-                    <p>Stand still with your hands on your hips.</p>
-                    <p>Slowly push your hips out to the front and rotate them 360 degrees.</p>
-                    <p>Then rotate them again 360 degrees in the other direction.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Arm Rotations</h4>
-                  <div class="content">
-                    <p>Stand with your feet shoulder-width apart and extend yoru arms parallel to the floor.</p>
-                    <p>Circle your arms forward using small controlled motions, gradually making the circles bigger.</p>
-                    <p>Change direction of the circles every ten seconds or so.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Jumping Jacks</h4>
-                  <div class="content">
-                    <p>Stand with your legs straight and arms to your sides.</p>
-                    <p>Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.</p>
-                    <p>Jump again, lowering your arms and bringing your legs together, returning to your starting position.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Leg Swings</h4>
-                  <div class="content">
-                    <p>Stand straight with your feet hip-width apart and hold onto a wall.</p>
-                    <p>Keeping one leg stationary, slowly swing the opposite leg forward and backward in a single smooth movement.</p>
-                    <p>Switch sides and repeat until set is complete.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="exercises-list col-12 col-md-6 col-xl-3">
-              <h3>Upper Body</h3>
-              <ul>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Press Ups</h4>
-                  <div class="content">
-                    <p>Set up prone, with your weight supported on your toes and hands beneath your shoulders, body straight.</p>
-                    <p>
-                      Keep your core locked so a straight line forms between your head, glutes and heels. Lower your body until your chest is an inch from the ground then explosively drive up by fully extending your arms.
-                    </p>
-                    <p>For a more advanced move, hold your hands straight at hip level and try to touch the knees to your hands as you lift them.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Pull Ups</h4>
-                  <div class="content">
-                    <p><strong>For this exercise you will require a pull up bar.</strong></p>
-                    <p>Start with your hands on the bar approximately shoulder-width apart with your palms facing forward.</p>
-                    <p>With arms extended above you, stick your chest out and curve your back slightly. That is your starting position.</p>
-                    <p>Pull yourself up towards the bar using your back until the bar is at chest level while breathing out.</p>
-                    <p>Slowly lower yourself to the starting position while breathing in. That is one rep.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Bicep Curls</h4>
-                  <div class="content">
-                    <p><strong>For this exercise you will require dumbbells. Filled water bottles can be useful substitutes.</strong></p>
-                    <p>Stand straight with a dumbbell in each hand, your feet shoulder width and hadns by your sides.</p>
-                    <p>Squeeze the biceps and lift the dumbbells, keeping your elbows close to your body and the upper arms stationary.</p>
-                    <p>Once the dumbbells are at shoulder level, slowly lower your arms to the starting position.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Tricep Dips</h4>
-                  <div class="content">
-                    <p>Place your hands behind you onto a chair, with your fingers facing forward.</p>
-                    <p>Extend your legs and start bending your elbows.</p>
-                    <p>Lower your body until your arms are at a 90 degree angle.</p>
-                    <p>Lift your body back up until your arms are straight.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Pike Push Ups</h4>
-                  <div class="content">
-                    <p>Set up prone, with your weight supported on your toes and hands beneath your shoulders, hips up.</p>
-                    <p>Bend your elbows until your arms form a 90 degree angle, and bring your head close to the mat.</p>
-                    <p>Straighten your elbows, pushing your body away from the mat and return to the starting position.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="exercises-list col-12 col-md-6 col-xl-3">
-              <h3>Core</h3>
-              <ul>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Sit Ups</h4>
-                  <div class="content">
-                    <p>Lie down on your back, keep your knees bent and your back and feet flat on the mat.</p>
-                    <p>Slowly lift your torso and sit up.</p>
-                    <p>Return to the starting position by rolling down one vertebrae at a time.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Plank</h4>
-                  <div class="content">
-                    <p>Set up prone, with your weight supported on your toes and forearms.</p>
-                    <p>Keep your back straight with an engaged core.</p>
-                    <p>Hold this position for the duration of the exercise.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Flutter Kicks</h4>
-                  <div class="content">
-                    <p>Lie on your back with your hands by your sides or place them underneath your glutes.</p>
-                    <p>Alternate stacking your feet on top of each other for the duration, keeping your core engaged throughout.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Russian Twists</h4>
-                  <div class="content">
-                    <p>Sit up with your legs bent at the knees. Your upper body should create a V shape with your thighs.</p>
-                    <p>Twist your torso to the right, then reverse the motion, twisting it to the left.</p>
-                    <p>Repeat this action for the duration, keeping your back straight and core engaged throughout.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Jackknife</h4>
-                  <div class="content">
-                    <p>Lie flat on your back with your arms extended above your head.</p>
-                    <p>Hover your arms and legs a few inches off the mat, pressing your tailbone into the mat.</p>
-                    <p>Take a deep breath, and on your exhale, keeping your limbs straight, lift your head and pull your arms and legs up into a V-shape roughly 30-45 degrees away from the mat.</p>
-                    <p>Lower back down to your starting position.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="exercises-list col-12 col-md-6 col-xl-3">
-              <h3>Lower Body</h3>
-              <ul>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Squats</h4>
-                  <div class="content">
-                    <p>Stand up with your feet shoulder-width apart.</p>
-                    <p>Bend your knees, press your hips back and stop the movement once the hip joing is slightly lower than the knees.</p>
-                    <p>Press your heels into the floor to return to the starting position.</p>
-                    <p><strong>For an extra challenge, try this while holding dumbbells or filled water bottles in your hands!</strong></p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Lunges</h4>
-                  <div class="content">
-                    <p>Stand with your feet hip width apart, back straight, shoulders back and abs tight.</p>
-                    <p>Take a step forward, slowly bending the knees until yoru back knee is just above the floor.</p>
-                    <p>Stand up. reversing the movement.</p>
-                    <p>Alternate legs for the duration.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Step Up Knee Raise</h4>
-                  <div class="content">
-                    <p>Place a box or step in front of you and stand up straight.</p>
-                    <p>Step onto the box with your left foot and drive your right knee up.</p>
-                    <p>Step down with your right foot and alternate legs for the duration.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Box Jumps</h4>
-                  <div class="content">
-                    <p>Place a box or step in front of you and stand up straight.</p>
-                    <p>Jump forwards and up onto the box, landing smoothly on both feet.</p>
-                    <p>Step back down behind you and repeat action for the duration.</p>
-                    <p><strong>For an extra challenge use bigger boxes as you get fitter!</strong></p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-                <li class="exercise-item">
-                  <h4 class="toggle-trigger">Sumo Squats</h4>
-                  <div class="content">
-                    <p>Stand with your feet wider than your shoulders and your arms at your sides. Turn your feet slightly outward.</p>
-                    <p>
-                      Keeping your chest up and core engaged, push your hips back, bend your knees, and lower your body until your thighs are at least parallel to the floor. As you squat down, bring your hands together in front of your
-                      chest.
-                    </p>
-                    <p>Pause, and then return to the starting position.</p>
-                    <button class="my-button workout-add">Add to workout!</button>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        </div>
+        <div class="next">
+          <a href="#exercises" aria-label="next-section">
+            <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero 2 -->
+    <div class="hero hero-2 light"></div>
+
+    <!-- List of prebaked exercises  -->
+    <section id="exercises">
+      <div class="exercises-main container text-center">
+        <h2 class="section-head">Exercises</h2>
+        <p>
+          Choose any number of exercises from the options below to add to your workout. Open each dropdown list for
+          instructions on how to perform each exercise.
+        </p>
+        <div class="row">
+          <div class="exercises-list col-12 col-md-6 col-xl-3">
+            <h3>Warm Up</h3>
+            <ul>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">High Knees</h4>
+                <div class="content">
+                  <p>Begin Jogging on the spot, lifting your knees as high as you can.</p>
+                  <p>Try to lift your knees up to hip level but keep the core tight to support your back.</p>
+                  <p>For a more advanced move, hold your hands straight at hip level and try to touch the knees to your
+                    hands as you lift them.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Hip Rotations</h4>
+                <div class="content">
+                  <p>Stand still with your hands on your hips.</p>
+                  <p>Slowly push your hips out to the front and rotate them 360 degrees.</p>
+                  <p>Then rotate them again 360 degrees in the other direction.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Arm Rotations</h4>
+                <div class="content">
+                  <p>Stand with your feet shoulder-width apart and extend yoru arms parallel to the floor.</p>
+                  <p>Circle your arms forward using small controlled motions, gradually making the circles bigger.</p>
+                  <p>Change direction of the circles every ten seconds or so.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Jumping Jacks</h4>
+                <div class="content">
+                  <p>Stand with your legs straight and arms to your sides.</p>
+                  <p>Jump up and spread your feet beyond hip-width apart while bringing your arms above your head,
+                    nearly touching.</p>
+                  <p>Jump again, lowering your arms and bringing your legs together, returning to your starting
+                    position.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Leg Swings</h4>
+                <div class="content">
+                  <p>Stand straight with your feet hip-width apart and hold onto a wall.</p>
+                  <p>Keeping one leg stationary, slowly swing the opposite leg forward and backward in a single smooth
+                    movement.</p>
+                  <p>Switch sides and repeat until set is complete.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="exercises-list col-12 col-md-6 col-xl-3">
+            <h3>Upper Body</h3>
+            <ul>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Press Ups</h4>
+                <div class="content">
+                  <p>Set up prone, with your weight supported on your toes and hands beneath your shoulders, body
+                    straight.</p>
+                  <p>
+                    Keep your core locked so a straight line forms between your head, glutes and heels. Lower your body
+                    until your chest is an inch from the ground then explosively drive up by fully extending your arms.
+                  </p>
+                  <p>For a more advanced move, hold your hands straight at hip level and try to touch the knees to your
+                    hands as you lift them.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Pull Ups</h4>
+                <div class="content">
+                  <p><strong>For this exercise you will require a pull up bar.</strong></p>
+                  <p>Start with your hands on the bar approximately shoulder-width apart with your palms facing forward.
+                  </p>
+                  <p>With arms extended above you, stick your chest out and curve your back slightly. That is your
+                    starting position.</p>
+                  <p>Pull yourself up towards the bar using your back until the bar is at chest level while breathing
+                    out.</p>
+                  <p>Slowly lower yourself to the starting position while breathing in. That is one rep.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Bicep Curls</h4>
+                <div class="content">
+                  <p><strong>For this exercise you will require dumbbells. Filled water bottles can be useful
+                      substitutes.</strong></p>
+                  <p>Stand straight with a dumbbell in each hand, your feet shoulder width and hadns by your sides.</p>
+                  <p>Squeeze the biceps and lift the dumbbells, keeping your elbows close to your body and the upper
+                    arms stationary.</p>
+                  <p>Once the dumbbells are at shoulder level, slowly lower your arms to the starting position.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Tricep Dips</h4>
+                <div class="content">
+                  <p>Place your hands behind you onto a chair, with your fingers facing forward.</p>
+                  <p>Extend your legs and start bending your elbows.</p>
+                  <p>Lower your body until your arms are at a 90 degree angle.</p>
+                  <p>Lift your body back up until your arms are straight.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Pike Push Ups</h4>
+                <div class="content">
+                  <p>Set up prone, with your weight supported on your toes and hands beneath your shoulders, hips up.
+                  </p>
+                  <p>Bend your elbows until your arms form a 90 degree angle, and bring your head close to the mat.</p>
+                  <p>Straighten your elbows, pushing your body away from the mat and return to the starting position.
+                  </p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="exercises-list col-12 col-md-6 col-xl-3">
+            <h3>Core</h3>
+            <ul>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Sit Ups</h4>
+                <div class="content">
+                  <p>Lie down on your back, keep your knees bent and your back and feet flat on the mat.</p>
+                  <p>Slowly lift your torso and sit up.</p>
+                  <p>Return to the starting position by rolling down one vertebrae at a time.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Plank</h4>
+                <div class="content">
+                  <p>Set up prone, with your weight supported on your toes and forearms.</p>
+                  <p>Keep your back straight with an engaged core.</p>
+                  <p>Hold this position for the duration of the exercise.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Flutter Kicks</h4>
+                <div class="content">
+                  <p>Lie on your back with your hands by your sides or place them underneath your glutes.</p>
+                  <p>Alternate stacking your feet on top of each other for the duration, keeping your core engaged
+                    throughout.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Russian Twists</h4>
+                <div class="content">
+                  <p>Sit up with your legs bent at the knees. Your upper body should create a V shape with your thighs.
+                  </p>
+                  <p>Twist your torso to the right, then reverse the motion, twisting it to the left.</p>
+                  <p>Repeat this action for the duration, keeping your back straight and core engaged throughout.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Jackknife</h4>
+                <div class="content">
+                  <p>Lie flat on your back with your arms extended above your head.</p>
+                  <p>Hover your arms and legs a few inches off the mat, pressing your tailbone into the mat.</p>
+                  <p>Take a deep breath, and on your exhale, keeping your limbs straight, lift your head and pull your
+                    arms and legs up into a V-shape roughly 30-45 degrees away from the mat.</p>
+                  <p>Lower back down to your starting position.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="exercises-list col-12 col-md-6 col-xl-3">
+            <h3>Lower Body</h3>
+            <ul>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Squats</h4>
+                <div class="content">
+                  <p>Stand up with your feet shoulder-width apart.</p>
+                  <p>Bend your knees, press your hips back and stop the movement once the hip joing is slightly lower
+                    than the knees.</p>
+                  <p>Press your heels into the floor to return to the starting position.</p>
+                  <p><strong>For an extra challenge, try this while holding dumbbells or filled water bottles in your
+                      hands!</strong></p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Lunges</h4>
+                <div class="content">
+                  <p>Stand with your feet hip width apart, back straight, shoulders back and abs tight.</p>
+                  <p>Take a step forward, slowly bending the knees until yoru back knee is just above the floor.</p>
+                  <p>Stand up. reversing the movement.</p>
+                  <p>Alternate legs for the duration.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Step Up Knee Raise</h4>
+                <div class="content">
+                  <p>Place a box or step in front of you and stand up straight.</p>
+                  <p>Step onto the box with your left foot and drive your right knee up.</p>
+                  <p>Step down with your right foot and alternate legs for the duration.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Box Jumps</h4>
+                <div class="content">
+                  <p>Place a box or step in front of you and stand up straight.</p>
+                  <p>Jump forwards and up onto the box, landing smoothly on both feet.</p>
+                  <p>Step back down behind you and repeat action for the duration.</p>
+                  <p><strong>For an extra challenge use bigger boxes as you get fitter!</strong></p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+              <li class="exercise-item">
+                <h4 class="toggle-trigger">Sumo Squats</h4>
+                <div class="content">
+                  <p>Stand with your feet wider than your shoulders and your arms at your sides. Turn your feet slightly
+                    outward.</p>
+                  <p>
+                    Keeping your chest up and core engaged, push your hips back, bend your knees, and lower your body
+                    until your thighs are at least parallel to the floor. As you squat down, bring your hands together
+                    in front of your
+                    chest.
+                  </p>
+                  <p>Pause, and then return to the starting position.</p>
+                  <button class="my-button workout-add">Add to workout!</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="next">
+          <a href="#workout" aria-label="next-section">
+            <i class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero 3 -->
+    <div class="hero hero-3 light"></div>
+
+    <!-- Workout section - this is where the workout list is generated
+        either from the prebaked options or custom exercises entered by the user -->
+    <section id="workout">
+      <div class="workout-main container text-center">
+        <h2 class="section-head">My Workout</h2>
+        <div class="row">
+          <div class="workout-exercises col-12 col-lg-4">
+            <h3>My Exercises</h3>
+            <ul id="workout-list"></ul>
+            <form class="exercise-form">
+              <label for="exercise-add" aria-label="add exercise"></label>
+              <i class="fas fa-plus"></i>
+              <span>
+                <input id="exercise-add" class="easy red-input light" type="text" name="add"
+                  placeholder="Add your own exercise here" />
+              </span>
+            </form>
+          </div>
+          <div class="inst col-12 col-lg-8">
+            <h3>Instructions</h3>
+            <p>
+              Hit the button below when you are ready to start your workout. You will then have 3 difficulty levels to
+              choose from. Each difficulty level increases the amount of time you will perform each exercise, and
+              reduces the rest
+              time inbetween each.
+            </p>
+            <ul>
+              <li><strong>Take it easy: </strong>30s per exercise with 60s of rest</li>
+              <li><strong>Make me sweat: </strong>45s per exercise with 45s of rest</li>
+              <li><strong>Hardcore: </strong>60s per exercise with 30s of rest</li>
+            </ul>
+            <p>
+              If you are feeling adventurous, you will be able to set your own time settings after selecting the button
+              below. Select the custom button and enter your preferred times before starting.
+            </p>
+            <button class="red-button my-button" id="start-workout">Let's Go!!</button>
           </div>
           <div class="next">
-            <a href="#workout" aria-label="next-section">
+            <a href="#contact" aria-label="next-section">
               <i class="fas fa-arrow-down"></i>
             </a>
           </div>
         </div>
-      </section>
 
-      <!-- hero 3 -->
-      <div class="hero hero-3 light"></div>
-
-      <!-- Workout section - this is where the workout list is generated
-        either from the prebaked options or custom exercises entered by the user -->
-      <section id="workout">
-        <div class="workout-main container text-center">
-          <h2 class="section-head">My Workout</h2>
-          <div class="row">
-            <div class="workout-exercises col-12 col-lg-4">
-              <h3>My Exercises</h3>
-              <ul id="workout-list"></ul>
-              <form class="exercise-form">
-                <label for="exercise-add" aria-label="add exercise"></label>
-                <i class="fas fa-plus"></i>
-                <span>
-                  <input id="exercise-add" class="easy red-input light" type="text" name="add" placeholder="Add your own exercise here" />
-                </span>
-              </form>
-            </div>
-            <div class="inst col-12 col-lg-8">
-              <h3>Instructions</h3>
-              <p>
-                Hit the button below when you are ready to start your workout. You will then have 3 difficulty levels to choose from. Each difficulty level increases the amount of time you will perform each exercise, and reduces the rest
-                time inbetween each.
-              </p>
-              <ul>
-                <li><strong>Take it easy: </strong>30s per exercise with 60s of rest</li>
-                <li><strong>Make me sweat: </strong>45s per exercise with 45s of rest</li>
-                <li><strong>Hardcore: </strong>60s per exercise with 30s of rest</li>
-              </ul>
-              <p>
-                If you are feeling adventurous, you will be able to set your own time settings after selecting the button below. Select the custom button and enter your preferred times before starting.
-              </p>
-              <button class="red-button my-button" id="start-workout">Let's Go!!</button>
-            </div>
-            <div class="next">
-              <a href="#contact" aria-label="next-section">
-                <i class="fas fa-arrow-down"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- modal content with timers for the actual workout -->
-          <div class="modal-area" id="exercise-modal">
-            <div class="modal-content light"></div>
-          </div>
+        <!-- modal content with timers for the actual workout -->
+        <div class="modal-area" id="exercise-modal">
+          <div class="modal-content light"></div>
         </div>
-      </section>
-
-      <!-- Audio Elements -->
-
-      <audio id="ding" src="assets/audio/Ding-sound-effect.mp3"></audio>
-      <audio id="cheer" src="assets/audio/Big-crowd-cheering.mp3"></audio>
-      <audio id="buzz" src="assets/audio/Buzzer-sound.mp3"></audio>
-
-      <!-- hero 4 -->
-      <div class="hero hero-4 light"></div>
-
-      <!-- contact form section -->
-      <section id="contact" class="container">
-        <div class="contact-main container text-center">
-          <h2 class="section-head">Feedback Form</h2>
-          <p>Please feel free to offer any feedback. We would also welcome suggestions for new exercises to be added permanently.</p>
-          <form id="contact-form">
-            <div class="form-field row">
-              <label for="name" class="col-12 col-md-3">Name:</label>
-              <input class="col-12 col-md-9 form-input easy red-input light" type="text" id="name" name="name" placeholder="Your name..." />
-            </div>
-            <div class="form-field row">
-              <label for="tel" class="col-12 col-md-3">Tel:</label>
-              <input class="col-12 col-md-9 form-input easy red-input light" type="tel" id="tel" name="tel" placeholder="Your number..." />
-            </div>
-            <div class="form-field row">
-              <label for="email" class="col-12 col-md-3">Email:</label>
-              <input class="col-12 col-md-9 form-input red-input light" type="email" id="email" name="email" placeholder="Your email..." />
-            </div>
-            <div class="form-field row">
-              <label for="info" class="col-12 col-md-3">Comment:</label>
-              <textarea class="col-12 col-md-9 form-input easy red-input light" name="info" rows="2" id="info" placeholder="Write text here..."></textarea>
-            </div>
-            <input type="submit" value="Submit" id="submit-button" class="red-button my-button" />
-          </form>
-        </div>
-      </section>
-
-      <div id="toast"></div>
-    </main>
-
-    <footer class="light">
-      <p><i class="far fa-copyright"></i> Patrick Oldman 2021</p>
-
-      <!-- takes the user to the top of the screen -->
-      <div class="circle light">
-        <i class="fas fa-arrow-up" id="toTop"></i>
       </div>
-    </footer>
+    </section>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="assets/script.js"></script>
-  </body>
+    <!-- Audio Elements -->
+
+    <audio id="ding" src="assets/audio/Ding-sound-effect.mp3"></audio>
+    <audio id="cheer" src="assets/audio/Big-crowd-cheering.mp3"></audio>
+    <audio id="buzz" src="assets/audio/Buzzer-sound.mp3"></audio>
+
+    <!-- hero 4 -->
+    <div class="hero hero-4 light"></div>
+
+    <!-- contact form section -->
+    <section id="contact" class="container">
+      <div class="contact-main container text-center">
+        <h2 class="section-head">Feedback Form</h2>
+        <p>Please feel free to offer any feedback. We would also welcome suggestions for new exercises to be added
+          permanently.</p>
+        <form id="contact-form">
+          <div class="form-field row">
+            <label for="name" class="col-12 col-md-3">Name:</label>
+            <input class="col-12 col-md-9 form-input easy red-input light" type="text" id="name" name="name"
+              placeholder="Your name..." />
+          </div>
+          <div class="form-field row">
+            <label for="tel" class="col-12 col-md-3">Tel:</label>
+            <input class="col-12 col-md-9 form-input easy red-input light" type="tel" id="tel" name="tel"
+              placeholder="Your number..." />
+          </div>
+          <div class="form-field row">
+            <label for="email" class="col-12 col-md-3">Email:</label>
+            <input class="col-12 col-md-9 form-input red-input light" type="email" id="email" name="email"
+              placeholder="Your email..." />
+          </div>
+          <div class="form-field row">
+            <label for="info" class="col-12 col-md-3">Comment:</label>
+            <textarea class="col-12 col-md-9 form-input easy red-input light" name="info" rows="2" id="info"
+              placeholder="Write text here..."></textarea>
+          </div>
+          <input type="submit" value="Submit" id="submit-button" class="red-button my-button" />
+        </form>
+      </div>
+    </section>
+
+    <div id="toast"></div>
+  </main>
+
+  <footer class="light">
+    <p><i class="far fa-copyright"></i> Patrick Oldman 2021</p>
+
+    <!-- takes the user to the top of the screen -->
+    <div class="circle light">
+      <i class="fas fa-arrow-up" id="toTop"></i>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="assets/script.js"></script>
+</body>
+
 </html>
