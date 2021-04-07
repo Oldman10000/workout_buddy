@@ -427,6 +427,22 @@ After
 
 Fortunately I was unable to identify many bugs with the app. However one bug which persisted throughout was the sound effects played during the workout timer, which only appear to work on the Chrome, Firefox and Edge browsers. The timer function unfortunately remains silent on Safari and Opera.
 
+### Code Validation
+
+* HTML code validator found no errors
+
+![HTML Validation](documentation/html_validation.jpg)
+
+* CSS code validator found no errors
+
+![CSS Validation](documentation/css_validation.jpg)
+
+* JS lint found no major issues, there were some warnings regarding line length and the characters included in the email regex that I copied and pasted from an external resource. JS lint was also helpful in standardizing my "" or '' usage in my javascript file.
+
+![JS Lint](documentation/js_lint.jpg)
+
+* I also used JS Hint to double check my script, again there were no major issues. There are warnings for undefined variables, which are mostly jQuery $ symbols, and a few other variables which appear undeclared at points. However as these variables are often nested within functions, this is not an issue. JS Hint was also helpful in regard to ensuring I had added semicolons to all the correct places.
+
 ## Technologies Used
 
 ### Languages Used
