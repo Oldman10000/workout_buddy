@@ -71,7 +71,7 @@ function getExercises() {
   let allExercises = document.querySelectorAll(".activity");
   allExercises.forEach(exercise => {
     exercises.push(exercise.innerText);
-  })
+  });
 }
 
 // refreshes local storage by taking the current
@@ -116,7 +116,7 @@ const template = exercise => {
     </li>
   `;
   list.innerHTML += html;
-}
+};
 
 // adds content of box to workout list upon submit
 // values are trimmed to show only text content to remove any whitespace
@@ -152,11 +152,11 @@ $(".workout-add").click(function () {
     </li>
   `;
   list.innerHTML += html;
-  startColour()
+  startColour();
   addLocalExercises();
   $(this).css({
     background: "#33C173"
-  })
+  });
   let x = $(this);
   setTimeout(function () {
     $(x).parent().prev().toggleClass("active");
@@ -166,14 +166,14 @@ $(".workout-add").click(function () {
       background: "#f5f5f5"
     });
   }, 1000);
-})
+});
 
 // deletes items from workout list
 $("#workout-list").click(function (e) {
   if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
-  };
-  startColour()
+  }
+  startColour();
   // deletes from local storage
   addLocalExercises();
 });
@@ -240,7 +240,7 @@ startWorkout = function (sec1, sec2) {
   // removes first exercise from array
   removeFirstExercise = function () {
     exercises.shift();
-  }
+  };
 
   // gets width of container
   let width = $(".modal-content").width();
@@ -325,7 +325,7 @@ startWorkout = function (sec1, sec2) {
         }, 1000);
       }
     }, 1000);
-  }
+  };
 
   // triggers countdown function
   countDown();
@@ -334,7 +334,7 @@ startWorkout = function (sec1, sec2) {
   let timer = function () {
     // takes first item in exercises array
     let x = exercises[0];
-    let sec = sec1
+    let sec = sec1;
     let timer1 = setInterval(function () {
       $(".modal-content").html(`
         ${sound}
@@ -424,7 +424,7 @@ startWorkout = function (sec1, sec2) {
         }
       }
     }, 1000);
-  }
+  };
 
   // timer for rest period between exercises
   let restTimer = function () {
@@ -503,7 +503,7 @@ startWorkout = function (sec1, sec2) {
         }, 1000);
       }
     }, 1000);
-  }
+  };
 
   // congratulations message when workout is complete
   let congratulations = () => {
@@ -533,8 +533,8 @@ startWorkout = function (sec1, sec2) {
     $("#close-modal").click(function () {
       $("#exercise-modal").hide();
     });
-  }
-}
+  };
+};
 
 // if there are no exercises on the workout
 function noExercises() {
@@ -676,12 +676,12 @@ let workoutStart = function () {
     // if no exercises in list
     noExercises();
   }
-}
+};
 
 // Open exercise modal to start workout
 $("#start-workout").click(function () {
   workoutStart();
-})
+});
 
 // feedback form interactive script
 
@@ -815,7 +815,7 @@ window.onscroll = () => {
   } else {
     mybutton.style.display = "none";
   }
-}
+};
 
 // smooth function copied and adapted from tutorialdeep.com
 // https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
