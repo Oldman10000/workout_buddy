@@ -387,6 +387,46 @@ I am a fitness 'veteran' and I want:
     - All exercises the user has added to their workout is saved on the browser local storage, so this will remain static if the user refreshes or returns to the page the next day.
     ![Workout local storage](documentation/workout_local.jpg)
 
+### Device and Browser Testing
+
+* Chrome developer tools used throughout development to check usability on different devices/sizes. Devices "used" on dev tools include:
+    - Moto G4 and Iphone 6/7/8, as these are fairly standard sizes for a mobile devices
+    - Iphone 5/SE and Samsung Galaxy Fold, as these are relatively narrow mobile devices
+    - Pixel 2 XL and Iphone X, as these are larger mobile devices
+    - Ipad and Surface Pro, as these are standard sizes for tablet devices
+    - Ipad Pro, as this is a higher resolution tablet device
+
+* Personal devices used to check usability after deployment
+    - OnePlus Nord mobile phone
+    - Huawei Mediapad M5 10" tablet
+    - Dell Inspiron 7577 laptop
+    - Dell U2520D monitor
+
+* Friends and family asked to check usability on their Apple mobile, laptop, desktop, and tablet devices, particularly to check usability on Safari browser
+
+* Browsers checked were Chrome, Firefox, Edge, Opera, and Safari on all device types
+
+### Problems overcome when testing on devices and browsers
+
+#### Responsiveness
+
+In terms of responsiveness, I found there were much fewer issues with this project than in my previous MS1 project. My experience has stood me in good stead, and constantly checking features on all device sizes during development stops issues from occuring later on. Chrome developer tools is of course, very helpful for this but is not always 100% accurate in displaying content on emulated smaller devices.
+
+One thing which dev tools does not allow the developer to do, is display the screen appearance when the user has entered an input field and the keyboard comes into focus at the bottom.
+
+In the case of this project, when testing the site on my personal mobile, there was an issue with the custom workout time section of the workout modal. When I entered the input fields and my keyboard came into focus, this pushed the button items out of the modal content frame, looking very odd. This was due to the 'top-margin' of the buttons on this screen.
+
+I was able to fix this issue by removing the top margin for small screens in a media query.
+
+Before
+![Mobile Custom Times](documentation/mobile_custom_times.jpg)
+After
+![Mobile Fixed](documentation/mobile_fixed.jpg)
+
+#### Bugs
+
+Fortunately I was unable to identify many bugs with the app. However one bug which persisted throughout was the sound effects played during the workout timer, which only appear to work on the Chrome, Firefox and Edge browsers. The timer function unfortunately remains silent on Safari and Opera.
+
 ## Technologies Used
 
 ### Languages Used
