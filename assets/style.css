@@ -710,7 +710,7 @@ footer p {
     right: 60px;
   }
   .custom-buttons-div {
-    margin-top: none;
+    margin-top: 0;
   }
 }
 
