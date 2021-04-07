@@ -709,6 +709,9 @@ footer p {
   .toggle-trigger::after {
     right: 60px;
   }
+  .custom-buttons-div {
+    margin-top: none;
+  }
 }
 
 @media only screen and (min-width: 992px) {
