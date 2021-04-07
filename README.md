@@ -132,6 +132,14 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
   - Once the user has scrolled further than 20px from the top of the screen, an upward facing arrow button appears at the middle bottom of the screen. Upon selection, this arrow returns the user to the very top of the page.
 ![Mid Nav](documentation/nav_up.jpg)
 
+### Colour Toggle
+
+* The site features a light/dark mode colour scheme toggle. In light mode the background is a light colour with dark text content, while in dark mode the background is a dark colour with light text content.
+  - Light Mode
+  ![Light Mode](documentation/light_mode.jpg)
+  - Dark Mode
+  ![Dark Mode](documentation/dark_mode.jpg)
+
 ### User Preferences
 
 * User preferences are saved in the browser local storage, meaning that when the user either refreshes the page or returns to it at any other time, the site will look exactly the same as how they left it. There are three main features which carry this function.
