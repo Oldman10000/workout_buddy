@@ -465,6 +465,13 @@ Fortunately I was unable to identify many bugs with the app. However one bug whi
 * [Coolers](https://coolors.co/) to generate the colour pallette
 * [Compressjpeg](https://compressjpeg.com/) - used to compress hero images
 * [Reduceimages.com](https://www.reduceimages.com/) - used to lower resolution of hero images for smaller screens
+* [favicon.io](https://favicon.io/) - used to create favicon image
+* [W3C Validator](https://validator.w3.org/) - used to validate HTML file
+* [W3C Validator](https://jigsaw.w3.org/css-validator/) - used to validate CSS file
+* [JS Lint](https://www.jslint.com/) - used to check JavaScript file
+* [JS Hint](https://jshint.com/) - used to check JavaScript file
+* [Web Formatter](https://webformatter.com/) - used to beautify HTML, CSS and JavaScript files
+* [Grammarly](grammarly.com) - Used to check spelling and grammar on the index.html file and the README.md file upon completion
 
 ## Credits
 
