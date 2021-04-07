@@ -1,30 +1,31 @@
 // light/dark mode toggle - saves in local storage for refresh
 // local storage code copied and amended from css-tricks.com
-// https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#storing-preferences
+// https://css-tricks.com/a-complete-guide
+// -to-dark-mode-on-the-web/#storing-preferences
 
 const currentTheme = localStorage.getItem("theme");
 const toggleButton = localStorage.getItem("button");
 
 if (currentTheme == "dark") {
   // ...then use the .dark-theme class
-  $(".light").addClass('dark');
+  $(".light").addClass("dark");
 }
 
 if (toggleButton == "light") {
-  $("#light-dark-toggle").addClass('toggle-light');
+  $("#light-dark-toggle").addClass("toggle-light");
 }
 
-// Listen for a click on the button 
+// Listen for a click on the button
 $("#light-dark-toggle").click(function () {
 
   // Toggle the .dark-theme class on each click
-  $(".light").toggleClass('dark');
+  $(".light").toggleClass("dark");
 
   // Let's say the theme is equal to light
   let theme = "light";
 
   // If the body contains the .dark-theme class...
-  if ($(".light").hasClass('dark')) {
+  if ($(".light").hasClass("dark")) {
 
     // ...then let's make the theme dark
     theme = "dark";
@@ -33,11 +34,11 @@ $("#light-dark-toggle").click(function () {
   localStorage.setItem("theme", theme);
 
   // toggles class on toggle button
-  $(this).toggleClass('toggle-light');
+  $(this).toggleClass("toggle-light");
 
   let button = "dark";
 
-  if ($(this).hasClass('toggle-light')) {
+  if ($(this).hasClass("toggle-light")) {
     button = "light";
   }
 
@@ -46,22 +47,22 @@ $("#light-dark-toggle").click(function () {
 
 // navbar toggle
 $("#hamburger").click(function () {
-  $(this).toggleClass('flip');
-  $(".nav").toggleClass('visible');
-  $("main").toggleClass('shrink');
+  $(this).toggleClass("flip");
+  $(".nav").toggleClass("visible");
+  $("main").toggleClass("shrink");
 });
 
 // closes navbar after picking section
 $(".section-link").click(function () {
-  $("#hamburger").toggleClass('flip');
-  $(".nav").toggleClass('visible');
-  $("main").toggleClass('shrink');
+  $("#hamburger").toggleClass("flip");
+  $(".nav").toggleClass("visible");
+  $("main").toggleClass("shrink");
 });
 
 // toggles display of workout instructions
 $(".toggle-trigger").click(function () {
-  $(this).toggleClass('active').next().slideToggle('slow');
-  $(this).parent().toggleClass('green');
+  $(this).toggleClass("active").next().slideToggle("slow");
+  $(this).parent().toggleClass("green");
 });
 
 // pushes each item in myWorkout list to the exercises array
@@ -73,23 +74,24 @@ function getExercises() {
   })
 }
 
-// refreshes local storage by taking the current data from the DOM every time this is run
+// refreshes local storage by taking the current
+// data from the DOM every time this is run
 function addLocalExercises() {
   getExercises();
   let savedExercises = Object.assign({}, exercises);
-  localStorage.setItem('exercises', JSON.stringify(savedExercises));
+  localStorage.setItem("exercises", JSON.stringify(savedExercises));
 }
 
 // adding custom items to workout list
 // code copied and adapted from Udemy Course
 // 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling
 
-const addExercise = document.querySelector('.exercise-form');
-const list = document.querySelector('#workout-list');
+const addExercise = document.querySelector(".exercise-form");
+const list = document.querySelector("#workout-list");
 
 // gets exercises from local storage
 function getLocalExercises() {
-  const stored = localStorage.getItem('exercises');
+  const stored = localStorage.getItem("exercises");
   let data = JSON.parse(stored);
   $.each(data, function (i, val) {
     const html = `
@@ -99,7 +101,7 @@ function getLocalExercises() {
     </li>
   `;
     list.innerHTML += html;
-  })
+  });
 }
 
 // runs every time the page is refreshed and returns local storage
@@ -118,12 +120,12 @@ const template = exercise => {
 
 // adds content of box to workout list upon submit
 // values are trimmed to show only text content to remove any whitespace
-addExercise.addEventListener('submit', e => {
+addExercise.addEventListener("submit", e => {
   e.preventDefault();
   let exercise = addExercise.add.value.trim();
   if (exercise.length) {
     template(exercise);
-    startColour()
+    startColour();
     addLocalExercises();
     addExercise.reset();
   } else {
@@ -153,23 +155,22 @@ $(".workout-add").click(function () {
   startColour()
   addLocalExercises();
   $(this).css({
-    background: '#33C173'
+    background: "#33C173"
   })
   let x = $(this);
   setTimeout(function () {
-    console.log('hello');
-    $(x).parent().prev().toggleClass('active');
-    $(x).parent().slideToggle('slow');
-    $(x).parent().parent().toggleClass('green');
+    $(x).parent().prev().toggleClass("active");
+    $(x).parent().slideToggle("slow");
+    $(x).parent().parent().toggleClass("green");
     $(x).css({
-      background: '#efefef'
-    })
+      background: "#f5f5f5"
+    });
   }, 1000);
 })
 
 // deletes items from workout list
 $("#workout-list").click(function (e) {
-  if (e.target.classList.contains('delete')) {
+  if (e.target.classList.contains("delete")) {
     e.target.parentElement.remove();
   };
   startColour()
@@ -177,7 +178,8 @@ $("#workout-list").click(function (e) {
   addLocalExercises();
 });
 
-// checks if there are any exercises in the workout and switches colour of start button depending
+// checks if there are any exercises in the workout
+// and switches colour of start button depending
 function startColour() {
   getExercises();
   if (exercises.length) {
@@ -194,23 +196,34 @@ function toggleSound() {
   $("#sound").click(function () {
     // checks whether sound is currently muted or not
     // if sound is currently on
-    if ($(this).children([0]).hasClass('fa-volume-up')) {
-      // this section is needed for the first modal pop up as this does not refresh
-      $(this).children([0]).removeClass('fa-volume-up');
-      $(this).children([0]).addClass('fa-volume-mute');
+    if ($(this).children([0]).hasClass("fa-volume-up")) {
+      // this section is needed for the first
+      // modal pop up as this does not refresh
+      $(this).children([0]).removeClass("fa-volume-up");
+      $(this).children([0]).addClass("fa-volume-mute");
       // changes value of 'on' variable when sound is switched off
       on = false;
-      // this changes the value of variable 'sound' every time, so that it stays the same every time the modal refreshes on 'set interval'
-      sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+      // this changes the value of variable 'sound' every time, so that it
+      // stays the same every time the modal refreshes on 'set interval'
+      sound = `
+        <div class="modal-icon" id="sound">
+          <i class="fas fa-volume-mute"></i>
+        </div>
+      `;
       z = "off";
       // if sound is currently muted
     } else {
-      $(this).children([0]).removeClass('fa-volume-mute');
-      $(this).children([0]).addClass('fa-volume-up');
+      $(this).children([0]).removeClass("fa-volume-mute");
+      $(this).children([0]).addClass("fa-volume-up");
       // returns 'on' variable to true when sound is on
       on = true;
-      sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-up"></i></div>`;
-      // this changes the value of variable 'sound' every time, so that it stays the same every time the modal refreshes on 'set interval'
+      sound = `
+        <div class="modal-icon" id="sound">
+          <i class="fas fa-volume-up"></i><
+        /div>
+      `;
+      // this changes the value of variable 'sound' every time, so that it
+      // stays the same every time the modal refreshes on 'set interval'
       z = "on";
     }
     // sets local storage based on above code so this always matches dom content
@@ -220,7 +233,8 @@ function toggleSound() {
 
 // general workout timer function
 
-// this loops through each item in the exercises array until workout is complete
+// this loops through each item in the
+// exercises array until workout is complete
 startWorkout = function (sec1, sec2) {
 
   // removes first exercise from array
@@ -231,7 +245,8 @@ startWorkout = function (sec1, sec2) {
   // gets width of container
   let width = $(".modal-content").width();
 
-  // when user starts workout, timer function is activated giving 15 seconds before workout begins
+  // when user starts workout, timer function is activated
+  // giving 15 seconds before workout begins
   let countDown = function () {
     let sec = 15;
     let sec3 = 15;
@@ -258,31 +273,32 @@ startWorkout = function (sec1, sec2) {
       // reduces width of progress bar as timer ticks down
       let progWidth = ((sec + 1) * width / sec3);
       $(".progress").css({
-        width: progWidth + 'px'
+        width: progWidth + "px"
       });
-      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes colours within modal box in
+      // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 10) {
         $(".timer").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".progress").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".modal-content").css({
-          border: '2.5px solid #ffa630'
+          border: "2.5px solid #ffa630"
         });
       }
       // changes to 'red'
       if (sec < 5) {
         $(".timer").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".progress").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".modal-content").css({
-          border: '2.5px solid #d53910'
+          border: "2.5px solid #d53910"
         });
       }
       // plays sound when timer is at 10 and 5 seconds remaining
@@ -302,7 +318,7 @@ startWorkout = function (sec1, sec2) {
         setTimeout(function () {
           // changes inner colours back to green for next section
           $(".modal-content").css({
-            border: '2.5px solid #33C173'
+            border: "2.5px solid #33C173"
           });
           // activates timer for first exercise in list
           timer(sec1);
@@ -342,31 +358,32 @@ startWorkout = function (sec1, sec2) {
       // reduces width of progress bar as timer ticks down
       let progWidth = ((sec + 1) * width / sec1);
       $(".progress").css({
-        width: progWidth + 'px'
+        width: progWidth + "px"
       });
-      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes colours within modal box in
+      // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".progress").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".modal-content").css({
-          border: '2.5px solid #ffa630'
+          border: "2.5px solid #ffa630"
         });
       }
       // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".progress").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".modal-content").css({
-          border: '2.5px solid #d53910'
+          border: "2.5px solid #d53910"
         });
       }
       // plays sound when timer is at 20 and 10 seconds remaining
@@ -381,7 +398,8 @@ startWorkout = function (sec1, sec2) {
         clearInterval(timer1);
         // removes first exercise from exercises array
         removeFirstExercise();
-        // if exercises array is now empty, congratulations is trigged, ending the workout
+        // if exercises array is now empty,
+        // congratulations is trigged, ending the workout
         if (exercises.length == 0) {
           if (on) {
             $("#cheer")[0].play();
@@ -389,7 +407,7 @@ startWorkout = function (sec1, sec2) {
           setTimeout(function () {
             congratulations();
             $(".modal-content").css({
-              border: '2.5px solid #33C173'
+              border: "2.5px solid #33C173"
             });
           }, 1000);
           // if exercises array has items remaining, triggers restTimer function
@@ -399,7 +417,7 @@ startWorkout = function (sec1, sec2) {
           }
           setTimeout(function () {
             $(".modal-content").css({
-              border: '2.5px solid #33C173'
+              border: "2.5px solid #33C173"
             });
             restTimer(sec2);
           }, 1000);
@@ -435,31 +453,32 @@ startWorkout = function (sec1, sec2) {
       // reduces width of progress bar as timer ticks down
       let progWidth = ((sec + 1) * width / sec2);
       $(".progress").css({
-        width: progWidth + 'px'
+        width: progWidth + "px"
       });
-      // changes colours within modal box in traffic light pattern as timer ticks down
+      // changes colours within modal box in
+      // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".progress").css({
-          background: '#ffa630'
+          background: "#ffa630"
         });
         $(".modal-content").css({
-          border: '2.5px solid #ffa630'
+          border: "2.5px solid #ffa630"
         });
       }
       // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".progress").css({
-          background: '#d53910'
+          background: "#d53910"
         });
         $(".modal-content").css({
-          border: '2.5px solid #d53910'
+          border: "2.5px solid #d53910"
         });
       }
       // plays sound when timer is at 20 and 10 seconds remaining
@@ -477,7 +496,7 @@ startWorkout = function (sec1, sec2) {
         }
         setTimeout(function () {
           $(".modal-content").css({
-            border: '2.5px solid #33C173'
+            border: "2.5px solid #33C173"
           });
           // starts timer for first exercise in array
           timer(sec1);
@@ -495,13 +514,20 @@ startWorkout = function (sec1, sec2) {
       <h3>Congratulations!</h3>
       <p>Workout Complete</p>
       <div class="complete-img-div">
-        <img src="assets/images/champagne.png" alt="champagne" class="complete-img">
+        <img src="assets/images/champagne.png"
+        alt="champagne" class="complete-img">
       </div>
       <div class="social">
         <p>Share to social media!!</p>
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     `);
     $("#close-modal").click(function () {
@@ -595,8 +621,13 @@ let workoutStart = function () {
     on = true;
   } else {
     // if soundStorage == "off"
-    // this is also the default option when the user first loads the page as local storage is not set until the toggle is activated
-    sound = `<div class="modal-icon" id="sound"><i class="fas fa-volume-mute"></i></div>`;
+    // this is also the default option when the user first loads
+    // the page as local storage is not set until the toggle is activated
+    sound = `
+              <div class="modal-icon" id="sound">
+                <i class="fas fa-volume-mute"></i>
+              </div>
+            `;
     // used to check if sound is on or not
     on = false;
   }
@@ -665,8 +696,8 @@ function submitChange() {
 
 // changes colour of start button in custom exercise times start button
 function startChange() {
-  if ($("#exercise-time").hasClass('green-input') && ($("#rest-time").hasClass('green-input'))) {
-    $("#start").removeClass('red-button');
+  if ($("#exercise-time").hasClass("green-input") && ($("#rest-time").hasClass("green-input"))) {
+    $("#start").removeClass("red-button");
   } else {
     $("#start").addClass("red-button");
   }
@@ -696,7 +727,8 @@ inputs.forEach(input => {
 
 // email function is seperate
 
-// regex for valid email format taken from https://www.w3resource.com/javascript/form/email-validation.php
+// regex for valid email format taken from
+// https://www.w3resource.com/javascript/form/email-validation.php
 let letters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 $("#email").keyup(function (e) {
@@ -761,7 +793,7 @@ $("a").click(function (e) {
 
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
+    $("html, body").animate({
       scrollTop: $(hash).offset().top
     }, 1000, function () {
 
@@ -774,7 +806,7 @@ $("a").click(function (e) {
 // Return to top button script copied and adapted from W3 schools tutorial
 // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
 
-mybutton = document.querySelector('.circle');
+mybutton = document.querySelector(".circle");
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = () => {
@@ -788,7 +820,7 @@ window.onscroll = () => {
 // smooth function copied and adapted from tutorialdeep.com
 // https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/
 
-$('#toTop').click(function () {
+$("#toTop").click(function () {
   $("html, body").animate({ scrollTop: 0 }, 1000);
   return false;
 });
