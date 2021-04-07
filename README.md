@@ -16,6 +16,12 @@ I am looking to cast as wide a net as possible in terms of user base. This app n
 
 #### User Stories
 
+I am a visitor and I want:
+
+1. To know what the website is for
+2. To be able to easily navigate around the site
+3. To get in touch with the website owner
+
 I am a fitness beginner and I want:
 
 1. Instructions for how to perform exercises
@@ -320,6 +326,66 @@ In the end, after some advice from Igor at Code Institute, I was once again able
 7. The code checks if there are any items in the array, if the array is now empty the workout ends, and the modal innerHTML changes to the congratulations screen
 8. If there are items still on the array, the restTimer function is triggered, which ticks down for the set amount of time depending on difficulty
 9. Once complete the timer function is triggered again from the 'new' first item in the array
+
+## Testing
+
+### User Story Testing
+
+I am a visitor and I want:
+
+1. To know what the website is for
+    - The app is called 'Workout Buddy' which gives the user an good idea of what it can be used for
+    - The first hero image seen upon page load displays a woman performing a sit up
+    ![Opening Screen](documentation/opening_screen.jpg)
+    - The first main section provides the user with simple but informative instructions, in stages, which educate how the app works and what it does.
+    ![Opening Screen](documentation/light_mode.jpg)
+2. To be able to easily navigate around the site
+    - As is standard, a navbar is included on the site which the user can use to move between sections.
+    ![Navbar](documentation/nav_small.jpg)
+    - There is a 'down arrow' at the bottom of each section which provides the user with visual feedback that there is more content to access as well as providing a means to quickly access the next section.
+    ![Nav Down](documentation/nav_down.jpg)
+    - If the user wants to quickly return to the top of the page, there is an upwards facing arrow fixed to the bottom of the page, allowing the user to quickly do this.
+    ![Nav Up](documentation/nav_up.jpg)
+    
+3. To get in touch with the website owner
+    - A feedback form has been included to allow the user to contact the website owner for any purpose. The user is required to provide contact details for submission.
+    ![Feedback Form](documentation/valid.jpg)
+
+I am a fitness beginner and I want:
+
+1. Instructions for how to perform exercises
+    - Some basic exercises are included on the website for the user to choose from. If extra equipment is needed to perform an exercise, this information is highlighted.
+    ![Exercise Instructions](documentation/exercise_instructions.jpg)
+2. Instructions must not be alienating and explanations should be easy to understand
+    - Instructions are provided in a simple manner and each step is seperated.
+    ![Exercise Instructions](documentation/exercise_instructions.jpg)
+3. A way to 'progress' their fitness level using the app
+    - There are three baked in difficulty levels when operating the workout timer function. As the user gets fitter from using the app they can increase the time periods for each exercise. If the hard mode is still too easy, they can insert custom time periods as well.
+    ![Workout Instructions](documentation/instructions.jpg)
+    - A beginner is encouraged to start small and build their way up as they feel more confident.
+    ![Beginner](documentation/beginner.jpg)
+4. Positive feedback after completing a workout
+    - After the workout is complete, the modal content changes to 'congratulations' content which, if sound is turned on plays a 'cheer' sound effect, displays an image of a champagne bottle being opened and finally provides the user with a means to share their achievement to social media.
+    ![Congratulations](documentation/congratulations.jpg)
+
+I am a fitness 'veteran' and I want:
+
+1. To be able to quickly construct my workout
+    - Workouts can be made very quickly using the built in exercises. It takes just one button click to add an exercise to the workout. 
+    ![Exercise Instructions](documentation/exercise_instructions.jpg)
+2. To have a range of exercises to choose from
+    - There are currently 20 exercises to choose from in total, out of 4 categories. This is plenty to start with, however it is recognised that a regular user is likely to want greater variety. This content is something that can easily be added to in future.
+    ![All exercises](documentation/all_exercises.jpg)
+3. To be able to add my own custom exercises if what I want to do is unavailable
+    - The currently limited prebuilt exercise list is offset by the fact that a user also has the option to manually enter any exercise they like to the workout, rather than only having the pre built in exercises to choose from.
+    ![Exercise Input](documentation/green_input.jpg)
+4. To challenge myself
+    - There is no limit to how many exercises can be added to the workout list, so a user can add as many exercises as they like.
+    - Another way to make things more challenging would be to increase the time limit for each exercise on the timer function. As the user is able to enter custom times, they can make each exercise last as long as they like.
+    ![Custom Times](documentation/valid_custom.jpg)
+5. For my workout to be saved on the app next time I visit
+    - All exercises the user has added to their workout is saved on the browser local storage, so this will remain static if the user refreshes or returns to the page the next day.
+    ![Workout local storage](documentation/workout_local.jpg)
 
 ## Technologies Used
 
