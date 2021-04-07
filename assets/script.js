@@ -16,7 +16,6 @@ if (toggleButton == "light") {
 
 // Listen for a click on the button
 $("#light-dark-toggle").click(function () {
-
   // Toggle the .dark-theme class on each click
   $(".light").toggleClass("dark");
 
@@ -25,7 +24,6 @@ $("#light-dark-toggle").click(function () {
 
   // If the body contains the .dark-theme class...
   if ($(".light").hasClass("dark")) {
-
     // ...then let's make the theme dark
     theme = "dark";
   }
@@ -79,7 +77,7 @@ function getExercises() {
   // defines all exercises as added in the DOM and cycles through them
   // to add to the exercises array
   let allExercises = document.querySelectorAll(".activity");
-  allExercises.forEach(exercise => {
+  allExercises.forEach((exercise) => {
     exercises.push(exercise.innerText);
   });
 }
@@ -123,7 +121,7 @@ function getLocalExercises() {
 getLocalExercises();
 
 // creates template literal for exercises added to list
-const template = exercise => {
+const template = (exercise) => {
   const html = `
     <li class="exercise">
       <span class="activity">${exercise}</span>
@@ -135,7 +133,7 @@ const template = exercise => {
 
 // adds content of box to workout list upon submit
 // values are trimmed to show only text content to remove any whitespace
-addExercise.addEventListener("submit", e => {
+addExercise.addEventListener("submit", (e) => {
   // prevents default submit action
   e.preventDefault();
   // gets value of input box and trims any empty space
@@ -183,7 +181,7 @@ $(".workout-add").click(function () {
   // adds to local storage
   addLocalExercises();
   $(this).css({
-    background: "#33C173"
+    background: "#33C173",
   });
   let x = $(this);
   // toggles appearance of exercise instructions after submitting
@@ -192,7 +190,7 @@ $(".workout-add").click(function () {
     $(x).parent().slideToggle("slow");
     $(x).parent().parent().toggleClass("green");
     $(x).css({
-      background: "#f5f5f5"
+      background: "#f5f5f5",
     });
   }, 1000);
 });
@@ -268,7 +266,6 @@ function toggleSound() {
 // this loops through each item in the
 // exercises array until workout is complete
 let startWorkout = function (sec1, sec2) {
-
   // removes first exercise from array
   let removeFirstExercise = function () {
     exercises.shift();
@@ -303,34 +300,34 @@ let startWorkout = function (sec1, sec2) {
         clearInterval(timer3);
       });
       // reduces width of progress bar as timer ticks down
-      let progWidth = ((sec + 1) * width / sec3);
+      let progWidth = ((sec + 1) * width) / sec3;
       $(".progress").css({
-        width: progWidth + "px"
+        width: progWidth + "px",
       });
       // changes colours within modal box in
       // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 10) {
         $(".timer").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".progress").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".modal-content").css({
-          border: "2.5px solid #ffa630"
+          border: "2.5px solid #ffa630",
         });
       }
       // changes to 'red'
       if (sec < 5) {
         $(".timer").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".progress").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".modal-content").css({
-          border: "2.5px solid #d53910"
+          border: "2.5px solid #d53910",
         });
       }
       // plays sound when timer is at 10 and 5 seconds remaining
@@ -350,7 +347,7 @@ let startWorkout = function (sec1, sec2) {
         setTimeout(function () {
           // changes inner colours back to green for next section
           $(".modal-content").css({
-            border: "2.5px solid #33C173"
+            border: "2.5px solid #33C173",
           });
           // activates timer for first exercise in list
           timer(sec1);
@@ -388,34 +385,34 @@ let startWorkout = function (sec1, sec2) {
         clearInterval(timer1);
       });
       // reduces width of progress bar as timer ticks down
-      let progWidth = ((sec + 1) * width / sec1);
+      let progWidth = ((sec + 1) * width) / sec1;
       $(".progress").css({
-        width: progWidth + "px"
+        width: progWidth + "px",
       });
       // changes colours within modal box in
       // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".progress").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".modal-content").css({
-          border: "2.5px solid #ffa630"
+          border: "2.5px solid #ffa630",
         });
       }
       // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".progress").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".modal-content").css({
-          border: "2.5px solid #d53910"
+          border: "2.5px solid #d53910",
         });
       }
       // plays sound when timer is at 20 and 10 seconds remaining
@@ -439,7 +436,7 @@ let startWorkout = function (sec1, sec2) {
           setTimeout(function () {
             congratulations();
             $(".modal-content").css({
-              border: "2.5px solid #33C173"
+              border: "2.5px solid #33C173",
             });
           }, 1000);
           // if exercises array has items remaining, triggers restTimer function
@@ -449,7 +446,7 @@ let startWorkout = function (sec1, sec2) {
           }
           setTimeout(function () {
             $(".modal-content").css({
-              border: "2.5px solid #33C173"
+              border: "2.5px solid #33C173",
             });
             restTimer(sec2);
           }, 1000);
@@ -483,34 +480,34 @@ let startWorkout = function (sec1, sec2) {
         clearInterval(timer2);
       });
       // reduces width of progress bar as timer ticks down
-      let progWidth = ((sec + 1) * width / sec2);
+      let progWidth = ((sec + 1) * width) / sec2;
       $(".progress").css({
-        width: progWidth + "px"
+        width: progWidth + "px",
       });
       // changes colours within modal box in
       // traffic light pattern as timer ticks down
       // changes to 'amber'
       if (sec < 20) {
         $(".timer").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".progress").css({
-          background: "#ffa630"
+          background: "#ffa630",
         });
         $(".modal-content").css({
-          border: "2.5px solid #ffa630"
+          border: "2.5px solid #ffa630",
         });
       }
       // changes to 'red'
       if (sec < 10) {
         $(".timer").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".progress").css({
-          background: "#d53910"
+          background: "#d53910",
         });
         $(".modal-content").css({
-          border: "2.5px solid #d53910"
+          border: "2.5px solid #d53910",
         });
       }
       // plays sound when timer is at 20 and 10 seconds remaining
@@ -528,7 +525,7 @@ let startWorkout = function (sec1, sec2) {
         }
         setTimeout(function () {
           $(".modal-content").css({
-            border: "2.5px solid #33C173"
+            border: "2.5px solid #33C173",
           });
           // starts timer for first exercise in array
           timer(sec1);
@@ -608,7 +605,7 @@ function customOpen() {
   `);
   // adds validation to custom number inputs
   const inputs = document.querySelectorAll(".custom-number");
-  inputs.forEach(input => {
+  inputs.forEach((input) => {
     formColour(input);
   });
   // toggles sound
@@ -731,7 +728,7 @@ function submitChange() {
 
 // changes colour of start button in custom exercise times start button
 function startChange() {
-  if ($("#exercise-time").hasClass("green-input") && ($("#rest-time").hasClass("green-input"))) {
+  if ($("#exercise-time").hasClass("green-input") && $("#rest-time").hasClass("green-input")) {
     $("#start").removeClass("red-button");
   } else {
     $("#start").addClass("red-button");
@@ -756,7 +753,7 @@ function formColour(x) {
 }
 
 const inputs = document.querySelectorAll(".easy");
-inputs.forEach(input => {
+inputs.forEach((input) => {
   formColour(input);
 });
 
@@ -800,7 +797,7 @@ $("#contact-form").submit(function (e) {
     $("#toast").show();
     $("#contact-form")[0].reset();
     let inputs = document.querySelectorAll(".form-input");
-    inputs.forEach(input => {
+    inputs.forEach((input) => {
       input.classList.remove("green-input");
       input.classList.add("red-input");
     });
@@ -817,7 +814,6 @@ $("#contact-form").submit(function (e) {
 // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
 
 $("a").click(function (e) {
-
   // Make sure this.hash has a value before overriding default behavior
   if (this.hash !== "") {
     // Prevent default anchor click behavior
@@ -828,13 +824,16 @@ $("a").click(function (e) {
 
     // Using jQuery's animate() method to add smooth page scroll
     // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-    $("html, body").animate({
-      scrollTop: $(hash).offset().top
-    }, 1000, function () {
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-    });
+    $("html, body").animate(
+      {
+        scrollTop: $(hash).offset().top,
+      },
+      1000,
+      function () {
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      }
+    );
   } // End if
 });
 

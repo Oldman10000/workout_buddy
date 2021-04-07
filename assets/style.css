@@ -4,16 +4,16 @@ main {
 
 .light {
   background: #f5f5f5;
-  color: #353B3C;
+  color: #353b3c;
 }
 
 .dark {
-  background: #353B3C;
+  background: #353b3c;
   color: #f5f5f5;
 }
 
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 section {
@@ -41,7 +41,7 @@ h4 {
 /* global button styles */
 
 .my-button {
-  border: solid 2.5px #33C173;
+  border: solid 2.5px #33c173;
   border-radius: 7.5px;
   padding: 5px 10px;
   font-weight: 600;
@@ -66,7 +66,7 @@ input {
 
 .green-input {
   border: none;
-  border-bottom: solid 2px #33C173;
+  border-bottom: solid 2px #33c173;
 }
 
 .red-input:focus {
@@ -74,9 +74,10 @@ input {
   border-bottom: solid 2px #d53910;
   outline: none;
 }
+
 .green-input:focus {
   border: none;
-  border-bottom: solid 2px #33C173;
+  border-bottom: solid 2px #33c173;
   outline: none;
 }
 
@@ -102,6 +103,7 @@ input {
   border-color: inherit;
   cursor: pointer;
 }
+
 .next:hover i {
   color: inherit;
 }
@@ -154,7 +156,7 @@ header {
 }
 
 #heading i:hover {
-  color: #33C173;
+  color: #33c173;
 }
 
 #heading a:hover {
@@ -217,7 +219,7 @@ header {
 }
 
 .toggle-dark i {
-  color: #353B3C;
+  color: #353b3c;
   transition: 0.3s;
 }
 
@@ -246,7 +248,7 @@ header {
 }
 
 #hamburger:hover i {
-  color: #33C173;
+  color: #33c173;
 }
 
 .flip {
@@ -305,7 +307,7 @@ ul {
 }
 
 .green {
-  border: solid 1px #33C173;
+  border: solid 1px #33c173;
 }
 
 .content {
@@ -336,7 +338,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   display: inline-block;
   position: absolute;
   right: 30px;
-  transform: rotate(90deg)scale(1, 2);
+  transform: rotate(90deg) scale(1, 2);
   transition: transform 0.6s;
 }
 
@@ -368,7 +370,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   padding: 5px;
   margin: 2.5px;
   position: relative;
-  border-bottom: solid 2px #33C173;
+  border-bottom: solid 2px #33c173;
 }
 
 #workout-list i {
@@ -380,7 +382,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 #workout-list i:hover {
   cursor: pointer;
-  color: #d53910
+  color: #d53910;
 }
 
 .exercise-form {
@@ -437,7 +439,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   top: 50%;
   transform: translateY(-50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-  border: 2.5px solid #33C173;
+  border: 2.5px solid #33c173;
   transition: 0.5s;
 }
 
@@ -450,11 +452,11 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 #sound {
- left: 7px;
+  left: 7px;
 }
 
 .fa-volume-up {
-  color: #33C173;
+  color: #33c173;
   transition: 0.2s;
 }
 
@@ -464,7 +466,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 #close-modal {
-  color: #33C173;
+  color: #33c173;
   right: 7px;
 }
 
@@ -515,9 +517,9 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
   position: relative;
   height: 150px;
   width: 150px;
-  background-color: #33C173;
+  background-color: #33c173;
   margin: auto;
-  border: solid 5px #353B3C;
+  border: solid 5px #353b3c;
   border-radius: 50%;
 }
 
@@ -531,7 +533,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 .progress {
-  background: #33C173;
+  background: #33c173;
   height: 10px;
   width: 100%;
   position: absolute;
@@ -554,13 +556,13 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 
 .social i {
   font-size: 2em;
-  color: #353B3C;
+  color: #353b3c;
   margin: 0 10px;
   transition-duration: 0.25s;
 }
 
 .social i:hover {
-  color: #33C173;
+  color: #33c173;
 }
 
 /* Contact Form Styling */
@@ -618,13 +620,15 @@ textarea {
 }
 
 /* When submitting feedback form */
+
 .form-feedback {
-  background: #33C173;
-  border: solid 2.5px #33C173;
+  background: #33c173;
+  border: solid 2.5px #33c173;
   border-radius: 5px;
 }
 
 /* When inputs are invalid upon enter */
+
 .negative {
   background: #d53910;
   border: solid 2.5px #d53910;
@@ -643,8 +647,8 @@ footer p {
   padding: 0 1rem 1rem 0;
 }
 
-
 /* Back to top button */
+
 .circle {
   display: none;
   position: fixed;
@@ -662,7 +666,7 @@ footer p {
 }
 
 .circle:hover {
-  color: #33C173;
+  color: #33c173;
 }
 
 #toTop {
@@ -719,26 +723,20 @@ footer p {
     font-size: 1.05em;
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
   }
-
   .hero-1 {
     background-image: url("../assets/images/hero1.jpg");
     height: 80vh;
   }
-
   .hero-2 {
     background-image: url("../assets/images/hero2.jpg");
   }
-  
   .hero-3 {
     background-image: url("../assets/images/hero3.jpg");
   }
-  
   .hero-4 {
     background-image: url("../assets/images/hero4.jpg");
   }
-
   p {
     font-size: 1.2em;
   }
-
 }
