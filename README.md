@@ -527,6 +527,22 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ## Credits
 
+### Code
+
+#### CSS
+
+* Navbar copied and adapted from [W3 Schools](https://www.w3schools.com/howto/howto_js_sidenav.asp)https://www.w3schools.com/howto/howto_js_sidenav.asp
+* Toggle-trigger styling and animation copied and adapted from [Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling](https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/)
+
+#### JavaScript
+
+* Light/dark mode toggle local storage code copied and adapted from [CSS Tricks](https://css-tricks.com/a-complete-guide)
+* Adding custom items to workout list copied and adapted from [Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling](https://www.udemy.com/course/modern-javascript-from-novice-to-ninja/)
+* Regex for valid email format taken from [W3 Resource](https://www.w3resource.com/javascript/form/email-validation.php)
+* Smooth scrolling function when pressing internal links copied and adapted from [W3 Schools](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp)
+* Return to top button script copied and adapted from [W3 Schools](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp)
+* Smooth scolling function when selecting return to top button copied and adapted from [Tutorial Deep](https://tutorialdeep.com/knowhow/smooth-scroll-to-top-jquery/)
+
 ### Images
 
 * Image of woman performing sit ups taken from [unsplash.com](https://unsplash.com/photos/lrQPTQs7nQQ). Photographer Credit - [Jonathan Borba](https://unsplash.com/@jonathanborba).
@@ -553,4 +569,13 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Acknowledgements
 
+* Thanks to my mentor Arnold Kyeza for providing very helpful advice in terms of content, how to tackle certain problems and for keeping me on track throughout.
+* Thanks to the Code Institute Slack community for providing resources and tips as well as peer-reviewing the project.
 * Thanks to Code Institute tutor Igor for helping me figure out the best way to implement the timer feature as described in the [Timer Function](#timer-function) section of [Issues Overcome](#issues-overcome).
+* Thanks to friends and family for taking the time to look at the site and give advice on both content and user stories.
+* As ever, [W3 Schools](https://www.w3schools.com/) and [Stackoverflow](https://stackoverflow.com/) were extremely useful when I forgot correct code syntax for HTML, CSS, JavaScript and jQuery elements and a quick search in either of these websites would often point me in the right direction.
+* Chrome Dev Tools
+  - Testing and adjusting CSS styles
+  - Testing my JavaScript using the console
+  - Testing local storage in the Application section
+  - Testing using the Lighthouse
