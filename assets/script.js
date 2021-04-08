@@ -1,3 +1,8 @@
+let exercises; // used to create exercises array based on exercises the user has added to workout
+let on; // used to check if sound is switched on
+let sound; // used to create template literal for sound icon
+let z; // used to set sound local storage
+
 // light/dark mode toggle - saves in local storage for refresh
 // local storage code copied and amended from css-tricks.com
 // https://css-tricks.com/a-complete-guide
@@ -249,8 +254,8 @@ function toggleSound() {
       on = true;
       sound = `
         <div class="modal-icon" id="sound">
-          <i class="fas fa-volume-up"></i><
-        /div>
+          <i class="fas fa-volume-up"></i>
+        </div>
       `;
       // this changes the value of variable 'sound' every time, so that it
       // stays the same every time the modal refreshes on 'set interval'

@@ -441,7 +441,7 @@ Fortunately I was unable to identify many bugs with the app. However one bug whi
 
 ![JS Lint](documentation/js_lint.jpg)
 
-* I also used JS Hint to double check my script, again there were no major issues. There are warnings for undefined variables, which are mostly jQuery $ symbols, and a few other variables which appear undeclared at points. However as these variables are often nested within functions, this is not an issue. JS Hint was also helpful in regard to ensuring I had added semicolons to all the correct places.
+* I also used JS Hint to double check my script, again there were no major issues. There are warnings for undefined variables, which are all jQuery $ symbols. There are also warnings for ES6 only properities such as variable declarations using let and const instead of var, arrow functions being used, and template literal syntax. As ES6 is compatible only with the latest browsers and not at all with internet explorer, for a real world project it would be sensible to use the babeljs compiler, which converts the JavaScript into browser-compatible code.
 
 ### Chrome Dev Tools Lighthouse
 
@@ -455,7 +455,7 @@ As always, Chrome dev tools lighthouse was very useful in testing the site for p
 
 The mobile Performance is slightly worse than that of the desktop due to the large file sizes of the hero images. For small screens I reduced the resolution of these images to improve load times, however I could go no smaller with these images otherwise the quality would have been compromised.
 
-My <strong> tags were displayed as having an insufficient contrast ratio to the background due to the red colour. I tested this with friends of various ages, none of whom considered this to be an issue so I have kept these in. I find it strange that these were the only red coloured elements which were flagged as being potentially problematic, as many other elements on the page share the same shade of colour.
+My 'strong' tags were displayed as having an insufficient contrast ratio to the background due to the red colour. I tested this with friends of various ages, none of whom considered this to be an issue so I have kept these in. I find it strange that these were the only red coloured elements which were flagged as being potentially problematic, as many other elements on the page share the same shade of colour.
 
 ## Technologies Used
 
