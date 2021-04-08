@@ -8,6 +8,12 @@ For this project, I am building a fitness app. The idea is that a user can quick
 
 The aim is to create a simple app to help people organise their exercise at home, which is more important than ever these days as a lot of us are stuck inside for most of the day.
 
+[Link to deployed site](https://oldman10000.github.io/workout_buddy/)
+
+### Mockup
+
+![Mockup](documentation/mockup.jpg)
+
 ## UXD
 
 ### Strategy
