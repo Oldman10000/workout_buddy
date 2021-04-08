@@ -743,7 +743,7 @@ function startChange() {
 // changes colour of input fields if all valid
 function formColour(x) {
   $(x).keyup(function (e) {
-    if (e.target.value.length) {
+    if (e.target.value.trim().length) {
       $(x).removeClass("red-input");
       $(x).addClass("green-input");
     } else {
