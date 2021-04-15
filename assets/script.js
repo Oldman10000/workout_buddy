@@ -757,27 +757,39 @@ function formColour(x) {
   });
 }
 
-const inputs = document.querySelectorAll(".easy");
-inputs.forEach((input) => {
+// adds validation for 'simple' inputs name and comment
+const simpleInputs = document.querySelectorAll(".simple");
+simpleInputs.forEach((input) => {
   formColour(input);
 });
 
-// email function is seperate
+// email and tel functions are seperate as they need greater validation
+
+//regex for valid tel format
+let validTel = /^\d+$/;
 
 // regex for valid email format taken from
 // https://www.w3resource.com/javascript/form/email-validation.php
-let letters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+let validEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-$("#email").keyup(function (e) {
-  if (e.target.value.match(letters)) {
-    $("#email").removeClass("red-input");
-    $("#email").addClass("green-input");
-  } else {
-    $("#email").removeClass("green-input");
-    $("#email").addClass("red-input");
-  }
-  submitChange();
-});
+function checkRegex(input, regex) {
+  input.keyup(function (e) {
+    if (e.target.value.match(regex)) {
+      input.removeClass("red-input");
+      input.addClass("green-input");
+    } else {
+      input.removeClass("green-input");
+      input.addClass("red-input");
+    }
+    submitChange();
+  });
+}
+
+// checks telephone valid input
+checkRegex($("#tel"), validTel)
+
+// checks email valid input
+checkRegex($("#email"), validEmail)
 
 // action upon submit contact form
 $("#contact-form").submit(function (e) {
