@@ -124,5 +124,5 @@ function addToDom(list, item) {
 
 addToDom(warmUp, $("#warm-up"))
 addToDom(upperBody, $("#upper-body"))
-addToDom(core, $("#core"))
-addToDom(lowerBody, $("#lower-body"))
+// instructions.addToDom(core, $("#core"))
+// instructions.addToDom(lowerBody, $("#lower-body"))
