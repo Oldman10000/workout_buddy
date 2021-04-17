@@ -5,7 +5,7 @@ const warmUp = [
     extra: false,
     instructions: [
       "Begin Jogging on the spot, lifting your knees as high as you can.",
-      "Try to lift your knees up to hip level but keep the core tight to support your back.",
+      "Try to lift your knees to hip level but keep the core tight to support your back.",
       "For a more advanced move, hold your hands straight at hip level and try to touch the knees to your hands as you lift them."
     ]
   },
@@ -24,9 +24,9 @@ const warmUp = [
     title: "Arm Rotations",
     extra: false,
     instructions: [
-      "Stand with your feet shoulder-width apart and extend yoru arms parallel to the floor.",
+      "Stand with your feet shoulder-width apart and extend your arms parallel to the floor.",
       "Circle your arms forward using small controlled motions, gradually making the circles bigger.",
-      "Change direction of the circles every ten seconds or so."
+      "Change the direction of the circles every ten seconds or so."
     ]
   },
 
@@ -45,7 +45,7 @@ const warmUp = [
     extra: false,
     instructions: [
       "Stand straight with your feet hip-width apart and hold onto a wall.",
-      "Keeping one leg stationary, slowly swing the opposite leg forward and backward in a single smooth movement.",
+      "Keeping one leg stationary, slowly swing the opposite leg forward and backwards in a single smooth movement.",
       "Switch sides and repeat until set is complete."
     ]
   }
@@ -65,8 +65,8 @@ const upperBody = [
   },
 
   {
-    title: "Pull Ups",
-    extra: "For this exercise you will require a pull up bar.",
+    title: "Pull-Ups",
+    extra: "For this exercise, you will require a pull-up bar.",
     instructions: [
       "Start with your hands on the bar approximately shoulder-width apart with your palms facing forward.",
       "With arms extended above you, stick your chest out and curve your back slightly. That is your starting position.",
@@ -77,9 +77,9 @@ const upperBody = [
 
   {
     title: "Bicep Curls",
-    extra: "For this exercise you will require dumbbells. Filled water bottles can be useful substitutes.",
+    extra: "For this exercise, you will require dumbbells. Filled water bottles can be useful substitutes.",
     instructions: [
-      "Stand straight with a dumbbell in each hand, your feet shoulder width and hadns by your sides.",
+      "Stand straight with a dumbbell in each hand, your feet shoulder-width and hands by your sides.",
       "Squeeze the biceps and lift the dumbbells, keeping your elbows close to your body and the upper arms stationary.",
       "Once the dumbbells are at shoulder level, slowly lower your arms to the starting position."
     ]
@@ -91,7 +91,7 @@ const upperBody = [
     instructions: [
       "Place your hands behind you onto a chair, with your fingers facing forward.",
       "Extend your legs and start bending your elbows.",
-      "Lower your body until your arms are at a 90 degree angle.",
+      "Lower your body until your arms are at a 90-degree angle.",
       "Lift your body back up until your arms are straight."
     ]
   },
@@ -101,7 +101,7 @@ const upperBody = [
     extra: false,
     instructions: [
       "Set up prone, with your weight supported on your toes and hands beneath your shoulders, hips up.",
-      "Bend your elbows until your arms form a 90 degree angle, and bring your head close to the mat.",
+      "Bend your elbows until your arms form a 90-degree angle, and bring your head close to the mat.",
       "Straighten your elbows, pushing your body away from the mat and return to the starting position."
     ]
   }
@@ -115,7 +115,7 @@ const core = [
     instructions: [
       "Lie down on your back, keep your knees bent and your back and feet flat on the mat.",
       "Slowly lift your torso and sit up.",
-      "Return to the starting position by rolling down one vertebrae at a time."
+      "Return to the starting position by rolling down one vertebra at a time."
     ]
   },
 
@@ -167,7 +167,7 @@ const lowerBody = [
     extra: "For an extra challenge, try this while holding dumbbells or filled water bottles in your hands!",
     instructions: [
       "Stand up with your feet shoulder-width apart.",
-      "Bend your knees, press your hips back and stop the movement once the hip joing is slightly lower than the knees.",
+      "Bend your knees, press your hips back and stop the movement once the hip joint is slightly lower than the knees.",
       "Press your heels into the floor to return to the starting position."
     ]
   },
@@ -176,8 +176,8 @@ const lowerBody = [
     title: "Lunges",
     extra: false,
     instructions: [
-      "Stand with your feet hip width apart, back straight, shoulders back and abs tight.",
-      "Take a step forward, slowly bending the knees until yoru back knee is just above the floor.",
+      "Stand with your feet hip-width apart, back straight, shoulders back and abs tight.",
+      "Take a step forward, slowly bending the knees until your back knee is just above the floor.",
       "Stand up. reversing the movement.",
       "Repeat, alternating legs for the duration."
     ]
@@ -195,11 +195,11 @@ const lowerBody = [
 
   {
     title: "Box Jumps",
-    extra: "This exercise requires a box, or alternatively a strong chair. For an extra challenge use bigger boxes as you get fitter!",
+    extra: "This exercise requires a box or a strong chair. For an extra challenge use bigger boxes as you get fitter!",
     instructions: [
       "Place a box or step in front of you and stand up straight.",
       "Jump forwards and up onto the box, landing smoothly on both feet.",
-      "Step back down behind you and repeat action for the duration.",
+      "Step back down behind you and repeat the action for the duration.",
     ]
   },
 
