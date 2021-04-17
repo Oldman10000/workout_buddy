@@ -49,7 +49,7 @@ const warmUp = [
       "Switch sides and repeat until set is complete."
     ]
   }
-]
+];
 
 // upper body exercise instructions
 const upperBody = [
@@ -105,7 +105,7 @@ const upperBody = [
       "Straighten your elbows, pushing your body away from the mat and return to the starting position."
     ]
   }
-]
+];
 
 // core exercise instructions
 const core = [
@@ -158,7 +158,7 @@ const core = [
       "Lower back down to your starting position."
     ]
   }
-]
+];
 
 // lower body exercise instructions
 const lowerBody = [
@@ -212,7 +212,7 @@ const lowerBody = [
       "Pause, and then return to the starting position."
     ]
   }
-]
+];
 
 // adds each exercise instructions to html file
 function addToDom(list, item) {
@@ -230,11 +230,11 @@ function addToDom(list, item) {
           <button class="my-button workout-add">Add to workout!</button>
         </ol>
       </li >
-    `)
+    `);
   });
 }
 
-addToDom(warmUp, $("#warm-up"))
-addToDom(upperBody, $("#upper-body"))
-addToDom(core, $("#core"))
-addToDom(lowerBody, $("#lower-body"))
+addToDom(warmUp, $("#warm-up"));
+addToDom(upperBody, $("#upper-body"));
+addToDom(core, $("#core"));
+addToDom(lowerBody, $("#lower-body"));
