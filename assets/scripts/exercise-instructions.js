@@ -157,6 +157,60 @@ const core = [
   }
 ]
 
+const lowerBody = [
+  {
+    title: "Squats",
+    extra: "For an extra challenge, try this while holding dumbbells or filled water bottles in your hands!",
+    instructions: [
+      "Stand up with your feet shoulder-width apart.",
+      "Bend your knees, press your hips back and stop the movement once the hip joing is slightly lower than the knees.",
+      "Press your heels into the floor to return to the starting position."
+    ]
+  },
+
+  {
+    title: "Lunges",
+    extra: false,
+    instructions: [
+      "Stand with your feet hip width apart, back straight, shoulders back and abs tight.",
+      "Take a step forward, slowly bending the knees until yoru back knee is just above the floor.",
+      "Stand up. reversing the movement.",
+      "Repeat, alternating legs for the duration."
+    ]
+  },
+
+  {
+    title: "Step Up Knee Raise",
+    extra: false,
+    instructions: [
+      "Place a box or step in front of you and stand up straight.",
+      "Step onto the box with your left foot and drive your right knee up.",
+      "Step down with your right foot and alternate legs for the duration."
+    ]
+  },
+
+  {
+    title: "Box Jumps",
+    extra: "This exercise requires a box, or alternatively a strong chair. For an extra challenge use bigger boxes as you get fitter!",
+    instructions: [
+      "Place a box or step in front of you and stand up straight.",
+      "Jump forwards and up onto the box, landing smoothly on both feet.",
+      "Step back down behind you and repeat action for the duration.",
+    ]
+  },
+
+  {
+    title: "Sumo Squats",
+    extra: false,
+    instructions: [
+      "Stand with your feet wider than your shoulders and your arms at your sides. Turn your feet slightly outward.",
+      "Keeping your chest up and core engaged, push your hips back, bend your knees, and lower your body until your thighs are at least parallel to the floor. As you squat down, bring your hands together in front of your chest.",
+      "Pause, and then return to the starting position."
+    ]
+  }
+]
+
+
 function addToDom(list, item) {
   list.forEach((exercise) => {
     item.append(`
@@ -177,4 +231,4 @@ function addToDom(list, item) {
 addToDom(warmUp, $("#warm-up"))
 addToDom(upperBody, $("#upper-body"))
 addToDom(core, $("#core"))
-// addToDom(lowerBody, $("#lower-body"))
+addToDom(lowerBody, $("#lower-body"))
