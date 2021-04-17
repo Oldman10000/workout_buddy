@@ -112,11 +112,11 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
 
   ![Small Screen](documentation/responsive_small.jpg)
 
-  - On Larger screens, the "My Exercises" items are in four columns.
+  - On Larger screens, the "My Exercises" items are in two columns.
   
   ![Large Screen](documentation/responsive_large.jpg)
 
-  - On tablet screens, the "My Exercises" items are in two columns.
+  - On tablet screens, the "My Exercises" items are in one column, same as for smaller screens.
 
   ![Mid Screen](documentation/responsive_mid.jpg)
 
@@ -142,7 +142,7 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
   ![Mid Nav](documentation/nav_down.jpg)
 
   - Once the user has scrolled further than 20px from the top of the screen, an upward-facing arrow button appears at the middle bottom of the screen. Upon selection, this arrow returns the user to the very top of the page.
-![Mid Nav](documentation/nav_up.jpg)
+  ![Mid Nav](documentation/nav_up.jpg)
 
 ### Colour Toggle
 
