@@ -105,6 +105,58 @@ const upperBody = [
   }
 ]
 
+const core = [
+  {
+    title: "Sit Ups",
+    extra: false,
+    instructions: [
+      "Lie down on your back, keep your knees bent and your back and feet flat on the mat.",
+      "Slowly lift your torso and sit up.",
+      "Return to the starting position by rolling down one vertebrae at a time."
+    ]
+  },
+
+  {
+    title: "Plank",
+    extra: false,
+    instructions: [
+      "Set up prone, with your weight supported on your toes and forearms.",
+      "Keep your back straight with an engaged core.",
+      "Hold this position for the duration of the exercise."
+    ]
+  },
+
+  {
+    title: "Flutter Kicks",
+    extra: false,
+    instructions: [
+      "Lie on your back with your hands by your sides or place them underneath your glutes.",
+      "Alternate stacking your feet on top of each other for the duration, keeping your core engaged throughout.",
+    ]
+  },
+
+  {
+    title: "Russian Twists",
+    extra: false,
+    instructions: [
+      "Sit up with your legs bent at the knees. Your upper body should create a V shape with your thighs.",
+      "Twist your torso to the right, then reverse the motion, twisting it to the left.",
+      "Repeat this action for the duration, keeping your back straight and core engaged throughout."
+    ]
+  },
+
+  {
+    title: "Jackknife",
+    extra: false,
+    instructions: [
+      "Lie flat on your back with your arms extended above your head.",
+      "Hover your arms and legs a few inches off the mat, pressing your tailbone into the mat.",
+      "Take a deep breath, and on your exhale, keeping your limbs straight, lift your head and pull your arms and legs up into a V-shape roughly 30-45 degrees away from the mat.",
+      "Lower back down to your starting position."
+    ]
+  }
+]
+
 function addToDom(list, item) {
   list.forEach((exercise) => {
     item.append(`
@@ -124,5 +176,5 @@ function addToDom(list, item) {
 
 addToDom(warmUp, $("#warm-up"))
 addToDom(upperBody, $("#upper-body"))
-// instructions.addToDom(core, $("#core"))
-// instructions.addToDom(lowerBody, $("#lower-body"))
+addToDom(core, $("#core"))
+// addToDom(lowerBody, $("#lower-body"))
