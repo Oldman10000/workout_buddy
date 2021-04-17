@@ -285,7 +285,7 @@ strong {
 
 /* Exercise Section Styling */
 
-ul {
+#exercises ul {
   padding-left: 0;
   list-style-type: none;
   padding: 25px 0;
@@ -417,6 +417,7 @@ Udemy Course 'Modern Javascript: From Novice to Ninja' - Author: Shaun Pelling *
 }
 
 .inst ul {
+  list-style-type: none;
   margin: 20px;
 }
 
