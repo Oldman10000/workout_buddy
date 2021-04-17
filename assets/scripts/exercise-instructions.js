@@ -219,14 +219,16 @@ function addToDom(list, item) {
   list.forEach((exercise) => {
     item.append(`
       <li class="exercise-item">
-      <h4 class="toggle-trigger">${exercise.title}</h4>
-      <ol class="content">
-        ${exercise.extra ? `<p><strong>${exercise.extra}</strong><p>` : ``}
-        ${exercise.instructions.map((instruction) =>
-      `<li>${instruction}</li>`
-      ).join("")}
-        <button class="my-button workout-add">Add to workout!</button>
-      </ol>
+        <h4 class="toggle-trigger">${exercise.title}</h4>
+        <ol class="content">
+          <div class="instructions">
+            ${exercise.extra ? `<p><strong>${exercise.extra}</strong><p>` : ``}
+            ${exercise.instructions.map((instruction) =>
+            `<li>${instruction}</li>`
+            ).join("")}
+          </div>
+          <button class="my-button workout-add">Add to workout!</button>
+        </ol>
       </li >
     `)
   });
