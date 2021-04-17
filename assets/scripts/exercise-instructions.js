@@ -210,7 +210,6 @@ const lowerBody = [
   }
 ]
 
-
 function addToDom(list, item) {
   list.forEach((exercise) => {
     item.append(`
