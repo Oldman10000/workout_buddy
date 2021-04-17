@@ -1,3 +1,4 @@
+// warmup exercise instructions
 const warmUp = [
   {
     title: "High Knees",
@@ -50,6 +51,7 @@ const warmUp = [
   }
 ]
 
+// upper body exercise instructions
 const upperBody = [
   {
     title: "Press Ups",
@@ -105,6 +107,7 @@ const upperBody = [
   }
 ]
 
+// core exercise instructions
 const core = [
   {
     title: "Sit Ups",
@@ -157,6 +160,7 @@ const core = [
   }
 ]
 
+// lower body exercise instructions
 const lowerBody = [
   {
     title: "Squats",
@@ -210,6 +214,7 @@ const lowerBody = [
   }
 ]
 
+// adds each exercise instructions to html file
 function addToDom(list, item) {
   list.forEach((exercise) => {
     item.append(`
