@@ -24,9 +24,9 @@ const warmUp = [
     title: "Arm Rotations",
     extra: false,
     instructions: [
-      "Stand still with your hands on your hips.",
-      "Slowly push your hips out to the front and rotate them 360 degrees.",
-      "Then rotate them again 360 degrees in the other direction."
+      "Stand with your feet shoulder-width apart and extend yoru arms parallel to the floor.",
+      "Circle your arms forward using small controlled motions, gradually making the circles bigger.",
+      "Change direction of the circles every ten seconds or so."
     ]
   },
 
@@ -34,9 +34,9 @@ const warmUp = [
     title: "Jumping Jacks",
     extra: false,
     instructions: [
-      "Stand with your feet shoulder-width apart and extend yoru arms parallel to the floor.",
-      "Circle your arms forward using small controlled motions, gradually making the circles bigger.",
-      "Change direction of the circles every ten seconds or so."
+      "Stand with your legs straight and arms to your sides.",
+      "Jump up and spread your feet beyond hip-width apart while bringing your arms above your head, nearly touching.",
+      "Jump again, lowering your arms and bringing your legs together, returning to your starting position."
     ]
   },
 
