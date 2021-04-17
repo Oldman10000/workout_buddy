@@ -28,6 +28,7 @@ h4 {
 
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 /* Light/Dark Modes */
@@ -296,7 +297,6 @@ strong {
 /* Exercise Section Styling */
 
 #exercises ul {
-  padding-left: 0;
   padding: 25px 0;
 }
 
