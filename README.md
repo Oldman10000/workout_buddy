@@ -6,7 +6,7 @@ This is my second Milestone Project for the Full Stack Software Development Dipl
 
 For this project, I am building a fitness app. The idea is that a user can quickly and easily create a home workout. Included will be some baked in exercises for the user to choose from, and a 'whiteboard' section where the chosen workout exercises will be added to the workout. The user has the option to enter their custom exercise activity into the workout as well.
 
-The aim is to create a simple app to help people organise their exercise at home, which is more important than ever these days as a lot of us are stuck inside for most of the day.
+The aim is to create a simple app to help people organise their exercise at home, which is more important than ever these days as a lot of us are stuck inside much of the time.
 
 [Link to deployed site](https://oldman10000.github.io/workout_buddy/)
 
@@ -243,7 +243,7 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
 
 * When selecting the 'Let's Go!!' button, which starts the workout, a modal is triggered which appears in front of all other content.
   - From the first screen, the user can select a difficulty option that selects different timeframes for the exercises and rest periods depending on the difficulty. The user has already been familiarised with the respective times in the Instructions section.
-    - On the top left is the sound toggle button. If the sound is set on, some sound effects play during and after the workout, which will be described in more detail later.
+   - On the top left is the sound toggle button. If the sound is set on, some sound effects play during and after the workout, which will be described in more detail later.
     - On the top right is a close button. This is always active and will cancel the workout completely if selected in the middle of a timer.
     ![First Modal Screen](documentation/open_modal.jpg)
   - If the user selects 'custom', the content of the modal changes to two inputs for the user to enter their desired times for each exercise and rest period respectively. The workout will then begin as normal when the user selects the Start Button.
@@ -255,13 +255,13 @@ All font is 'Roboto' from the Google Fonts collection. This is a very typical fo
     - If the sound toggle is on, there will also be audio cues for the user. Every five seconds a short 'ding' sound is played, while once the timer has elapsed a buzzer sound is played.
   - Once the countdown has elapsed, a new timer is triggered with the first exercise in the user's workout list. The content of the modal displays the current exercise.
     ![Exercise Screen](documentation/exercise.jpg)
-    - As with the countdown, the colours of the border, number background and progress bar change. This time they change with 20 seconds and 10 seconds remaining to amber and red respectively.
-    - Once again, the progress bar reduces in size in proportion to the remaining time.
-    - As with the countdown, if the sound is switched on, the audio cues are triggered, again at 20 and 10 seconds remaining for the 'ding' and the 'buzz' once the exercise is complete.
+   - As with the countdown, the colours of the border, number background and progress bar change. This time they change with 20 seconds and 10 seconds remaining to amber and red respectively.
+   - Once again, the progress bar reduces in size in proportion to the remaining time.
+   - As with the countdown, if the sound is switched on, the audio cues are triggered, again at 20 and 10 seconds remaining for the 'ding' and the 'buzz' once the exercise is complete.
   - When the exercise is complete, if further exercises are remaining on the workout, the rest countdown is triggered.
-    - The rest screen is very similar to the workout. The text content informs the user to 'rest' and also displays the next exercise in the workout so the user is prepared for what is to come.
+   - The rest screen is very similar to the workout. The text content informs the user to 'rest' and also displays the next exercise in the workout so the user is prepared for what is to come.
     ![Rest Screen](documentation/rest.jpg)
-    - Visual and audio feedback is provided to the user in the same way as in the exercise timer.
+   - Visual and audio feedback is provided to the user in the same way as in the exercise timer.
   - If the current exercise is complete, and there are no further exercises in the workout, the congratulations screen is triggered.
   ![Rest Screen](documentation/congratulations.jpg)
     - There is an image of a champagne bottle displayed as well as text congratulating the user
@@ -449,9 +449,7 @@ Fortunately, I was unable to identify many bugs with the app. However, one bug w
 
 * JS lint found no major issues, there were some warnings regarding line length and the characters included in the email regex that I copied and pasted from an external resource. JS lint was also helpful in standardizing my " " or ' ' usage in my javascript file.
 
-![JS Lint](documentation/js_lint.jpg)
-
-* I also used JS Hint to double-check my script, again there were no major issues. There are warnings for undefined variables, which are all jQuery $ symbols. There are also warnings for ES6 only properties such as variable declarations using let and const instead of var, arrow functions being used, and template literal syntax. As ES6 is compatible only with the latest browsers and not at all with internet explorer, for a real-world project it would be sensible to use the babeljs compiler, which converts the JavaScript into browser-compatible code.
+* I also used JS Hint to double-check my script, again there were no major issues. There are warnings for undefined variables, which are all jQuery $ symbols. There are also warnings for ES6 only properties such as variable declarations using let and const instead of var, arrow functions being used, and template literal syntax. As ES6 is compatible only with the latest browsers and not at all with Internet Explorer, for a real-world project it would be sensible to use the babeljs compiler, which converts the JavaScript into browser-compatible code.
 
 ### Chrome Dev Tools Lighthouse
 
@@ -577,10 +575,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
   - [Openfit.com](https://www.openfit.com/)
   - [spotebi.com](https://www.spotebi.com/)
 
-
 ### Acknowledgements
 
-* Thanks to my mentor Arnold Kyeza for providing very helpful advice in terms of content, how to tackle certain problems and for keeping me on track throughout.
+* Thanks to my mentor Arnold Kyeza for providing very helpful advice in terms of content, how to tackle certain problems, checking my ReadMe file and for keeping me on track throughout.
 * Thanks to the Code Institute Slack community for providing resources and tips as well as peer-reviewing the project.
 * Thanks to Code Institute tutor Igor for helping me figure out the best way to implement the timer feature as described in the [Timer Function](#timer-function) section of [Issues Overcome](#issues-overcome).
 * Thanks to friends and family for taking the time to look at the site and give advice on both content and user stories.
