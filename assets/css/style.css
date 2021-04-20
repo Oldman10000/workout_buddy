@@ -125,20 +125,20 @@ input {
 }
 
 .hero-1 {
-  background-image: url("../assets/images/hero1small.jpg");
+  background-image: url("../images/hero1small.jpg");
   height: 80vh;
 }
 
 .hero-2 {
-  background-image: url("../assets/images/hero2small.jpg");
+  background-image: url("../images/hero2small.jpg");
 }
 
 .hero-3 {
-  background-image: url("../assets/images/hero3small.jpg");
+  background-image: url("../images/hero3small.jpg");
 }
 
 .hero-4 {
-  background-image: url("../assets/images/hero4small.jpg");
+  background-image: url("../images/hero4small.jpg");
 }
 
 /* Header Styling */
@@ -742,17 +742,17 @@ footer p {
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 25px 0 rgba(0, 0, 0, 0.2);
   }
   .hero-1 {
-    background-image: url("../assets/images/hero1.jpg");
+    background-image: url("../images/hero1.jpg");
     height: 80vh;
   }
   .hero-2 {
-    background-image: url("../assets/images/hero2.jpg");
+    background-image: url("../images/hero2.jpg");
   }
   .hero-3 {
-    background-image: url("../assets/images/hero3.jpg");
+    background-image: url("../images/hero3.jpg");
   }
   .hero-4 {
-    background-image: url("../assets/images/hero4.jpg");
+    background-image: url("../images/hero4.jpg");
   }
   p {
     font-size: 1.2em;
